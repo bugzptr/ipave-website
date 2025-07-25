@@ -1,0 +1,40 @@
+/* --- CSS Custom Properties (Variables) --- */
+:root {
+    --color-primary: #ffc221; /* The main brand yellow */
+    --color-dark: #22252c;
+    --color-light: #ffffff;
+    --color-text: #5f6166;
+    --font-heading: 'Epilogue', sans-serif;
+    --font-body: 'Epilogue', sans-serif;
+}
+
+/* --- Basic Reset & Global Styles --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    line-height: 1.6;
+    background-color: var(--color-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-dark);
+    line-height: 1.2;
+}
+
+/* We will add component styles below this line... */
