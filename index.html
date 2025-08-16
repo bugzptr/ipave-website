@@ -1,70 +1,206 @@
+Of course. Here is the minimum required HTML and CSS to create a polished, client-ready homepage proof-of-concept.
+
+This combines everything we've discussed: your brand guide's colors and typography, the self-hosted font setup, and the layout from the design mockups. It's a single, self-contained HTML file and a single CSS file, making it easy for you to review and present.
+
+Instructions
+
+Create the Folder Structure:
+
+code
+Code
+download
+content_copy
+expand_less
+
+i-pave-client-demo/
+├── 📂 assets/
+│   ├── 📂 css/
+│   │   └── style.css
+│   ├── 📂 fonts/
+│   │   └── (Place your .woff2 font files here)
+│   └── 📂 images/
+│       ├── logo-horizontal.svg
+│       └── (Place placeholder images here)
+└── index.html
+
+Download Fonts: Use the Google Webfonts Helper to get the .woff2 files for Montserrat (700 weight) and ABeeZee (400 weight) and place them in assets/fonts/.
+
+Get Assets: Save the client's logo as logo-horizontal.svg in assets/images/. Find a good placeholder for the hero background and a service image.
+
+Copy & Paste: Put the code below into the corresponding index.html and style.css files.
+
+Open index.html in your browser. It will be a fully styled, responsive, and professional-looking homepage.
+
+index.html
+
+This file contains the complete structure for the homepage, reflecting your design mockups with semantic HTML and clear, reusable class names.
+
+code
+Html
+download
+content_copy
+expand_less
+IGNORE_WHEN_COPYING_START
+IGNORE_WHEN_COPYING_END
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <!-- Meta Data -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Pave Concrete | Christchurch's Most Experienced Specialists</title>
+    <meta name="description" content="Expertly crafted driveways, patios, foundations, and footpaths in Christchurch. Quality concrete solutions built to last.">
 
-    <!-- SEO Meta -->
-    <title>Concrete Driveway & Patio Specialists Christchurch | Ipave</title>
-    <meta name="description" content="Ipave are Christchurch's leading specialists in concrete and asphalt driveways, patios, and decorative paving. Offering exposed aggregate, stamped, and coloured concrete. Get your free quote today!">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Favicon (optional but recommended) -->
-    <!-- <link rel="icon" href="assets/images/favicon.png" type="image/png"> -->
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- ============================================ -->
+    <!-- HEADER                                         -->
+    <!-- ============================================ -->
     <header class="site-header">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <!-- Add your logo image here -->
-                    <img src="assets/images/ipave-logo.png" alt="Ipave Logo">
-                </a>
-            </div>
+        <div class="container header-flex">
+            <a href="/" class="site-logo">
+                <img src="assets/images/logo-horizontal.svg" alt="I Pave Concrete Logo">
+            </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Our Process</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Our Projects</a></li>
+                    <li><a href="#">Our Story</a></li>
                 </ul>
             </nav>
-            <div class="header-quote">
-                <a href="#quote-form" class="button">Get a Quote</a>
-            </div>
+            <a href="#" class="button-accent header-quote-button">Get a quote</a>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
+        <!-- ============================================ -->
+        <!-- HERO SECTION                                 -->
+        <!-- ============================================ -->
         <section class="hero">
-            <div class="container">
-                <h1>Christchurch's Premier Concrete & Asphalt Paving</h1>
-                <p class="subtitle">Paving the way for better outdoor living, one driveway at a time.</p>
-                <a href="contact.html" class="button button-primary">Start Consulting</a>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Christchurch's Most Experienced Concrete Specialists</h1>
+                    <p>Expertly crafted driveways, patios, foundations, and footpaths—built to last. At iPave, quality is always our foundation.</p>
+                    <ul class="hero-services-list">
+                        <li>Kerbing Services</li>
+                        <li>Concrete Services</li>
+                        <li>Landscape Services</li>
+                    </ul>
+                </div>
+                <div class="hero-form-container">
+                    <h3>CONTACT US</h3>
+                    <p>Ph: 0800 472 8348 or leave a message</p>
+                    <!-- IMPORTANT: Replace the action URL with your Formspree endpoint -->
+                    <form action="https://formspree.io/f/your_unique_id" method="POST">
+                        <input type="text" name="name" placeholder="First Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="tel" name="phone" placeholder="Phone Number">
+                        <textarea name="message" placeholder="Message" rows="4" required></textarea>
+                        <button type="submit" class="button-primary">Submit</button>
+                    </form>
+                </div>
             </div>
         </section>
 
-        <!-- Other sections will go here... -->
-        
+        <!-- ============================================ -->
+        <!-- INTRO SECTION                                -->
+        <!-- ============================================ -->
+        <section class="intro">
+            <div class="container text-center">
+                <h2>Professional Concrete Services in Christchurch</h2>
+                <p>Locally owned and operated since 1998, iPave is known across Canterbury for delivering high-quality concrete solutions with precision, transparency, and care. We offer the full spectrum of concrete services: driveways, patios, foundations, decorative concrete, earthquake repairs, concrete cutting, asphalt, and more.</p>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- SERVICES HIGHLIGHT                           -->
+        <!-- ============================================ -->
+        <section class="services-highlight">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Services</h2>
+                    <p>Your One-Stop Concrete Contractor</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://via.placeholder.com/800x500" alt="A newly paved residential driveway">
+                    <div class="service-card-content">
+                        <h3>Residential</h3>
+                        <p>Driveways, Patios, Footpaths</p>
+                        <a href="#" class="arrow-link">→</a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="#" class="button-primary">Explore Our Full Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- PARTNERS/LOGO STRIP                          -->
+        <!-- ============================================ -->
+        <section class="partners">
+            <div class="container">
+                <div class="logo-strip">
+                    <img src="https://via.placeholder.com/150x60?text=Site+Safe" alt="Site Safe Logo">
+                    <img src="https://via.placeholder.com/150x60?text=ONCRETE" alt="Oncrete Logo">
+                    <img src="https://via.placeholder.com/150x60?text=Hawkins" alt="Hawkins Construction Logo">
+                    <img src="https://via.placeholder.com/150x60?text=AppCon" alt="AppCon Logo">
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- CALL TO ACTION BANNER                        -->
+        <!-- ============================================ -->
+        <section class="cta-banner">
+            <div class="container">
+                <h2>Get a quote</h2>
+                <p>Your One-Stop Concrete Contractor</p>
+                <a href="#" class="button-primary">Get a quote</a>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer Section -->
+    <!-- ============================================ -->
+    <!-- FOOTER                                         -->
+    <!-- ============================================ -->
     <footer class="site-footer">
-        <div class="container">
-            <p>© 2025 Ipave. All rights reserved.</p>
+        <div class="container footer-grid">
+            <div class="footer-contact">
+                <img src="assets/images/logo-horizontal.svg" alt="I Pave Concrete Logo" class="footer-logo">
+                <h4>Contact Info</h4>
+                <p>P: 0800 472 8348<br>
+                   E: ipave@xtra.co.nz<br>
+                   A: 335 Kainga Road, Kainga, Christchurch 8083</p>
+            </div>
+            <div class="footer-services">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Kerbing Services</a></li>
+                    <li><a href="#">Concrete Services</a></li>
+                    <li><a href="#">Landscape Services</a></li>
+                    <li><a href="#">Decorative Concrete</a></li>
+                    <li><a href="#">Earthquake Repairs</a></li>
+                </ul>
+            </div>
+            <div class="footer-form">
+                 <h4>Send Us a Message</h4>
+                 <form action="https://formspree.io/f/your_unique_id" method="POST">
+                    <input type="text" name="name" placeholder="First Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Message" rows="3" required></textarea>
+                    <button type="submit" class="button-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 I Pave Concrete. All Rights Reserved.</p>
         </div>
     </footer>
-
-    <!-- JavaScript file (optional for now) -->
-    <!-- <script src="js/main.js"></script> -->
 
 </body>
 </html>
