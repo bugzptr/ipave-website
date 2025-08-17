@@ -1,220 +1,3 @@
-Of course. Here is the minimum required HTML and CSS to create a polished, client-ready homepage proof-of-concept.
-
-This combines everything we've discussed: your brand guide's colors and typography, the self-hosted font setup, and the layout from the design mockups. It's a single, self-contained HTML file and a single CSS file, making it easy for you to review and present.
-
-Instructions
-
-Create the Folder Structure:
-
-code
-Code
-download
-content_copy
-expand_less
-
-i-pave-client-demo/
-├── 📂 assets/
-│   ├── 📂 css/
-│   │   └── style.css
-│   ├── 📂 fonts/
-│   │   └── (Place your .woff2 font files here)
-│   └── 📂 images/
-│       ├── logo-horizontal.svg
-│       └── (Place placeholder images here)
-└── index.html
-
-Download Fonts: Use the Google Webfonts Helper to get the .woff2 files for Montserrat (700 weight) and ABeeZee (400 weight) and place them in assets/fonts/.
-
-Get Assets: Save the client's logo as logo-horizontal.svg in assets/images/. Find a good placeholder for the hero background and a service image.
-
-Copy & Paste: Put the code below into the corresponding index.html and style.css files.
-
-Open index.html in your browser. It will be a fully styled, responsive, and professional-looking homepage.
-
-index.html
-
-This file contains the complete structure for the homepage, reflecting your design mockups with semantic HTML and clear, reusable class names.
-
-code
-Html
-download
-content_copy
-expand_less
-IGNORE_WHEN_COPYING_START
-IGNORE_WHEN_COPYING_END
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I Pave Concrete | Christchurch's Most Experienced Specialists</title>
-    <meta name="description" content="Expertly crafted driveways, patios, foundations, and footpaths in Christchurch. Quality concrete solutions built to last.">
-
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-
-    <!-- ============================================ -->
-    <!-- HEADER                                         -->
-    <!-- ============================================ -->
-    <header class="site-header">
-        <div class="container header-flex">
-            <a href="/" class="site-logo">
-                <img src="assets/images/logo-horizontal.svg" alt="I Pave Concrete Logo">
-            </a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">Our Process</a></li>
-                    <li><a href="#">Our Services</a></li>
-                    <li><a href="#">Our Projects</a></li>
-                    <li><a href="#">Our Story</a></li>
-                </ul>
-            </nav>
-            <a href="#" class="button-accent header-quote-button">Get a quote</a>
-        </div>
-    </header>
-
-    <main>
-        <!-- ============================================ -->
-        <!-- HERO SECTION                                 -->
-        <!-- ============================================ -->
-        <section class="hero">
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <h1>Christchurch's Most Experienced Concrete Specialists</h1>
-                    <p>Expertly crafted driveways, patios, foundations, and footpaths—built to last. At iPave, quality is always our foundation.</p>
-                    <ul class="hero-services-list">
-                        <li>Kerbing Services</li>
-                        <li>Concrete Services</li>
-                        <li>Landscape Services</li>
-                    </ul>
-                </div>
-                <div class="hero-form-container">
-                    <h3>CONTACT US</h3>
-                    <p>Ph: 0800 472 8348 or leave a message</p>
-                    <!-- IMPORTANT: Replace the action URL with your Formspree endpoint -->
-                    <form action="https://formspree.io/f/your_unique_id" method="POST">
-                        <input type="text" name="name" placeholder="First Name" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="tel" name="phone" placeholder="Phone Number">
-                        <textarea name="message" placeholder="Message" rows="4" required></textarea>
-                        <button type="submit" class="button-primary">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================ -->
-        <!-- INTRO SECTION                                -->
-        <!-- ============================================ -->
-        <section class="intro">
-            <div class="container text-center">
-                <h2>Professional Concrete Services in Christchurch</h2>
-                <p>Locally owned and operated since 1998, iPave is known across Canterbury for delivering high-quality concrete solutions with precision, transparency, and care. We offer the full spectrum of concrete services: driveways, patios, foundations, decorative concrete, earthquake repairs, concrete cutting, asphalt, and more.</p>
-            </div>
-        </section>
-
-        <!-- ============================================ -->
-        <!-- SERVICES HIGHLIGHT                           -->
-        <!-- ============================================ -->
-        <section class="services-highlight">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Services</h2>
-                    <p>Your One-Stop Concrete Contractor</p>
-                </div>
-                <div class="service-card">
-                    <img src="https://via.placeholder.com/800x500" alt="A newly paved residential driveway">
-                    <div class="service-card-content">
-                        <h3>Residential</h3>
-                        <p>Driveways, Patios, Footpaths</p>
-                        <a href="#" class="arrow-link">→</a>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <a href="#" class="button-primary">Explore Our Full Services</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================ -->
-        <!-- PARTNERS/LOGO STRIP                          -->
-        <!-- ============================================ -->
-        <section class="partners">
-            <div class="container">
-                <div class="logo-strip">
-                    <img src="https://via.placeholder.com/150x60?text=Site+Safe" alt="Site Safe Logo">
-                    <img src="https://via.placeholder.com/150x60?text=ONCRETE" alt="Oncrete Logo">
-                    <img src="https://via.placeholder.com/150x60?text=Hawkins" alt="Hawkins Construction Logo">
-                    <img src="https://via.placeholder.com/150x60?text=AppCon" alt="AppCon Logo">
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================ -->
-        <!-- CALL TO ACTION BANNER                        -->
-        <!-- ============================================ -->
-        <section class="cta-banner">
-            <div class="container">
-                <h2>Get a quote</h2>
-                <p>Your One-Stop Concrete Contractor</p>
-                <a href="#" class="button-primary">Get a quote</a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ============================================ -->
-    <!-- FOOTER                                         -->
-    <!-- ============================================ -->
-    <footer class="site-footer">
-        <div class="container footer-grid">
-            <div class="footer-contact">
-                <img src="assets/images/logo-horizontal.svg" alt="I Pave Concrete Logo" class="footer-logo">
-                <h4>Contact Info</h4>
-                <p>P: 0800 472 8348<br>
-                   E: ipave@xtra.co.nz<br>
-                   A: 335 Kainga Road, Kainga, Christchurch 8083</p>
-            </div>
-            <div class="footer-services">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="#">Kerbing Services</a></li>
-                    <li><a href="#">Concrete Services</a></li>
-                    <li><a href="#">Landscape Services</a></li>
-                    <li><a href="#">Decorative Concrete</a></li>
-                    <li><a href="#">Earthquake Repairs</a></li>
-                </ul>
-            </div>
-            <div class="footer-form">
-                 <h4>Send Us a Message</h4>
-                 <form action="https://formspree.io/f/your_unique_id" method="POST">
-                    <input type="text" name="name" placeholder="First Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <textarea name="message" placeholder="Message" rows="3" required></textarea>
-                    <button type="submit" class="button-primary">Submit</button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 I Pave Concrete. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
-assets/css/style.css
-
-This file contains all the styling, based directly on your brand guide and our discussion on self-hosting fonts. It is fully responsive and organized for easy editing.
-
-code
-Css
-download
-content_copy
-expand_less
-IGNORE_WHEN_COPYING_START
-IGNORE_WHEN_COPYING_END
 /* ====================================================== */
 /* 1. SELF-HOSTED FONT DEFINITIONS                        */
 /* ====================================================== */
@@ -225,6 +8,7 @@ IGNORE_WHEN_COPYING_END
   font-weight: 400;
   src: url('../fonts/abeezee-v22-latin-regular.woff2') format('woff2');
 }
+
 @font-face {
   font-display: swap;
   font-family: 'Montserrat';
@@ -253,92 +37,348 @@ IGNORE_WHEN_COPYING_END
 /* ====================================================== */
 /* 3. GLOBAL STYLES & RESETS                              */
 /* ====================================================== */
-*, *::before, *::after { box-sizing: border-box; }
-body { margin: 0; font-family: var(--font-family-body); color: var(--color-text-body); background-color: var(--color-white); line-height: 1.6; }
-h1, h2, h3, h4 { font-family: var(--font-family-heading); color: var(--color-primary); margin: 0 0 1rem 0; font-weight: 700; line-height: 1.2; }
-h1 { font-size: 3rem; }
-h2 { font-size: 2.5rem; }
-p { margin: 0 0 1rem 0; }
-a { color: var(--color-primary); text-decoration: none; transition: opacity 0.2s ease; }
-a:hover { opacity: 0.8; }
-img { max-width: 100%; height: auto; display: block; }
-section { padding: clamp(3rem, 8vw, 5rem) 0; }
+*, *::before, *::after { 
+    box-sizing: border-box; 
+}
+
+body { 
+    margin: 0; 
+    font-family: var(--font-family-body); 
+    color: var(--color-text-body); 
+    background-color: var(--color-white); 
+    line-height: 1.6; 
+}
+
+h1, h2, h3, h4 { 
+    font-family: var(--font-family-heading); 
+    color: var(--color-primary); 
+    margin: 0 0 1rem 0; 
+    font-weight: 700; 
+    line-height: 1.2; 
+}
+
+h1 { 
+    font-size: 3rem; 
+}
+
+h2 { 
+    font-size: 2.5rem; 
+}
+
+p { 
+    margin: 0 0 1rem 0; 
+}
+
+a { 
+    color: var(--color-primary); 
+    text-decoration: none; 
+    transition: opacity 0.2s ease; 
+}
+
+a:hover { 
+    opacity: 0.8; 
+}
+
+img { 
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+section { 
+    padding: clamp(3rem, 8vw, 5rem) 0; 
+}
 
 /* ====================================================== */
 /* 4. UTILITY & LAYOUT CLASSES                            */
 /* ====================================================== */
-.container { max-width: var(--container-width); margin: 0 auto; padding: 0 1.5rem; }
-.text-center { text-align: center; }
-.text-center p { max-width: 750px; margin-left: auto; margin-right: auto; }
-.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.container { 
+    max-width: var(--container-width); 
+    margin: 0 auto; 
+    padding: 0 1.5rem; 
+}
+
+.text-center { 
+    text-align: center; 
+}
+
+.text-center p { 
+    max-width: 750px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.visually-hidden { 
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    padding: 0; 
+    margin: -1px; 
+    overflow: hidden; 
+    clip: rect(0, 0, 0, 0); 
+    white-space: nowrap; 
+    border: 0; 
+}
 
 /* ====================================================== */
 /* 5. COMPONENT STYLES                                    */
 /* ====================================================== */
 /* --- Buttons --- */
-.button-primary, .button-accent { display: inline-block; padding: 0.8rem 2rem; border-radius: var(--border-radius); font-family: var(--font-family-heading); text-align: center; border: 2px solid transparent; cursor: pointer; font-weight: 700; }
-.button-primary { background-color: var(--color-primary); color: var(--color-white); }
-.button-accent { background-color: var(--color-accent); color: var(--color-primary); border-color: var(--color-primary); }
+.button-primary, .button-accent { 
+    display: inline-block; 
+    padding: 0.8rem 2rem; 
+    border-radius: var(--border-radius); 
+    font-family: var(--font-family-heading); 
+    text-align: center; 
+    border: 2px solid transparent; 
+    cursor: pointer; 
+    font-weight: 700; 
+}
+
+.button-primary { 
+    background-color: var(--color-primary); 
+    color: var(--color-white); 
+}
+
+.button-accent { 
+    background-color: var(--color-accent); 
+    color: var(--color-primary); 
+    border-color: var(--color-primary); 
+}
 
 /* --- Forms --- */
-form { display: flex; flex-direction: column; gap: 1rem; }
-form input, form textarea { width: 100%; padding: 0.8rem; border: 1px solid var(--color-light-gray); border-radius: var(--border-radius); font-family: var(--font-family-body); font-size: 1rem; }
-form button { width: 100%; }
+form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem; 
+}
+
+form input, form textarea { 
+    width: 100%; 
+    padding: 0.8rem; 
+    border: 1px solid var(--color-light-gray); 
+    border-radius: var(--border-radius); 
+    font-family: var(--font-family-body); 
+    font-size: 1rem; 
+}
+
+form button { 
+    width: 100%; 
+}
 
 /* --- Header --- */
-.site-header { background-color: var(--color-primary); padding: 1rem 0; }
-.header-flex { display: flex; justify-content: space-between; align-items: center; }
-.site-logo img { max-width: 250px; }
-.main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 2rem; }
-.main-nav a { color: var(--color-white); font-family: var(--font-family-heading); }
+.site-header { 
+    background-color: var(--color-primary); 
+    padding: 1rem 0; 
+}
+
+.header-flex { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.site-logo img { 
+    max-width: 250px; 
+}
+
+.main-nav ul { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    gap: 2rem; 
+}
+
+.main-nav a { 
+    color: var(--color-white); 
+    font-family: var(--font-family-heading); 
+}
 
 /* --- Hero Section --- */
-.hero { background: linear-gradient(rgba(33,33,97,0.85), rgba(33,33,97,0.85)), url(https://via.placeholder.com/1920x1080) no-repeat center center/cover; color: var(--color-white); }
-.hero h1 { color: var(--color-accent); }
-.hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-.hero-form-container { background: var(--color-white); color: var(--color-text-body); padding: 2rem; border-radius: var(--border-radius); }
-.hero-form-container h3, .hero-form-container p { color: var(--color-primary); text-align: center; }
-.hero-services-list { list-style: none; padding-left: 1.5rem; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23FDE906' class='bi bi-check-lg' viewBox='0 0 16 16'%3E%3Cpath d='M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z'/%3E%3C/svg%3E") no-repeat 0 0.4em; }
-.hero-services-list li { padding-left: 1rem; margin-bottom: 0.5rem; }
+.hero { 
+    background: linear-gradient(rgba(33,33,97,0.85), rgba(33,33,97,0.85)), url(https://via.placeholder.com/1920x1080) no-repeat center center/cover; 
+    color: var(--color-white); 
+}
+
+.hero h1 { 
+    color: var(--color-accent); 
+}
+
+.hero-content { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 3rem; 
+    align-items: center; 
+}
+
+.hero-form-container { 
+    background: var(--color-white); 
+    color: var(--color-text-body); 
+    padding: 2rem; 
+    border-radius: var(--border-radius); 
+}
+
+.hero-form-container h3, .hero-form-container p { 
+    color: var(--color-primary); 
+    text-align: center; 
+}
+
+.hero-services-list { 
+    list-style: none; 
+    padding-left: 1.5rem; 
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23FDE906' class='bi bi-check-lg' viewBox='0 0 16 16'%3E%3Cpath d='M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z'/%3E%3C/svg%3E") no-repeat 0 0.4em; 
+}
+
+.hero-services-list li { 
+    padding-left: 1rem; 
+    margin-bottom: 0.5rem; 
+}
 
 /* --- Services Highlight --- */
-.services-highlight { background-color: #f9f9f9; }
-.section-header { text-align: center; margin-bottom: 3rem; }
-.service-card { background: var(--color-white); border: 1px solid var(--color-light-gray); border-radius: var(--border-radius); overflow: hidden; margin-bottom: 2rem; }
-.service-card-content { padding: 2rem; display: flex; justify-content: space-between; align-items: center; }
-.service-card p { margin: 0; color: #666; }
-.arrow-link { font-size: 2.5rem; line-height: 1; font-weight: bold; }
+.services-highlight { 
+    background-color: #f9f9f9; 
+}
+
+.section-header { 
+    text-align: center; 
+    margin-bottom: 3rem; 
+}
+
+.service-card { 
+    background: var(--color-white); 
+    border: 1px solid var(--color-light-gray); 
+    border-radius: var(--border-radius); 
+    overflow: hidden; 
+    margin-bottom: 2rem; 
+}
+
+.service-card-content { 
+    padding: 2rem; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.service-card p { 
+    margin: 0; 
+    color: #666; 
+}
+
+.arrow-link { 
+    font-size: 2.5rem; 
+    line-height: 1; 
+    font-weight: bold; 
+}
 
 /* --- Partners --- */
-.partners { background: var(--color-light-gray); }
-.logo-strip { display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; gap: 2rem; }
-.logo-strip img { max-height: 50px; width: auto; filter: grayscale(100%); opacity: 0.7; transition: all 0.3s ease; }
-.logo-strip img:hover { filter: grayscale(0%); opacity: 1; }
+.partners { 
+    background: var(--color-light-gray); 
+}
+
+.logo-strip { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    align-items: center; 
+    gap: 2rem; 
+}
+
+.logo-strip img { 
+    max-height: 50px; 
+    width: auto; 
+    filter: grayscale(100%); 
+    opacity: 0.7; 
+    transition: all 0.3s ease; 
+}
+
+.logo-strip img:hover { 
+    filter: grayscale(0%); 
+    opacity: 1; 
+}
 
 /* --- CTA Banner --- */
-.cta-banner { background-color: var(--color-accent); text-align: center; }
-.cta-banner h2 { color: var(--color-primary); }
+.cta-banner { 
+    background-color: var(--color-accent); 
+    text-align: center; 
+}
+
+.cta-banner h2 { 
+    color: var(--color-primary); 
+}
 
 /* --- Footer --- */
-.site-footer { background-color: var(--color-primary); color: var(--color-white); padding-top: 4rem; }
-.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
-.footer-logo { max-width: 200px; margin-bottom: 1rem; filter: brightness(0) invert(1); }
-.site-footer h4 { color: var(--color-accent); }
-.footer-services ul { list-style: none; padding: 0; }
-.footer-services a { color: var(--color-white); }
-.footer-bottom { text-align: center; padding: 1.5rem 0; margin-top: 3rem; border-top: 1px solid rgba(255,255,255,0.2); }
+.site-footer { 
+    background-color: var(--color-primary); 
+    color: var(--color-white); 
+    padding-top: 4rem; 
+}
+
+.footer-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 3rem; 
+}
+
+.footer-logo { 
+    max-width: 200px; 
+    margin-bottom: 1rem; 
+    filter: brightness(0) invert(1); 
+}
+
+.site-footer h4 { 
+    color: var(--color-accent); 
+}
+
+.footer-services ul { 
+    list-style: none; 
+    padding: 0; 
+}
+
+.footer-services a { 
+    color: var(--color-white); 
+}
+
+.footer-bottom { 
+    text-align: center; 
+    padding: 1.5rem 0; 
+    margin-top: 3rem; 
+    border-top: 1px solid rgba(255,255,255,0.2); 
+}
 
 /* ====================================================== */
 /* 6. RESPONSIVE STYLES                                   */
 /* ====================================================== */
 @media (max-width: 900px) {
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-    .main-nav { display: none; } /* Simplification for demo. Real site needs JS toggle. */
-    .hero-content { grid-template-columns: 1fr; }
-    .header-flex { justify-content: center; }
-    .header-quote-button { display: none; }
+    h1 { 
+        font-size: 2.5rem; 
+    }
+    
+    h2 { 
+        font-size: 2rem; 
+    }
+    
+    .main-nav { 
+        display: none; 
+    }
+    
+    .hero-content { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .header-flex { 
+        justify-content: center; 
+    }
+    
+    .header-quote-button { 
+        display: none; 
+    }
 }
+
 @media (max-width: 600px) {
-    .service-card-content { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .service-card-content { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 1rem; 
+    }
 }
