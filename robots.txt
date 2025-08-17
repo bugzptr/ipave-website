@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location (when you create one)
+Sitemap: https://ipave-website.pages.dev/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

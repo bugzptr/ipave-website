@@ -153,6 +153,11 @@ form {
     gap: 1rem; 
 }
 
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
 form input, form textarea { 
     width: 100%; 
     padding: 0.8rem; 
@@ -160,6 +165,13 @@ form input, form textarea {
     border-radius: var(--border-radius); 
     font-family: var(--font-family-body); 
     font-size: 1rem; 
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(33, 33, 97, 0.1);
 }
 
 form button { 
