@@ -210,7 +210,7 @@ form button {
 .phone-link { 
     color: var(--color-accent); 
     font-family: var(--font-family-heading); 
-    font-size: 3.75rem; 
+    font-size: 2.5rem; 
     font-weight: 700; 
     text-decoration: none; 
     transition: opacity 0.2s ease; 
@@ -417,6 +417,10 @@ form button {
     .header-quote-button { 
         display: none; 
     }
+    
+    .phone-link {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -424,5 +428,9 @@ form button {
         flex-direction: column; 
         align-items: flex-start; 
         gap: 1rem; 
+    }
+    
+    .phone-link {
+        font-size: 1.5rem;
     }
 }
