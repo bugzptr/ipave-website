@@ -210,7 +210,7 @@ form button {
 .phone-link { 
     color: var(--color-accent); 
     font-family: var(--font-family-heading); 
-    font-size: 1.25rem; 
+    font-size: 3.75rem; 
     font-weight: 700; 
     text-decoration: none; 
     transition: opacity 0.2s ease; 
