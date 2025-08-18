@@ -184,7 +184,16 @@ form button {
     padding: 1rem 0; 
 }
 
-.header-flex { 
+.header-top { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 1rem; 
+    padding-bottom: 0.5rem; 
+    border-bottom: 1px solid rgba(255,255,255,0.1); 
+}
+
+.header-bottom { 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
@@ -192,6 +201,23 @@ form button {
 
 .site-logo img { 
     max-width: 250px; 
+}
+
+.header-phone { 
+    text-align: right; 
+}
+
+.phone-link { 
+    color: var(--color-accent); 
+    font-family: var(--font-family-heading); 
+    font-size: 1.25rem; 
+    font-weight: 700; 
+    text-decoration: none; 
+    transition: opacity 0.2s ease; 
+}
+
+.phone-link:hover { 
+    opacity: 0.8; 
 }
 
 .main-nav ul { 
@@ -377,7 +403,14 @@ form button {
         grid-template-columns: 1fr; 
     }
     
-    .header-flex { 
+    .header-top { 
+        flex-direction: column; 
+        gap: 1rem; 
+        text-align: center; 
+        margin-bottom: 1rem; 
+    }
+    
+    .header-bottom { 
         justify-content: center; 
     }
     
