@@ -4,26 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Security & Performance Headers -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#212161">
     <meta name="msapplication-TileColor" content="#212161">
     <title>I Pave Concrete | Christchurch's Most Experienced Specialists</title>
     <meta name="description" content="Expertly crafted driveways, patios, foundations, and footpaths in Christchurch. Quality concrete solutions built to last.">
     
-    <!-- SEO Meta Tags -->
     <meta name="keywords" content="concrete, driveway, patio, foundation, footpath, Christchurch, Canterbury, concrete contractor, concrete services, kerbing, landscape">
     <meta name="author" content="I Pave Concrete">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ipave-website.pages.dev/">
     <meta property="og:title" content="I Pave Concrete | Christchurch's Most Experienced Specialists">
     <meta property="og:description" content="Expertly crafted driveways, patios, foundations, and footpaths in Christchurch. Quality concrete solutions built to last.">
     <meta property="og:image" content="https://ipave-website.pages.dev/assets/images/logo-horizontal.svg">
     
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ipave-website.pages.dev/">
     <meta property="twitter:title" content="I Pave Concrete | Christchurch's Most Experienced Specialists">
@@ -35,16 +31,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://ipave-website.pages.dev/">
 
-    <!-- Preload critical fonts to prevent layout shifts -->
     <link rel="preload" href="assets/fonts/montserrat-v30-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/abeezee-v22-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     
-    <!-- Critical CSS inlined to prevent render blocking -->
     <style>
-        /* Critical CSS for above-the-fold content */
         :root {
             --color-primary: #212161;
             --color-accent: #FDE906;
@@ -70,7 +62,6 @@
         img { max-width: 100%; height: auto; display: block; contain: layout; }
         .service-image { width: 100%; height: auto; object-fit: cover; aspect-ratio: 800 / 534; contain: layout; }
         
-        /* Mobile-first responsive adjustments */
         @media (max-width: 600px) {
             .service-image { aspect-ratio: 362 / 242; }
             .hero-content { grid-template-columns: 1fr; }
@@ -117,7 +108,6 @@
         .hero-services-list { list-style: none; padding-left: 1.5rem; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23FDE906' class='bi bi-check-lg' viewBox='0 0 16 16'%3E%3Cpath d='M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z'/%3E%3C/svg%3E") no-repeat 0 0.4em; }
         .hero-services-list li { padding-left: 1rem; margin-bottom: 0.5rem; }
         
-        /* Service card styles to prevent layout shifts */
         .services-highlight { background-color: #f9f9f9; }
         .section-header { text-align: center; margin-bottom: 3rem; }
         .service-card { background: var(--color-white); border: 1px solid var(--color-light-gray); border-radius: var(--border-radius); overflow: hidden; margin-bottom: 2rem; }
@@ -125,7 +115,6 @@
         .service-card p { margin: 0; color: #666; }
         .arrow-link { font-size: 2.5rem; line-height: 1; font-weight: bold; }
         
-        /* Responsive adjustments */
         @media (max-width: 900px) {
             h1 { font-size: 2.5rem; }
             h2 { font-size: 2rem; }
@@ -141,17 +130,13 @@
         }
     </style>
 
-    <!-- Non-critical CSS loaded asynchronously -->
     <link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
     
-    <!-- DNS prefetch for external resources -->
     <link rel="dns-prefetch" href="//formspree.io">
     
-    <!-- Preconnect to Formspree for faster form submissions -->
     <link rel="preconnect" href="https://formspree.io">
     
-    <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -220,23 +205,18 @@
 </head>
 <body>
 
-    <!-- ============================================ -->
-    <!-- HEADER                                         -->
-    <!-- ============================================ -->
     <header class="site-header">
         <div class="container">
-            <!-- Top line: Logo and Phone -->
-            <div class="header-top">
-                <a href="/" class="site-logo">
-                    <img src="assets/images/logo-horizontal.svg" alt="I Pave Concrete Logo">
-                </a>
-                <div class="header-phone">
-                    <a href="tel:08004728348" class="phone-link">0800 472 8348</a>
-                </div>
-            </div>
-            
-            <!-- Bottom line: Navigation and CTA -->
-            <div class="header-bottom">
+                         <div class="header-top">
+                 <a href="/" class="site-logo">
+                     <img src="assets/images/logo-horizontal.svg" alt="I Pave Concrete Logo">
+                 </a>
+                 <div class="header-phone">
+                     <a href="tel:08004728348" class="phone-link">0800 472 8348</a>
+                 </div>
+             </div>
+             
+             <div class="header-bottom">
                 <nav class="main-nav" aria-label="Main navigation">
                     <ul>
                         <li><a href="#" aria-label="Learn about our process">Our Process</a></li>
@@ -251,10 +231,7 @@
     </header>
 
     <main>
-        <!-- ============================================ -->
-        <!-- HERO SECTION                                 -->
-        <!-- ============================================ -->
-        <section class="hero">
+                 <section class="hero">
             <div class="container hero-content">
                 <div class="hero-text">
                     <h1>Christchurch's Most Experienced Concrete Specialists</h1>
@@ -268,8 +245,7 @@
                 <div class="hero-form-container">
                     <h2>CONTACT US</h2>
                     <p>Ph: 0800 472 8348 or leave a message</p>
-                    <!-- IMPORTANT: Replace the action URL with your Formspree endpoint -->
-                    <form action="https://formspree.io/f/your_unique_id" method="POST" novalidate>
+                                         <form action="https://formspree.io/f/your_unique_id" method="POST" novalidate>
                         <div class="form-group">
                             <label for="name" class="visually-hidden">First Name</label>
                             <input type="text" id="name" name="name" placeholder="First Name" required aria-required="true">
@@ -292,47 +268,37 @@
             </div>
         </section>
 
-        <!-- ============================================ -->
-        <!-- INTRO SECTION                                -->
-        <!-- ============================================ -->
-        <section class="intro">
+                 <section class="intro">
             <div class="container text-center">
                 <h2>Professional Concrete Services in Christchurch</h2>
                 <p>Locally owned and operated since 1998, iPave is known across Canterbury for delivering high-quality concrete solutions with precision, transparency, and care. We offer the full spectrum of concrete services: driveways, patios, foundations, decorative concrete, earthquake repairs, concrete cutting, asphalt, and more.</p>
             </div>
         </section>
 
-        <!-- ============================================ -->
-        <!-- SERVICES HIGHLIGHT                           -->
-        <!-- ============================================ -->
-        <section class="services-highlight">
+                 <section class="services-highlight">
             <div class="container">
                 <div class="section-header">
                     <h2>Our Services</h2>
                     <p>Your One-Stop Concrete Contractor</p>
                 </div>
                 <div class="service-card">
-                    <picture>
-                        <!-- Mobile (small screens) - WebP for speed -->
-                        <source media="(max-width: 600px)" 
-                                srcset="assets/images/paved-driveway-mobile.webp" 
-                                type="image/webp">
-                        <!-- Tablet (medium screens) - WebP for speed -->
-                        <source media="(max-width: 900px)" 
-                                srcset="assets/images/paved-driveway-tablet.webp" 
-                                type="image/webp">
-                        <!-- Desktop (large screens) - WebP for excellent quality -->
-                        <source media="(min-width: 901px)" 
-                                srcset="assets/images/paved-driveway-desktop.webp" 
-                                type="image/webp">
-                        <!-- Fallback for browsers that don't support WebP -->
-                        <img src="assets/images/paved-driveway.jpg" 
-                             alt="A newly paved residential driveway" 
-                             loading="lazy" 
-                             width="800" 
-                             height="534" 
-                             class="service-image">
-                    </picture>
+                                         <picture>
+                         <source media="(max-width: 600px)" 
+                                 srcset="assets/images/paved-driveway-mobile.webp" 
+                                 type="image/webp">
+                         <source media="(max-width: 900px)" 
+                                 srcset="assets/images/paved-driveway-tablet.webp" 
+                                 type="image/webp">
+                         <source media="(min-width: 901px)" 
+                                 srcset="assets/images/paved-driveway-desktop.webp" 
+                                 type="image/webp">
+                         <img src="assets/images/paved-driveway.jpg" 
+                              alt="A newly paved residential driveway" 
+                              loading="lazy" 
+                              width="800" 
+                              height="534" 
+                              class="service-image">
+                     </picture>
                     <div class="service-card-content">
                         <h3>Residential</h3>
                         <p>Driveways, Patios, Footpaths</p>
@@ -347,10 +313,7 @@
 
 
 
-        <!-- ============================================ -->
-        <!-- CALL TO ACTION BANNER                        -->
-        <!-- ============================================ -->
-        <section class="cta-banner">
+                 <section class="cta-banner">
             <div class="container">
                 <h3>Get a quote</h3>
                 <p>Your One-Stop Concrete Contractor</p>
@@ -360,10 +323,7 @@
 
     </main>
 
-    <!-- ============================================ -->
-    <!-- FOOTER                                         -->
-    <!-- ============================================ -->
-    <footer class="site-footer">
+         <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-contact">
                 <img src="assets/images/logo-horizontal.svg" alt="I Pave Concrete Logo" class="footer-logo">
@@ -397,41 +357,36 @@
         </div>
         </footer>
  
-    <!-- Image optimization script -->
-    <script>
-        // Optimized lazy loading without forced reflows
-        document.addEventListener('DOMContentLoaded', function() {
-            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-            
-            // Use Intersection Observer with better performance settings
-            if ('IntersectionObserver' in window) {
-                const imageObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const img = entry.target;
-                            // Use requestAnimationFrame to avoid reflows
-                            requestAnimationFrame(() => {
-                                img.classList.add('loaded');
-                            });
-                            imageObserver.unobserve(img);
-                        }
-                    });
-                }, {
-                    rootMargin: '50px 0px', // Start loading 50px before image enters viewport
-                    threshold: 0.1 // Trigger when 10% of image is visible
-                });
-                
-                lazyImages.forEach(img => imageObserver.observe(img));
-            } else {
-                // Fallback for older browsers
-                lazyImages.forEach(img => {
-                    img.addEventListener('load', function() {
-                        this.classList.add('loaded');
-                    });
-                });
-            }
-        });
-    </script>
+              <script>
+         document.addEventListener('DOMContentLoaded', function() {
+             const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+             
+             if ('IntersectionObserver' in window) {
+                 const imageObserver = new IntersectionObserver((entries) => {
+                     entries.forEach(entry => {
+                         if (entry.isIntersecting) {
+                             const img = entry.target;
+                             requestAnimationFrame(() => {
+                                 img.classList.add('loaded');
+                             });
+                             imageObserver.unobserve(img);
+                         }
+                     });
+                 }, {
+                     rootMargin: '50px 0px',
+                     threshold: 0.1
+                 });
+                 
+                 lazyImages.forEach(img => imageObserver.observe(img));
+             } else {
+                 lazyImages.forEach(img => {
+                     img.addEventListener('load', function() {
+                         this.classList.add('loaded');
+                     });
+                 });
+             }
+         });
+     </script>
  
  </body>
  </html>

@@ -1,6 +1,3 @@
-/* ====================================================== */
-/* 1. SELF-HOSTED FONT DEFINITIONS                        */
-/* ====================================================== */
 @font-face {
   font-display: swap;
   font-family: 'ABeeZee';
@@ -17,9 +14,6 @@
   src: url('../fonts/montserrat-v30-latin-700.woff2') format('woff2');
 }
 
-/* ====================================================== */
-/* 2. CSS VARIABLES (DESIGN TOKENS)                       */
-/* ====================================================== */
 :root {
     --color-primary: #212161;
     --color-accent: #FDE906;
@@ -34,9 +28,6 @@
     --border-radius: 5px;
 }
 
-/* ====================================================== */
-/* 3. GLOBAL STYLES & RESETS                              */
-/* ====================================================== */
 *, *::before, *::after { 
     box-sizing: border-box; 
 }
@@ -89,9 +80,6 @@ section {
     padding: clamp(3rem, 8vw, 5rem) 0; 
 }
 
-/* ====================================================== */
-/* 4. UTILITY & LAYOUT CLASSES                            */
-/* ====================================================== */
 .container { 
     max-width: var(--container-width); 
     margin: 0 auto; 
@@ -120,10 +108,6 @@ section {
     border: 0; 
 }
 
-/* ====================================================== */
-/* 5. COMPONENT STYLES                                    */
-/* ====================================================== */
-/* --- Buttons --- */
 .button-primary, .button-accent { 
     display: inline-block; 
     padding: 0.8rem 2rem; 
@@ -146,7 +130,6 @@ section {
     border-color: var(--color-primary); 
 }
 
-/* --- Forms --- */
 form { 
     display: flex; 
     flex-direction: column; 
@@ -178,7 +161,6 @@ form button {
     width: 100%; 
 }
 
-/* --- Header --- */
 .site-header { 
     background-color: var(--color-primary); 
     padding: 1rem 0; 
@@ -233,7 +215,6 @@ form button {
     font-family: var(--font-family-heading); 
 }
 
-/* --- Hero Section --- */
 .hero { 
     background: var(--color-primary); 
     color: var(--color-white); 
@@ -273,7 +254,6 @@ form button {
     margin-bottom: 0.5rem; 
 }
 
-/* --- Services Highlight --- */
 .services-highlight { 
     background-color: #f9f9f9; 
 }
@@ -296,12 +276,11 @@ form button {
     height: auto;
     max-width: 100%;
     object-fit: cover;
-    aspect-ratio: 800 / 534; /* Desktop aspect ratio */
+    aspect-ratio: 800 / 534;
     display: block;
-    contain: layout; /* Prevent layout shifts */
+    contain: layout;
 }
 
-/* Responsive aspect ratios to match critical CSS */
 @media (max-width: 600px) {
     .service-image { 
         aspect-ratio: 362 / 242; 
@@ -314,14 +293,12 @@ form button {
     }
 }
 
-/* Ensure picture element maintains aspect ratio */
 picture {
     display: block;
     width: 100%;
-    contain: layout; /* Prevent layout shifts */
+    contain: layout;
 }
 
-/* Optimize image loading */
 .service-image[loading="lazy"] {
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -351,7 +328,6 @@ picture {
 
 
 
-/* --- CTA Banner --- */
 .cta-banner { 
     background-color: var(--color-accent); 
     text-align: center; 
@@ -361,12 +337,11 @@ picture {
     color: var(--color-primary); 
 }
 
-/* --- Image Optimizations --- */
 img {
     max-width: 100%;
     height: auto;
     display: block;
-    contain: layout; /* Prevent layout shifts */
+    contain: layout;
 }
 
 img[loading="lazy"] {
@@ -378,7 +353,6 @@ img[loading="lazy"].loaded {
     opacity: 1;
 }
 
-/* --- Footer --- */
 .site-footer { 
     background-color: var(--color-primary); 
     color: var(--color-white); 
@@ -416,9 +390,6 @@ img[loading="lazy"].loaded {
     border-top: 1px solid rgba(255,255,255,0.2); 
 }
 
-/* ====================================================== */
-/* 6. RESPONSIVE STYLES                                   */
-/* ====================================================== */
 @media (max-width: 900px) {
     h1 { 
         font-size: 2.5rem; 
