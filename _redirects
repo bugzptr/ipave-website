@@ -1,0 +1,62 @@
+# I Pave Concrete - WordPress to Static Site Redirects
+# Based on sitemap analysis from ipave4u.co.nz
+
+# ======================================================
+# PRIORITY 1: Core Business Pages (301 Redirects)
+# ======================================================
+/about/ /about/index.html 301
+/services/ /services/index.html 301
+/contact/ /contact/index.html 301
+
+# ======================================================
+# PRIORITY 2: Content Pages (301 Redirects)
+# ======================================================
+/gallery/ /gallery/index.html 301
+/projects/ /projects/index.html 301
+/projects-2/ /projects/index.html 301
+/team/ /team/index.html 301
+
+# ======================================================
+# PRIORITY 3: Company Information (301 Redirects)
+# ======================================================
+/history/ /about/index.html#history 301
+/leadership/ /about/index.html#leadership 301
+
+# ======================================================
+# PRIORITY 4: E-commerce to Lead Generation (301 Redirects)
+# ======================================================
+/shop/ /services/ 301
+/cart/ /contact/quote-request.html 301
+/checkout/ /contact/quote-request.html 301
+/my-account/ /contact/ 301
+
+# ======================================================
+# WORDPRESS STRUCTURE CATCH-ALLS (301 Redirects)
+# ======================================================
+/wp-content/* / 301
+/wp-admin/* / 301
+/wp-includes/* / 301
+/wp-json/* / 301
+/wp-json/wp/v2/* / 301
+
+# ======================================================
+# OLD DOMAIN REDIRECTS (301 Redirects)
+# ======================================================
+# If you had any old domains or subdomains
+# /old-subdomain/* / 301
+
+# ======================================================
+# FALLBACK REDIRECTS (301 Redirects)
+# ======================================================
+# Catch any other WordPress-generated URLs
+/*.php / 301
+/*.html / 301
+/*.htm / 301
+
+# ======================================================
+# PERFORMANCE NOTES
+# ======================================================
+# - All redirects use 301 (permanent) for SEO value preservation
+# - Redirects are ordered by priority for faster processing
+# - WordPress structure redirects prevent 404s from old URLs
+# - E-commerce redirects guide users to lead generation pages

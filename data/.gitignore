@@ -1,0 +1,55 @@
+# WordPress Sitemap and Data Files
+sitemapxml.xml
+*.xml
+
+# WordPress Export Files
+*.sql
+*.sql.gz
+*.zip
+*.tar.gz
+
+# Configuration Files
+wp-config.php
+wp-config-*.php
+.htaccess
+
+# Database Dumps
+*.sql
+*.sql.gz
+*.db
+*.sqlite
+
+# Backup Files
+*.bak
+*.backup
+*~
+
+# Temporary Files
+*.tmp
+*.temp
+*.log
+
+# Sensitive Data
+passwords.txt
+credentials.txt
+api-keys.txt
+secrets.txt
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node Modules (if any)
+node_modules/
+
+# Environment Files
+.env
+.env.local
+.env.production
