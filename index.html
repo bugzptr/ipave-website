@@ -62,7 +62,8 @@
         p { margin: 0 0 1rem 0; }
         a { color: var(--color-primary); text-decoration: none; transition: opacity 0.2s ease; }
         a:hover { opacity: 0.8; }
-        img { max-width: 100%; height: auto; display: block; }
+                 img { max-width: 100%; height: auto; display: block; }
+         .service-image { width: 100%; height: auto; object-fit: cover; aspect-ratio: 362 / 242; }
         section { padding: clamp(3rem, 8vw, 5rem) 0; }
         
         .container { max-width: var(--container-width); margin: 0 auto; padding: 0 1.5rem; }
@@ -277,7 +278,27 @@
                     <p>Your One-Stop Concrete Contractor</p>
                 </div>
                 <div class="service-card">
-                    <img src="assets/images/paved-driveway.webp" alt="A newly paved residential driveway" loading="lazy" width="800" height="500">
+                    <picture>
+                        <!-- Mobile (small screens) - WebP for speed -->
+                        <source media="(max-width: 600px)" 
+                                srcset="assets/images/paved-driveway-mobile.webp" 
+                                type="image/webp">
+                        <!-- Tablet (medium screens) - WebP for speed -->
+                        <source media="(max-width: 900px)" 
+                                srcset="assets/images/paved-driveway-tablet.webp" 
+                                type="image/webp">
+                        <!-- Desktop (large screens) - WebP for excellent quality -->
+                        <source media="(min-width: 901px)" 
+                                srcset="assets/images/paved-driveway-desktop.webp" 
+                                type="image/webp">
+                        <!-- Fallback for browsers that don't support WebP -->
+                        <img src="assets/images/paved-driveway.jpg" 
+                             alt="A newly paved residential driveway" 
+                             loading="lazy" 
+                             width="800" 
+                             height="534" 
+                             class="service-image">
+                    </picture>
                     <div class="service-card-content">
                         <h3>Residential</h3>
                         <p>Driveways, Patios, Footpaths</p>
@@ -353,7 +374,27 @@
         <div class="footer-bottom">
             <p>&copy; 2025 I Pave Concrete. All Rights Reserved.</p>
         </div>
-    </footer>
-
-</body>
-</html>
+        </footer>
+ 
+    <!-- Image optimization script -->
+    <script>
+        // Optimize lazy loading images
+        document.addEventListener('DOMContentLoaded', function() {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            lazyImages.forEach(img => imageObserver.observe(img));
+        });
+    </script>
+ 
+ </body>
+ </html>

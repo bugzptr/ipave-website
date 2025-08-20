@@ -252,6 +252,84 @@ All Pages → Contact/Quote Request Forms
 *   **Images:** Place all images in the `/assets/images/` folder. Use descriptive filenames (e.g., `residential-driveway-paving.jpg`). Use SVGs for logos and icons whenever possible.
 *   **Fonts:** All fonts are self-hosted in `/assets/fonts/`. Ensure you have the correct `.woff2` files for any new font styles or weights.
 
+### Image Optimization with Squoosh - Hybrid Approach
+
+For optimal performance AND quality, we use a hybrid approach: WebP for mobile/tablet (speed) and PNG for desktop (maximum quality).
+
+#### Current Image: `paved-driveway.jpg`
+**Required sizes for responsive design (based on PageSpeed Insights):**
+
+1. **Mobile (≤600px):** `paved-driveway-mobile.webp`
+   - Dimensions: 362x242px (actual display size)
+   - Format: WebP
+   - Quality: 90-95% (for sharpness)
+   - Target file size: <25KB
+   - **Savings:** 114.6KB (from 139.6KB)
+
+2. **Tablet (601-900px):** `paved-driveway-tablet.webp`
+   - Dimensions: 500x334px (intermediate size)
+   - Format: WebP
+   - Quality: 90-95% (for sharpness)
+   - Target file size: <40KB
+   - **Savings:** 99.6KB (from 139.6KB)
+
+3. **Desktop (≥901px):** `paved-driveway-desktop.webp`
+   - Dimensions: 800x534px (actual display size per PageSpeed)
+   - Format: WebP
+   - Quality: 85-90% (excellent quality, much smaller than lossless)
+   - Target file size: <60KB
+   - **Savings:** 79.6KB (from 139.6KB)
+
+#### Image Optimization Tools:
+
+**Option 1: Paint.NET (Recommended)**
+- **File Format:** Save as WebP
+- **Quality Settings:** 
+  - Mobile: 90-95% quality
+  - Tablet: 90-95% quality  
+  - Desktop: 85-90% quality
+- **Resize:** Use Image → Resize to exact dimensions
+- **Save Settings:** Enable "Lossy" compression (not lossless)
+
+**Option 2: Squoosh (Alternative)**
+- **For Mobile/Tablet (WebP):**
+  - **Compression:** WebP
+  - **Quality:** 90-95% (for sharpness)
+  - **Resize:** Enable, maintain aspect ratio
+  - **Metadata:** Remove unnecessary metadata
+  - **Advanced:** Enable "Sharp YUV" if available
+
+- **For Desktop (WebP):**
+  - **Compression:** WebP
+  - **Quality:** 85-90% (excellent quality, much smaller than lossless)
+  - **Resize:** Enable, maintain aspect ratio
+  - **Metadata:** Remove unnecessary metadata
+  - **Advanced:** Enable "Sharp YUV" if available
+
+#### Paint.NET Workflow:
+
+1. **Open your original image** in Paint.NET
+2. **Resize for each target size:**
+   - **Mobile:** Image → Resize → 362 × 242 pixels
+   - **Tablet:** Image → Resize → 500 × 334 pixels  
+   - **Desktop:** Image → Resize → 800 × 534 pixels
+3. **Save as WebP:** File → Save As → WebP format
+4. **Quality settings:**
+   - **Mobile/Tablet:** 90-95% quality (sharp, fast)
+   - **Desktop:** 85-90% quality (excellent, optimized)
+5. **Ensure "Lossy" is enabled** (not lossless)
+6. **Fallback:** Keep original `paved-driveway.jpg` for browsers without WebP support
+
+#### Benefits:
+- **Mobile users:** Download only 25KB instead of 139.6KB (82% reduction)
+- **Tablet users:** Download only 40KB instead of 139.6KB (71% reduction)
+- **Desktop users:** Download only 60KB instead of 139.6KB (57% reduction) + **excellent quality**
+- **Total savings:** ~120KB per image
+- **Best of both worlds:** Speed on mobile, excellent quality on desktop
+- **Improved LCP:** Faster image loading on all devices
+- **Better Core Web Vitals:** Reduced CLS and improved performance scores
+- **User satisfaction:** All users get fast-loading, high-quality images
+
 ### SEO & Content Strategy
 
 *   **Keywords:** Each service page should target specific, relevant keywords while maintaining natural readability.

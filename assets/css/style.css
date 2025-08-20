@@ -291,6 +291,31 @@ form button {
     margin-bottom: 2rem; 
 }
 
+.service-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    aspect-ratio: 800 / 534;
+    display: block;
+}
+
+/* Ensure picture element maintains aspect ratio */
+picture {
+    display: block;
+    width: 100%;
+}
+
+/* Optimize image loading */
+.service-image[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-image[loading="lazy"].loaded {
+    opacity: 1;
+}
+
 .service-card-content { 
     padding: 2rem; 
     display: flex; 
@@ -343,6 +368,22 @@ form button {
 
 .cta-banner h2 { 
     color: var(--color-primary); 
+}
+
+/* --- Image Optimizations --- */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
 }
 
 /* --- Footer --- */
