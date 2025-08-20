@@ -296,9 +296,22 @@ form button {
     height: auto;
     max-width: 100%;
     object-fit: cover;
-    aspect-ratio: 800 / 534;
+    aspect-ratio: 800 / 534; /* Desktop aspect ratio */
     display: block;
     contain: layout; /* Prevent layout shifts */
+}
+
+/* Responsive aspect ratios to match critical CSS */
+@media (max-width: 600px) {
+    .service-image { 
+        aspect-ratio: 362 / 242; 
+    }
+}
+
+@media (max-width: 900px) and (min-width: 601px) {
+    .service-image { 
+        aspect-ratio: 500 / 334; 
+    }
 }
 
 /* Ensure picture element maintains aspect ratio */
