@@ -298,12 +298,14 @@ form button {
     object-fit: cover;
     aspect-ratio: 800 / 534;
     display: block;
+    contain: layout; /* Prevent layout shifts */
 }
 
 /* Ensure picture element maintains aspect ratio */
 picture {
     display: block;
     width: 100%;
+    contain: layout; /* Prevent layout shifts */
 }
 
 /* Optimize image loading */
@@ -375,6 +377,7 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    contain: layout; /* Prevent layout shifts */
 }
 
 img[loading="lazy"] {
