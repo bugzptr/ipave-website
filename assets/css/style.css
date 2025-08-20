@@ -220,6 +220,10 @@ form button {
     color: var(--color-white); 
 }
 
+.hero-text {
+    margin-top: -2rem;
+}
+
 .hero h1 { 
     color: var(--color-accent); 
 }
@@ -228,7 +232,7 @@ form button {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     gap: 3rem; 
-    align-items: center; 
+    align-items: start; 
 }
 
 .hero-form-container { 
