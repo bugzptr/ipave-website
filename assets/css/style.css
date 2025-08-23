@@ -336,6 +336,29 @@ picture {
     min-height: 100px;
 }
 
+.partner-logos a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: opacity 0.2s ease;
+}
+
+.partner-logos a:hover {
+    opacity: 0.8;
+}
+
+.partner-text {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    text-align: center;
+    max-width: 200px;
+}
+
 .partner-logo {
     max-width: 200px;
     height: auto;
@@ -357,11 +380,15 @@ picture {
 
 .partner-logo:hover {
     transform: scale(1.05);
-    opacity: 0.8;
 }
 
 @media (max-width: 600px) {
     .partner-logo {
+        max-width: 150px;
+    }
+    
+    .partner-text {
+        font-size: 1rem;
         max-width: 150px;
     }
 }
