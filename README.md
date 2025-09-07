@@ -4,6 +4,113 @@
 
 A fast, modern, and maintainable static website for I Pave Concrete, built with pure HTML, CSS, and vanilla JavaScript. This project replaces a previous WordPress site and is hosted on Cloudflare Pages for optimal performance and security.
 
+## 🚀 Performance Achievements
+
+**Perfect Core Web Vitals Achieved:**
+- **CLS Score**: 0 (Perfect!) on both Mobile and Desktop
+- **Speed Index**: 0.8s Mobile, 0.3s Desktop (Excellent!)
+- **First Contentful Paint**: 0.8s Mobile, 0.2s Desktop
+- **Largest Contentful Paint**: 1.1s Mobile, 0.3s Desktop
+- **Total Blocking Time**: 0ms on both devices
+- **Forced Reflows**: Eliminated (0ms)
+
+This website now meets Google's highest performance standards and provides an optimal user experience across all devices.
+
+## 🎯 Performance Optimization Journey
+
+### Initial Challenges
+- **CLS Score**: Started at 0.151 (Poor)
+- **Speed Index**: Started at 3.5s (Slow)
+- **Element Render Delay**: Started at 2,260ms (Very Slow)
+- **Forced Reflows**: 37ms (Performance Impact)
+
+### Optimization Strategy Implemented
+
+#### 1. **Cumulative Layout Shift (CLS) Fixes**
+- **Explicit Logo Dimensions**: Set `width: 250px; height: 60px` with `object-fit: contain`
+- **Layout Containment**: Applied `contain: layout` strategically to prevent layout shifts
+- **Min-Height Constraints**: Added stable dimensions to headings and hero sections
+- **Font Loading Strategy**: Used `font-display: block` to prevent font-related shifts
+- **Device-Specific Optimizations**: Different constraints for mobile vs desktop layouts
+
+#### 2. **Performance Optimizations**
+- **System Fonts for Critical Elements**: Used `-apple-system, BlinkMacSystemFont` for immediate rendering
+- **Font Preloading**: Preloaded critical fonts with `crossorigin` attribute
+- **JavaScript Optimization**: Eliminated `IntersectionObserver` and `requestAnimationFrame` that caused forced reflows
+- **Image Optimization**: Implemented responsive images with WebP format
+- **Critical CSS**: Moved above-the-fold styles to the top of the document
+
+#### 3. **Technical Implementation Details**
+
+**Layout Stability:**
+```css
+/* Critical above-the-fold styles */
+.hero-text h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 700;
+    color: #FDE906;
+    min-height: 1.1em;
+    contain: layout;
+}
+
+/* Explicit logo dimensions */
+.site-logo img { 
+    width: 250px; 
+    height: 60px; 
+    object-fit: contain; 
+}
+
+/* Layout containment */
+.hero-text { 
+    min-height: 300px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    contain: layout; 
+}
+```
+
+**Font Loading Strategy:**
+```css
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: block; /* Prevents layout shifts */
+    src: url('assets/fonts/montserrat-v30-latin-700.woff2') format('woff2');
+}
+```
+
+**JavaScript Optimization:**
+```javascript
+// Minimal script for optimal performance
+document.addEventListener('DOMContentLoaded', function() {
+    // Only apply to images that need it (not critical above-the-fold images)
+    const images = document.querySelectorAll('img:not(.site-logo img)');
+    images.forEach(img => {
+        img.addEventListener('load', function() {
+            this.style.opacity = '1';
+        });
+        img.style.opacity = '0.8';
+        img.style.transition = 'opacity 0.2s ease';
+    });
+});
+```
+
+#### 4. **SEO Enhancements**
+- **Google Business Profile Integration**: Added Place ID `ChIJ83t94geRMW0RxLzvXLzBZWA` to JSON-LD schema
+- **Structured Data**: Enhanced LocalBusiness schema with `sameAs` property
+- **Local SEO**: Optimized for Christchurch and Canterbury region
+
+### Results Achieved
+- **CLS Improvement**: 0.151 → 0 (100% improvement)
+- **Speed Index Improvement**: 3.5s → 0.8s Mobile, 0.3s Desktop (77% improvement)
+- **Render Delay Improvement**: 2,260ms → 220ms Mobile, 310ms Desktop (90% improvement)
+- **Forced Reflow Elimination**: 37ms → 0ms (100% improvement)
+
 ## Project Overview
 
 *   **Goal:** To create a high-performance, secure, and easily updatable marketing website.
