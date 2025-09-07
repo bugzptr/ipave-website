@@ -118,6 +118,7 @@
         section { padding: clamp(3rem, 8vw, 5rem) 0; }
         
         .container { max-width: var(--container-width); margin: 0 auto; padding: 0 1.5rem; }
+        .container.hero-content { contain: layout; }
         .text-center { text-align: center; }
         .text-center p { max-width: 750px; margin-left: auto; margin-right: auto; }
         .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
@@ -141,7 +142,14 @@
         
         .hero { background: var(--color-primary); color: var(--color-white); min-height: 100vh; display: flex; align-items: center; }
         .hero h1 { color: var(--color-accent); }
-        .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; width: 100%; contain: layout; }
+        .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; width: 100%; contain: layout; min-height: 500px; }
+        
+        /* Desktop-specific optimizations */
+        @media (min-width: 901px) {
+            .hero-content { min-height: 600px; }
+            .hero-text { min-height: 400px; }
+            .hero-form-container { min-height: 500px; }
+        }
         .hero-text { min-height: 300px; display: flex; flex-direction: column; justify-content: center; contain: layout; }
         .hero-form-container { background: var(--color-white); color: var(--color-text-body); padding: 2rem; border-radius: var(--border-radius); min-height: 400px; display: flex; flex-direction: column; justify-content: center; }
         .hero-form-container h3, .hero-form-container p { color: var(--color-primary); text-align: center; }
@@ -420,33 +428,18 @@
         </footer>
  
               <script>
+         // Optimized script to prevent forced reflows
          document.addEventListener('DOMContentLoaded', function() {
-             const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-             
-             if ('IntersectionObserver' in window) {
-                 const imageObserver = new IntersectionObserver((entries) => {
-                     entries.forEach(entry => {
-                         if (entry.isIntersecting) {
-                             const img = entry.target;
-                             requestAnimationFrame(() => {
-                                 img.classList.add('loaded');
-                             });
-                             imageObserver.unobserve(img);
-                         }
-                     });
-                 }, {
-                     rootMargin: '50px 0px',
-                     threshold: 0.1
+             // Simple, non-intrusive image loading without forced reflows
+             const images = document.querySelectorAll('img');
+             images.forEach(img => {
+                 img.addEventListener('load', function() {
+                     this.style.opacity = '1';
                  });
-                 
-                 lazyImages.forEach(img => imageObserver.observe(img));
-             } else {
-                 lazyImages.forEach(img => {
-                     img.addEventListener('load', function() {
-                         this.classList.add('loaded');
-                     });
-                 });
-             }
+                 // Set initial opacity to prevent flash
+                 img.style.opacity = '0';
+                 img.style.transition = 'opacity 0.3s ease';
+             });
          });
      </script>
  
