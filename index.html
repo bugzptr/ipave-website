@@ -35,6 +35,7 @@
 
     <link rel="preload" href="assets/fonts/montserrat-v30-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/abeezee-v22-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/images/logo-horizontal.svg" as="image">
     
     <style>
         @font-face {
@@ -71,8 +72,8 @@
         *, *::before, *::after { box-sizing: border-box; }
         body { margin: 0; font-family: var(--font-family-body); color: var(--color-text-body); background-color: var(--color-white); line-height: 1.6; }
         h1, h2, h3, h4 { font-family: var(--font-family-heading); color: var(--color-primary); margin: 0 0 1rem 0; font-weight: 700; line-height: 1.2; }
-        h1 { font-size: 3rem; min-height: 1.2em; }
-        h2 { font-size: 2.5rem; min-height: 1.2em; }
+        h1 { font-size: 3rem; min-height: 1.2em; contain: layout style; }
+        h2 { font-size: 2.5rem; min-height: 1.2em; contain: layout style; }
         p { margin: 0 0 1rem 0; }
         a { color: var(--color-primary); text-decoration: none; transition: opacity 0.2s ease; }
         a:hover { opacity: 0.8; }
@@ -99,6 +100,7 @@
             .header-bottom { justify-content: center; }
             .phone-link { font-size: 2rem; }
         }
+        main { min-height: 100vh; }
         section { padding: clamp(3rem, 8vw, 5rem) 0; }
         
         .container { max-width: var(--container-width); margin: 0 auto; padding: 0 1.5rem; }
@@ -123,11 +125,11 @@
         .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 2rem; }
         .main-nav a { color: var(--color-white); font-family: var(--font-family-heading); }
         
-        .hero { background: var(--color-primary); color: var(--color-white); min-height: 100vh; display: flex; align-items: center; }
-        .hero h1 { color: var(--color-accent); }
-        .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; width: 100%; }
-        .hero-text { min-height: 400px; display: flex; flex-direction: column; justify-content: center; }
-        .hero-form-container { background: var(--color-white); color: var(--color-text-body); padding: 2rem; border-radius: var(--border-radius); min-height: 500px; display: flex; flex-direction: column; justify-content: center; }
+        .hero { background: var(--color-primary); color: var(--color-white); min-height: 100vh; display: flex; align-items: center; contain: layout; }
+        .hero h1 { color: var(--color-accent); contain: layout style; }
+        .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; width: 100%; contain: layout; }
+        .hero-text { min-height: 400px; display: flex; flex-direction: column; justify-content: center; contain: layout; }
+        .hero-form-container { background: var(--color-white); color: var(--color-text-body); padding: 2rem; border-radius: var(--border-radius); min-height: 500px; display: flex; flex-direction: column; justify-content: center; contain: layout; }
         .hero-form-container h3, .hero-form-container p { color: var(--color-primary); text-align: center; }
         .hero-services-list { 
             list-style: none; 
@@ -139,6 +141,13 @@
             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23FDE906' class='bi bi-check-lg' viewBox='0 0 16 16'%3E%3Cpath d='M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z'/%3E%3C/svg%3E") no-repeat 0 0.4em; 
         }
         
+        /* Critical CSS for immediate rendering */
+        .hero-text h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+        
         .services-highlight { background-color: #f9f9f9; }
         .section-header { text-align: center; margin-bottom: 3rem; }
         .service-card { background: var(--color-white); border: 1px solid var(--color-light-gray); border-radius: var(--border-radius); overflow: hidden; margin-bottom: 2rem; }
@@ -147,7 +156,7 @@
         .arrow-link { font-size: 2.5rem; line-height: 1; font-weight: bold; }
         
         @media (max-width: 900px) {
-            h1 { font-size: 2.5rem; min-height: 1.2em; }
+            h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); min-height: 1.2em; }
             h2 { font-size: 2rem; min-height: 1.2em; }
             .main-nav { display: none; }
             .hero-content { grid-template-columns: 1fr; }
