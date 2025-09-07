@@ -105,6 +105,11 @@ document.addEventListener('DOMContentLoaded', function() {
 - **Structured Data**: Enhanced LocalBusiness schema with `sameAs` property
 - **Local SEO**: Optimized for Christchurch and Canterbury region
 
+#### 5. **Analytics Ready**
+- **Cloudflare Web Analytics**: Ready for implementation when needed
+- **Privacy-Focused**: Will use cookie-free analytics when implemented
+- **Performance Optimized**: Analytics script will be lightweight and non-blocking
+
 ### Results Achieved
 - **CLS Improvement**: 0.151 → 0 (100% improvement)
 - **Speed Index Improvement**: 3.5s → 0.8s Mobile, 0.3s Desktop (77% improvement)
@@ -120,7 +125,78 @@ document.addEventListener('DOMContentLoaded', function() {
 
 *   **Frontend:** HTML5, CSS3 (with Custom Properties), Vanilla JavaScript (ES6)
 *   **Hosting:** [Cloudflare Pages](https://pages.cloudflare.com/)
+*   **Analytics:** Not currently implemented (ready for Cloudflare Web Analytics when needed)
 *   **Form Handling:** [Formspree](https://formspree.io/) for processing contact form submissions.
+
+---
+
+## 📊 Cloudflare Web Analytics
+
+### Why Cloudflare Analytics?
+
+**Privacy-First Approach:**
+- **No Cookies Required**: Eliminates the need for cookie consent banners
+- **GDPR Compliant**: Respects user privacy without compromising data collection
+- **No Fingerprinting**: Doesn't track users across sessions or websites
+
+**Performance Benefits:**
+- **Server-Side Tracking**: Minimal impact on page load times
+- **Real-Time Data**: Immediate insights into website performance
+- **Core Web Vitals**: Measures actual user experience metrics
+- **Lightweight**: Only 1KB JavaScript file
+
+**Key Features:**
+- **Page Views**: Track unique visitors and page views
+- **Referrers**: See where your traffic comes from
+- **Core Web Vitals**: LCP, FID, CLS measurements from real users
+- **Geographic Data**: Country-level visitor information
+- **Device Information**: Desktop vs mobile usage
+
+### Implementation
+
+The analytics script is already implemented in the HTML:
+
+```html
+<!-- Cloudflare Web Analytics - Privacy-focused analytics without cookies -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN_HERE"}'></script>
+```
+
+### Setup Instructions
+
+1. **Enable Web Analytics in Cloudflare Dashboard:**
+   - Log into your Cloudflare account
+   - Navigate to your domain's Analytics & Logs section
+   - Enable "Web Analytics"
+   - Copy your unique token
+
+2. **Update the Token:**
+   - Replace `YOUR_TOKEN_HERE` in the script tag with your actual token
+   - The token will be provided by Cloudflare when you enable the service
+
+3. **Verify Implementation:**
+   - Check the Cloudflare dashboard for incoming data
+   - Data typically appears within 24 hours
+   - Real-time data is available immediately
+
+### Advantages Over Google Analytics
+
+| Feature | Cloudflare Analytics | Google Analytics |
+|---------|-------------------|------------------|
+| **Privacy** | ✅ No cookies, GDPR compliant | ❌ Requires cookie consent |
+| **Performance** | ✅ Minimal impact (1KB) | ❌ Heavy impact (45KB+) |
+| **Setup** | ✅ Simple script tag | ❌ Complex configuration |
+| **Real-time** | ✅ Immediate data | ❌ 24-48 hour delay |
+| **Core Web Vitals** | ✅ Built-in tracking | ❌ Requires separate setup |
+| **Server Load** | ✅ Server-side tracking | ❌ Client-side JavaScript |
+
+### Data You'll Get
+
+- **Traffic Overview**: Unique visitors, page views, bounce rate
+- **Performance Metrics**: Core Web Vitals from real users
+- **Geographic Data**: Country-level visitor distribution
+- **Referrer Information**: Where your traffic originates
+- **Device Breakdown**: Desktop vs mobile usage
+- **Top Pages**: Most visited content on your site
 
 ---
 
