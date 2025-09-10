@@ -50,6 +50,8 @@
 # ======================================================
 # Catch any other WordPress-generated URLs
 /*.php / 301
+# Exclude specific service pages from catch-all redirect
+!/concrete-patio-christchurch.html
 /*.html / 301
 /*.htm / 301
 
