@@ -1,8 +1,37 @@
 
 
-# I Pave Concrete Website
+# I Pave Concrete & Asphalt Website
 
-A fast, modern, and maintainable static website for I Pave Concrete, built with pure HTML, CSS, and vanilla JavaScript. This project replaces a previous WordPress site and is hosted on Cloudflare Pages for optimal performance and security.
+A fast, modern, and maintainable static website for I Pave Concrete & Asphalt, built with pure HTML, CSS, and vanilla JavaScript. This project replaces a previous WordPress site and is hosted on Cloudflare Pages for optimal performance and security.
+
+## 🎯 NAP Consistency & Local SEO Focus
+
+This website prioritizes **NAP (Name, Address, Phone) consistency** to support Google Business Profile optimization and prevent suspension issues. All business information is standardized across pages:
+
+- **Business Name**: I Pave Concrete & Asphalt
+- **Phone**: 0800 472 8348
+- **Address**: 335 Kainga Road, Kainga, Christchurch 8083, New Zealand
+- **Email**: admin@ipave.co.nz
+
+### SEO Strategy
+- Optimized for "concrete patio christchurch" and related local keywords
+- Dedicated service pages for key offerings
+- Consistent business information across all pages
+- Structured NAP format in headers and footers
+
+## 📋 Current Status & Recent Updates
+
+### Recent Changes (Latest)
+- **Business Name Standardization**: Updated from "I Pave Concrete" to "I Pave Concrete & Asphalt" across all pages
+- **NAP Consistency**: Implemented standardized NAP format in footer sections
+- **JSON-LD Removal**: Temporarily removed structured data to resolve GBP suspension issues
+- **Service Page Creation**: Added dedicated concrete patio service page (`concrete-patio.html`)
+
+### Next Steps
+1. **Monitor GBP Status**: Ensure suspension issues are resolved with consistent NAP
+2. **Re-add JSON-LD**: Once NAP is stable, add back structured data
+3. **Update GBP**: Align Google Business Profile with website information
+4. **Expand Service Pages**: Create additional dedicated service pages as needed
 
 ## 🚀 Performance Achievements
 
