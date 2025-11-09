@@ -3,10 +3,6 @@
 
 # Main pages
 /about/ /about.html 301
-/contact/ /contact/ 301
-/gallery/ /gallery/ 301
-/projects/ /projects/ 301
-/team/ /team/ 301
 
 # History and Leadership redirect to About
 /history/ /about.html 301
