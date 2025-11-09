@@ -1,0 +1,34 @@
+# Legacy WordPress redirects
+# Redirect old WordPress URLs to new site structure
+
+# Main pages
+/about/ /about.html 301
+/services/ /services/ 301
+/contact/ /contact/ 301
+/gallery/ /gallery/ 301
+/projects/ /projects/ 301
+/team/ /team/ 301
+
+# History and Leadership redirect to About
+/history/ /about.html 301
+/leadership/ /about.html 301
+
+# Projects redirects
+/projects-2/ /projects/ 301
+
+# E-commerce to Lead Generation redirects
+/shop/ /services/ 301
+/cart/ /contact/ 301
+/checkout/ /contact/ 301
+/my-account/ /contact/ 301
+
+# WordPress structure redirects
+/wp-content/* / 301
+/wp-admin/* / 301
+/wp-includes/* / 301
+
+# Service page redirects (if old URLs exist)
+/services/driveway-paving /services/residential-driveways.html 301
+/services/commercial-concrete /services/commercial-paving.html 301
+/services/concrete-maintenance /services/concrete-repair.html 301
+

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#212161">
+    <meta name="msapplication-TileColor" content="#212161">
+    <title>Our Team | I Pave Concrete & Asphalt | Experienced Concrete Specialists</title>
+    <meta name="description" content="Meet the experienced team at I Pave Concrete & Asphalt. With decades of combined experience, our skilled professionals deliver quality concrete work across Christchurch.">
+    
+    <meta name="keywords" content="concrete team Christchurch, concrete specialists, I Pave team, experienced concrete contractors">
+    <meta name="author" content="I Pave Concrete & Asphalt">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://ipave-website.pages.dev/team/">
+    <link rel="preload" href="../assets/fonts/montserrat-v30-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/abeezee-v22-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/images/logo-horizontal.svg" as="image">
+    
+    <style>
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-display: block;
+            src: url('../assets/fonts/montserrat-v30-latin-700.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'ABeeZee';
+            font-style: normal;
+            font-weight: 400;
+            font-display: block;
+            src: url('../assets/fonts/abeezee-v22-latin-regular.woff2') format('woff2');
+        }
+    </style>
+    
+    <style>
+        :root {
+            --color-primary: #212161;
+            --color-accent: #FDE906;
+            --color-light-gray: #E0E0E0;
+            --color-dark: #000000;
+            --color-white: #FFFFFF;
+            --color-text-body: #333;
+            --font-family-heading: 'Montserrat', sans-serif;
+            --font-family-body: 'ABeeZee', sans-serif;
+            --spacing-unit: 1rem;
+            --container-width: 1140px;
+            --border-radius: 5px;
+        }
+        
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-family: var(--font-family-body); color: var(--color-text-body); background-color: var(--color-white); line-height: 1.6; }
+        
+        h1, h2, h3, h4 { font-family: var(--font-family-heading); color: var(--color-primary); margin: 0 0 1rem 0; font-weight: 700; line-height: 1.2; }
+        h1 { font-size: 3rem; min-height: 1.2em; }
+        h2 { font-size: 2.5rem; min-height: 1.2em; }
+        p { margin: 0 0 1rem 0; }
+        a { color: var(--color-primary); text-decoration: none; transition: opacity 0.2s ease; }
+        a:hover { opacity: 0.8; }
+        img { max-width: 100%; height: auto; display: block; contain: layout; }
+        .site-logo img { width: 250px; height: 60px; object-fit: contain; }
+        
+        main { min-height: 100vh; }
+        section { padding: clamp(3rem, 8vw, 5rem) 0; }
+        
+        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 1.5rem; }
+        .text-center { text-align: center; }
+        .text-center p { max-width: 750px; margin-left: auto; margin-right: auto; }
+        
+        .button-primary { display: inline-block; padding: 0.8rem 2rem; border-radius: var(--border-radius); font-family: var(--font-family-heading); text-align: center; background-color: var(--color-primary); color: var(--color-white); font-weight: 700; }
+        
+        .site-header { background-color: var(--color-primary); padding: 1rem 0; min-height: 120px; }
+        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); min-height: 60px; }
+        .header-bottom { display: flex; justify-content: space-between; align-items: center; min-height: 40px; }
+        .site-logo img { max-width: 250px; }
+        .header-phone { text-align: right; min-height: 60px; display: flex; align-items: center; justify-content: flex-end; contain: layout; }
+        .phone-link { color: var(--color-accent); font-family: var(--font-family-heading); font-size: 2.5rem; font-weight: 700; text-decoration: none; }
+        .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 2rem; }
+        .main-nav a { color: var(--color-white); font-family: var(--font-family-heading); }
+        
+        .hero { background: var(--color-primary); color: var(--color-white); min-height: 50vh; display: flex; align-items: center; }
+        .hero h1 { color: var(--color-accent); }
+        .hero-content { text-align: center; }
+        
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .team-member { background: var(--color-white); border: 1px solid var(--color-light-gray); border-radius: var(--border-radius); padding: 2rem; text-align: center; }
+        .team-member h3 { color: var(--color-primary); margin-bottom: 0.5rem; }
+        .team-member .role { color: var(--color-accent); font-weight: 700; margin-bottom: 1rem; }
+        
+        .site-footer { background: var(--color-primary); color: var(--color-white); padding: 3rem 0 1rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-contact h4, .footer-services h4, .footer-form h4 { color: var(--color-accent); margin-bottom: 1rem; }
+        .footer-services ul { list-style: none; padding: 0; }
+        .footer-services li { margin-bottom: 0.5rem; }
+        .footer-services a { color: var(--color-white); }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
+        
+        .nap-info { margin-top: 1rem; }
+        .nap-info p { margin-bottom: 0.5rem; line-height: 1.4; }
+        .nap-info a { color: var(--color-white); text-decoration: underline; }
+        .nap-info a:hover { color: var(--color-accent); }
+        
+        @media (max-width: 900px) {
+            h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+            h2 { font-size: 2rem; }
+            .main-nav { display: none; }
+            .header-quote-button { display: none; }
+            .phone-link { font-size: 2rem; }
+        }
+        @media (max-width: 600px) {
+            .phone-link { font-size: 1.5rem; }
+        }
+    </style>
+
+    <link rel="stylesheet" href="../assets/css/style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="../assets/css/style.css"></noscript>
+    
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="header-top">
+                <a href="../" class="site-logo">
+                    <img src="../assets/images/logo-horizontal.svg" alt="I Pave Concrete & Asphalt Logo">
+                </a>
+                <div class="header-phone">
+                    <a href="tel:08004728348" class="phone-link">0800 472 8348</a>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <nav class="main-nav" aria-label="Main navigation">
+                    <ul>
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../our-process.html">Our Process</a></li>
+                        <li><a href="../services/">Services</a></li>
+                        <li><a href="../projects/">Our Projects</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </nav>
+                <a href="../contact/" class="button-primary header-quote-button">Get a quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>Our Team</h1>
+                <p>Meet the experienced professionals behind I Pave Concrete & Asphalt. Our dedicated team brings decades of combined experience to every project.</p>
+            </div>
+        </section>
+
+        <section class="intro">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 3rem;">
+                    <h2>Experienced Professionals You Can Trust</h2>
+                    <p>At I Pave Concrete & Asphalt, we're proud of our team. Many of our staff have worked with us for 15, even 20 years, bringing unmatched experience and dedication to every project. This loyalty and commitment to quality is what sets us apart.</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <h3>Daryl McLachlan</h3>
+                        <p class="role">Founder & Owner</p>
+                        <p>With nearly 50 years of concrete experience, Daryl started I Pave Concrete 28 years ago. His expertise and commitment to quality have built the company into Christchurch's trusted concrete specialists.</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <h3>Brook McLachlan</h3>
+                        <p class="role">Team Member</p>
+                        <p>Part of the family business, Brook brings fresh perspective while maintaining the high standards and craftsmanship that define I Pave Concrete.</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <h3>Our Skilled Team</h3>
+                        <p class="role">Concrete Specialists</p>
+                        <p>Our team of experienced concrete placers and specialists have over 100 years of combined experience. Many have been with us for 15-20 years, demonstrating their commitment to quality and the company.</p>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 3rem;">
+                    <p>Want to join our team? We're always looking for skilled, dedicated professionals. <a href="../contact/">Contact us</a> to learn more.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-contact">
+                <img src="../assets/images/logo-horizontal.svg" alt="I Pave Concrete & Asphalt Logo" class="footer-logo">
+                <h4>Contact Info</h4>
+                <div class="nap-info">
+                    <p><strong>I Pave Concrete & Asphalt</strong></p>
+                    <p>335 Kainga Road<br>
+                    Kainga, Christchurch 8083<br>
+                    New Zealand</p>
+                    <p>Phone: <a href="tel:08004728348">0800 472 8348</a><br>
+                    Email: <a href="mailto:admin@ipave.co.nz">admin@ipave.co.nz</a></p>
+                </div>
+            </div>
+            <div class="footer-services">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="../concrete-patio.html">Concrete Patio Christchurch</a></li>
+                    <li><a href="../services/residential-driveways.html">Residential Driveways</a></li>
+                    <li><a href="../services/commercial-paving.html">Commercial Paving</a></li>
+                    <li><a href="../services/concrete-repair.html">Concrete Repair</a></li>
+                    <li><a href="../services/decorative-concrete.html">Decorative Concrete</a></li>
+                    <li><a href="../services/kerbing-services.html">Kerbing Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-form">
+                <h4>Send Us a Message</h4>
+                <form action="https://formspree.io/f/xjkodern" method="POST">
+                    <input type="text" name="name" placeholder="First Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Tell us about your project" rows="3" required></textarea>
+                    <button type="submit" class="button-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 I Pave Concrete & Asphalt. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
