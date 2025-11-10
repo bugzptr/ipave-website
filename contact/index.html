@@ -37,6 +37,11 @@
     <link rel="preload" href="../assets/fonts/abeezee-v22-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/images/logo-horizontal.svg" as="image">
     
+    <!-- Encode Sans Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600;700;900&family=Encode+Sans+Expanded:wght@700&display=swap" rel="stylesheet">
+    
     <style>
         @font-face {
             font-family: 'Montserrat';
@@ -118,6 +123,163 @@
         .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 2rem; }
         .main-nav a { color: var(--color-white); font-family: var(--font-family-heading); }
         
+        .contact-hero { background: var(--color-primary); color: var(--color-white); padding: clamp(3rem, 8vw, 5rem) 0; display: flex; align-items: center; justify-content: center; min-height: auto; }
+        
+        .contact-content-box { 
+            background: var(--color-white); 
+            border: 2px solid var(--color-accent); 
+            border-radius: var(--border-radius);
+            max-width: 1026px;
+            width: 100%;
+            margin: 0 auto;
+            padding: clamp(2rem, 5vw, 4rem);
+            color: var(--color-text-body);
+        }
+        
+        .contact-content-box h1 { 
+            font-family: 'Encode Sans Expanded', 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 4rem);
+            color: var(--color-primary);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            line-height: 0.9;
+            letter-spacing: -0.06em;
+        }
+        
+        .contact-intro { 
+            font-family: 'Encode Sans Semi Condensed', 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: clamp(1.25rem, 2.5vw, 2rem);
+            color: var(--color-primary);
+            text-align: center;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .contact-description {
+            font-family: 'Encode Sans Semi Condensed', 'ABeeZee', sans-serif;
+            font-weight: 400;
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
+            color: var(--color-primary);
+            text-align: center;
+            margin-bottom: 3rem;
+            line-height: 1.5;
+            max-width: 926px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .contact-info-column {
+            font-family: 'Encode Sans Semi Condensed', 'ABeeZee', sans-serif;
+        }
+        
+        .contact-info-column h3 {
+            font-family: 'Encode Sans Semi Condensed', 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.125rem, 1.75vw, 1.5625rem);
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info-column p {
+            font-weight: 400;
+            font-size: clamp(0.9375rem, 1.25vw, 1.5625rem);
+            color: var(--color-primary);
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info-column a {
+            color: var(--color-primary);
+            text-decoration: underline;
+        }
+        
+        .form-section {
+            margin: 3rem 0;
+        }
+        
+        .form-section h2 {
+            font-family: 'Encode Sans Semi Condensed', 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+            color: var(--color-primary);
+            text-align: center;
+            margin-bottom: 2rem;
+            line-height: 0.9;
+        }
+        
+        .contact-form {
+            max-width: 756px;
+            margin: 0 auto;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            height: 69px;
+            border: 1px solid var(--color-primary);
+            border-radius: var(--border-radius);
+            font-family: 'Encode Sans Semi Condensed', 'ABeeZee', sans-serif;
+            font-size: clamp(1rem, 1.5vw, 2rem);
+            padding: 1rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-form textarea {
+            height: auto;
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: var(--color-primary);
+            opacity: 0.7;
+        }
+        
+        .contact-form button {
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+            border: none;
+            font-family: 'Encode Sans Semi Condensed', 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: clamp(1rem, 1.5vw, 2rem);
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            width: 100%;
+            max-width: 305px;
+            margin: 2rem auto 0;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+        
+        .contact-tagline {
+            font-family: 'Encode Sans Semi Condensed', 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.25rem, 2vw, 2rem);
+            color: var(--color-primary);
+            text-align: center;
+            margin-top: 3rem;
+            line-height: 1.2;
+        }
+        
+        .contact-tagline p {
+            font-weight: 400;
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
+            margin-top: 0.5rem;
+        }
+        
         .hero { background: var(--color-primary); color: var(--color-white); min-height: 60vh; display: flex; align-items: center; }
         .hero h1 { color: var(--color-accent); }
         .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; width: 100%; contain: layout; min-height: 400px; }
@@ -151,12 +313,15 @@
             .main-nav { display: none; }
             .hero-content { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
+            .contact-info-grid { grid-template-columns: 1fr; gap: 2rem; }
             .header-flex { justify-content: center; }
             .header-quote-button { display: none; }
             .phone-link { font-size: 2rem; }
+            .contact-content-box { margin: 0 1.5rem; padding: 2rem; }
         }
         @media (max-width: 600px) {
             .phone-link { font-size: 1.5rem; }
+            .contact-content-box { margin: 0 1rem; padding: 1.5rem; }
         }
         
         /* NAP (Name, Address, Phone) Styling */
@@ -250,104 +415,77 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <h1>Contact I Pave Concrete & Asphalt</h1>
-                    <p>Ready to start your concrete project? Get in touch with Christchurch's most experienced concrete specialists. We're here to help bring your vision to life.</p>
-                </div>
-                <div style="background: var(--color-white); color: var(--color-text-body); padding: 2rem; border-radius: var(--border-radius); min-height: 400px; display: flex; flex-direction: column; justify-content: center;">
-                    <h3 style="color: var(--color-primary); text-align: center; margin-bottom: 1rem;">Get Your Free Quote</h3>
-                    <p style="color: var(--color-primary); text-align: center; margin-bottom: 2rem;">Ph: 0800 472 8348 or leave a message</p>
-                    <form action="https://api.staticforms.dev/submit" method="POST" novalidate>
-                        <input type="hidden" name="apiKey" value="sf_21a1k3bflhbdnf58nh87n7m3">
-                        <input type="hidden" name="redirectTo" value="https://ipave-website.pages.dev/thank-you.html">
-                        <input type="hidden" name="replyTo" value="@email">
-                        <input type="hidden" name="to" value="dave@intellinet.co.nz">
-                        <div class="form-group">
-                            <label for="name" class="visually-hidden">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Name" required aria-required="true">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="visually-hidden">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Email" required aria-required="true">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone" class="visually-hidden">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="visually-hidden">Tell us about your project</label>
-                            <textarea id="message" name="message" placeholder="Tell us about your project" rows="4" required aria-required="true"></textarea>
-                        </div>
-                        <button type="submit" class="button-primary">Get Free Quote</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <section class="intro">
+        <section class="contact-hero">
             <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Contact Information</h3>
-                        <div class="contact-item">
-                            <h4>Phone</h4>
-                            <p><a href="tel:08004728348">0800 472 8348</a></p>
-                        </div>
-                        <div class="contact-item">
-                            <h4>Email</h4>
+                <div class="contact-content-box">
+                    <h1>Contact IPave Concrete & Asphalt</h1>
+                    
+                    <p class="contact-intro">Let's Talk About Your Next Project</p>
+                    
+                    <div class="contact-description">
+                        <p>Whether you're planning a new driveway, repairing damaged concrete, or starting a commercial build, the IPave team is here to help.</p>
+                        <p>We're proud to be a locally owned Christchurch company, delivering quality concreting and asphalt services across Canterbury and Auckland.</p>
+                    </div>
+                    
+                    <div class="contact-info-grid">
+                        <div class="contact-info-column">
+                            <h3>Call Us</h3>
+                            <p>Office: <a href="tel:08004728348">0800 472 8348</a></p>
+                            <h3 style="margin-top: 1.5rem;">Email Us</h3>
                             <p><a href="mailto:admin@ipave.co.nz">admin@ipave.co.nz</a></p>
                         </div>
-                        <div class="contact-item">
-                            <h4>Address</h4>
+                        
+                        <div class="contact-info-column">
+                            <h3>Visit Us</h3>
+                            <p><strong>I Pave Concrete & Asphalt</strong></p>
                             <p>335 Kainga Road<br>
                             Kainga, Christchurch 8083<br>
                             New Zealand</p>
+                            <p>(Open Monday–Saturday or by appointment)</p>
                         </div>
-                        <div class="contact-item">
-                            <h4>Office Hours</h4>
-                            <p>Open six days a week<br>
-                            Or by appointment</p>
+                        
+                        <div class="contact-info-column">
+                            <h3>Hours</h3>
+                            <p>Monday–Friday: 7:30am – 5:00pm</p>
+                            <p>Saturday: By appointment</p>
+                            <p>Sunday: Closed</p>
                         </div>
                     </div>
                     
-                    <div class="service-areas">
-                        <h3>Service Areas</h3>
-                        <p>We proudly serve Christchurch and the wider Canterbury region:</p>
-                        <ul>
-                            <li>Christchurch City</li>
-                            <li>Canterbury Region</li>
-                            <li>Surrounding Suburbs</li>
-                            <li>Commercial & Residential</li>
-                        </ul>
-                        <p style="margin-top: 2rem;">For projects outside our main service area, please contact us to discuss availability.</p>
+                    <div class="form-section">
+                        <h2>Send a Message</h2>
+                        <form class="contact-form" action="https://api.staticforms.dev/submit" method="POST" novalidate>
+                            <input type="hidden" name="apiKey" value="sf_21a1k3bflhbdnf58nh87n7m3">
+                            <input type="hidden" name="redirectTo" value="https://ipave-website.pages.dev/thank-you.html">
+                            <input type="hidden" name="replyTo" value="@email">
+                            <input type="hidden" name="to" value="dave@intellinet.co.nz">
+                            <div class="form-group">
+                                <label for="name" class="visually-hidden">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Name" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="visually-hidden">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Email" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="visually-hidden">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="visually-hidden">Tell us about your project</label>
+                                <textarea id="message" name="message" placeholder="Tell us about your project" rows="4" required aria-required="true"></textarea>
+                            </div>
+                            <button type="submit">GET A QUOTE</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-tagline">
+                        <p><strong>Building Canterbury's Foundations Since 1998</strong></p>
+                        <p>Reliable service. Honest pricing. Quality concrete work that lasts.<br>Let's get your project started, contact IPave today.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="intro" style="background-color: #f9f9f9;">
-            <div class="container text-center">
-                <h2>How to Get Started</h2>
-                <p>Starting your concrete project is easy. Here's how we work:</p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                    <div>
-                        <h3>1. Get in Touch</h3>
-                        <p>Call us at 0800 472 8348 or fill out our contact form. We'll discuss your project and answer any questions.</p>
-                    </div>
-                    <div>
-                        <h3>2. Free Quote</h3>
-                        <p>We'll provide a detailed, transparent quote with no hidden costs. You can visit our office or we can meet at your property.</p>
-                    </div>
-                    <div>
-                        <h3>3. Get Started</h3>
-                        <p>Once you're happy with the quote, we'll schedule your project and keep you informed every step of the way.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <footer class="site-footer">
