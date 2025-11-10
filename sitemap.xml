@@ -1,85 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  Sitemap URLs updated to production domain: ipave4u.co.nz
+  Submit to Google Search Console after domain is live
+-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ipave-website.pages.dev/</loc>
+    <loc>https://ipave4u.co.nz/</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ipave-website.pages.dev/about.html</loc>
+    <loc>https://ipave4u.co.nz/about.html</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ipave-website.pages.dev/our-process.html</loc>
+    <loc>https://ipave4u.co.nz/our-process.html</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ipave-website.pages.dev/concrete-patio.html</loc>
+    <loc>https://ipave4u.co.nz/concrete-patio.html</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ipave-website.pages.dev/services/</loc>
+    <loc>https://ipave4u.co.nz/services/</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ipave-website.pages.dev/services/residential-driveways.html</loc>
+    <loc>https://ipave4u.co.nz/services/residential-driveways.html</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ipave-website.pages.dev/services/commercial-paving.html</loc>
+    <loc>https://ipave4u.co.nz/services/commercial-paving.html</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ipave-website.pages.dev/services/concrete-repair.html</loc>
+    <loc>https://ipave4u.co.nz/services/concrete-repair.html</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ipave-website.pages.dev/services/decorative-concrete.html</loc>
+    <loc>https://ipave4u.co.nz/services/decorative-concrete.html</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ipave-website.pages.dev/services/kerbing-services.html</loc>
+    <loc>https://ipave4u.co.nz/services/kerbing-services.html</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ipave-website.pages.dev/contact/</loc>
+    <loc>https://ipave4u.co.nz/contact/</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ipave-website.pages.dev/gallery/</loc>
+    <loc>https://ipave4u.co.nz/gallery/</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ipave-website.pages.dev/projects/</loc>
+    <loc>https://ipave4u.co.nz/projects/</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ipave-website.pages.dev/team/</loc>
+    <loc>https://ipave4u.co.nz/team/</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

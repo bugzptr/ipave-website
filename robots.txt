@@ -1,8 +1,9 @@
 User-agent: *
 Allow: /
 
-# Sitemap location (when you create one)
-Sitemap: https://ipave-website.pages.dev/sitemap.xml
+# Sitemap location
+# Sitemap URL updated to production domain
+Sitemap: https://ipave4u.co.nz/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
