@@ -110,7 +110,10 @@
                 <div class="hero-form-container">
                     <h3>Get Your Free Driveway Quote</h3>
                     <p>Ph: 0800 472 8348 or leave a message</p>
-                    <form action="https://formspree.io/f/xjkodern" method="POST">
+                    <form action="https://api.staticforms.dev/submit" method="POST">
+                        <input type="hidden" name="apiKey" value="sf_21a1k3bflhbdnf58nh87n7m3">
+                        <input type="hidden" name="redirectTo" value="https://ipave4u.co.nz/thank-you.html">
+                        <input type="hidden" name="replyTo" value="@email">
                         <input type="text" name="name" placeholder="Name" required>
                         <input type="email" name="email" placeholder="Email" required>
                         <input type="tel" name="phone" placeholder="Phone Number">
@@ -218,7 +221,10 @@
             </div>
             <div class="footer-form">
                 <h4>Send Us a Message</h4>
-                <form action="https://formspree.io/f/xjkodern" method="POST">
+                <form action="https://api.staticforms.dev/submit" method="POST">
+                    <input type="hidden" name="apiKey" value="sf_21a1k3bflhbdnf58nh87n7m3">
+                    <input type="hidden" name="redirectTo" value="https://ipave4u.co.nz/thank-you.html">
+                    <input type="hidden" name="replyTo" value="@email">
                     <input type="text" name="name" placeholder="First Name" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <textarea name="message" placeholder="Tell us about your project" rows="3" required></textarea>
