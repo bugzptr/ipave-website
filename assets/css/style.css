@@ -330,7 +330,8 @@ form button {
     background: var(--color-white); 
     color: var(--color-text-body); 
     padding: 2rem; 
-    border-radius: var(--border-radius); 
+    border-radius: var(--border-radius);
+    min-height: 400px;
 }
 
 .hero-form-container h3, .hero-form-container p { 
@@ -527,11 +528,13 @@ picture {
     gap: 3rem;
     align-items: start;
     padding: 4rem 0;
-    min-height: 400px;
+    min-height: 500px;
+    width: 100%;
 }
 
 .hero-text {
     color: var(--color-white);
+    min-height: 300px;
 }
 
 .hero-text h1 {
@@ -541,6 +544,7 @@ picture {
     letter-spacing: -3.84px;
     margin-bottom: 1.5rem;
     max-width: 612px;
+    min-height: 115px;
 }
 
 .hero-text p {
@@ -572,6 +576,7 @@ picture {
     border: 2px solid var(--color-primary);
     padding: 2rem;
     max-width: 472px;
+    min-height: 400px;
 }
 
 .hero-form-container h3 {
