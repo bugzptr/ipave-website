@@ -33,167 +33,26 @@
     
     <link rel="canonical" href="https://ipave4u.co.nz/">
 
-    <link rel="preload" href="assets/fonts/montserrat-v30-latin-700.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/abeezee-v22-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/encode-sans-semi-condensed-400.ttf" as="font" type="font/truetype" crossorigin>
+    <link rel="preload" href="assets/fonts/encode-sans-expanded-700.ttf" as="font" type="font/truetype" crossorigin>
     <link rel="preload" href="assets/images/logo-horizontal.svg" as="image">
-    
-    <style>
-        @font-face {
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 700;
-            font-display: block;
-            src: url('assets/fonts/montserrat-v30-latin-700.woff2') format('woff2');
-        }
-        @font-face {
-            font-family: 'ABeeZee';
-            font-style: normal;
-            font-weight: 400;
-            font-display: block;
-            src: url('assets/fonts/abeezee-v22-latin-regular.woff2') format('woff2');
-        }
-    </style>
-    
-    <style>
-        :root {
-            --color-primary: #212161;
-            --color-accent: #FDE906;
-            --color-light-gray: #E0E0E0;
-            --color-dark: #000000;
-            --color-white: #FFFFFF;
-            --color-text-body: #333;
-            --font-family-heading: 'Montserrat', sans-serif;
-            --font-family-body: 'ABeeZee', sans-serif;
-            --spacing-unit: 1rem;
-            --container-width: 1140px;
-            --border-radius: 5px;
-        }
-        
-        *, *::before, *::after { box-sizing: border-box; }
-        body { margin: 0; font-family: var(--font-family-body); color: var(--color-text-body); background-color: var(--color-white); line-height: 1.6; }
-        
-        /* Critical above-the-fold styles */
-        .hero-text h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            line-height: 1.1;
-            margin-bottom: 1rem;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            font-weight: 700;
-            color: #FDE906;
-            min-height: 1.1em;
-            contain: layout;
-        }
-        h1, h2, h3, h4 { font-family: var(--font-family-heading); color: var(--color-primary); margin: 0 0 1rem 0; font-weight: 700; line-height: 1.2; }
-        h1 { font-size: 3rem; min-height: 1.2em; }
-        h2 { font-size: 2.5rem; min-height: 1.2em; }
-        p { margin: 0 0 1rem 0; }
-        a { color: var(--color-primary); text-decoration: none; transition: opacity 0.2s ease; }
-        a:hover { opacity: 0.8; }
-        img { max-width: 100%; height: auto; display: block; contain: layout; }
-        .service-image { width: 100%; height: auto; object-fit: cover; aspect-ratio: 800 / 534; contain: layout; }
-        .site-logo img { width: 250px; height: 60px; object-fit: contain; }
-        .partner-logo { width: 200px; height: 80px; object-fit: contain; }
-        
-        @media (max-width: 600px) {
-            .service-image { aspect-ratio: 362 / 242; }
-            .hero-content { grid-template-columns: 1fr; gap: 2rem; }
-            .hero-text { min-height: 250px; contain: layout; }
-            .hero-text h1 { min-height: 1.1em; contain: layout; }
-            .hero-form-container { min-height: 350px; }
-            .header-top { flex-direction: column; gap: 1rem; text-align: center; }
-            .header-bottom { justify-content: center; }
-            .phone-link { font-size: 1.5rem; }
-        }
-        @media (max-width: 900px) and (min-width: 601px) {
-            .service-image { aspect-ratio: 500 / 334; }
-            .hero-content { grid-template-columns: 1fr; gap: 2rem; }
-            .hero-text { min-height: 300px; contain: layout; }
-            .hero-form-container { min-height: 400px; }
-            .header-top { flex-direction: column; gap: 1rem; text-align: center; }
-            .header-bottom { justify-content: center; }
-            .phone-link { font-size: 2rem; }
-        }
-        main { min-height: 100vh; }
-        section { padding: clamp(3rem, 8vw, 5rem) 0; }
-        
-        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 1.5rem; }
-        .container.hero-content { contain: layout; min-height: 600px; }
-        .text-center { text-align: center; }
-        .text-center p { max-width: 750px; margin-left: auto; margin-right: auto; }
-        .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-        
-        .button-primary, .button-accent { display: inline-block; padding: 0.8rem 2rem; border-radius: var(--border-radius); font-family: var(--font-family-heading); text-align: center; border: 2px solid transparent; cursor: pointer; font-weight: 700; }
-        .button-primary { background-color: var(--color-primary); color: var(--color-white); }
-        .button-accent { background-color: var(--color-accent); color: var(--color-primary); border-color: var(--color-primary); }
-        
-        form { display: flex; flex-direction: column; gap: 1rem; }
-        form input, form textarea { width: 100%; padding: 0.8rem; border: 1px solid var(--color-light-gray); border-radius: var(--border-radius); font-family: var(--font-family-body); font-size: 1rem; }
-        form button { width: 100%; }
-        
-        .site-header { background-color: var(--color-primary); padding: 1rem 0; min-height: 120px; }
-        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); min-height: 60px; }
-        .header-bottom { display: flex; justify-content: space-between; align-items: center; min-height: 40px; }
-        .site-logo img { max-width: 250px; }
-        .header-phone { text-align: right; min-height: 60px; display: flex; align-items: center; justify-content: flex-end; contain: layout; }
-        .phone-link { color: var(--color-accent); font-family: var(--font-family-heading); font-size: 2.5rem; font-weight: 700; text-decoration: none; transition: opacity 0.2s ease; }
-        .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 2rem; }
-        .main-nav a { color: var(--color-white); font-family: var(--font-family-heading); }
-        
-        .hero { background: var(--color-primary); color: var(--color-white); min-height: 100vh; display: flex; align-items: center; }
-        .hero h1 { color: var(--color-accent); }
-        .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; width: 100%; contain: layout; min-height: 500px; }
-        
-        /* Desktop-specific optimizations */
-        @media (min-width: 901px) {
-            .hero-content { min-height: 600px; }
-            .hero-text { min-height: 400px; }
-            .hero-form-container { min-height: 500px; }
-            .container.hero-content { min-height: 700px; }
-        }
-        .hero-text { min-height: 300px; display: flex; flex-direction: column; justify-content: center; contain: layout; }
-        .hero-form-container { background: var(--color-white); color: var(--color-text-body); padding: 2rem; border-radius: var(--border-radius); min-height: 400px; display: flex; flex-direction: column; justify-content: center; }
-        .hero-form-container h3, .hero-form-container p { color: var(--color-primary); text-align: center; }
-        .hero-services-list { 
-            list-style: none; 
-            padding-left: 0; 
-        }
-        .hero-services-list li { 
-            padding-left: 1.5rem; 
-            margin-bottom: 0.5rem; 
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23FDE906' class='bi bi-check-lg' viewBox='0 0 16 16'%3E%3Cpath d='M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z'/%3E%3C/svg%3E") no-repeat 0 0.4em; 
-        }
-        
-        
-        .services-highlight { background-color: #f9f9f9; }
-        .section-header { text-align: center; margin-bottom: 3rem; }
-        .service-card { background: var(--color-white); border: 1px solid var(--color-light-gray); border-radius: var(--border-radius); overflow: hidden; margin-bottom: 2rem; }
-        .service-card-content { padding: 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .service-card p { margin: 0; color: #666; }
-        .arrow-link { font-size: 2.5rem; line-height: 1; font-weight: bold; }
-        
-        @media (max-width: 900px) {
-            h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); min-height: 1.2em; }
-            h2 { font-size: 2rem; min-height: 1.2em; }
-            .main-nav { display: none; }
-            .hero-content { grid-template-columns: 1fr; }
-            .header-flex { justify-content: center; }
-            .header-quote-button { display: none; }
-            .phone-link { font-size: 2rem; }
-        }
-        @media (max-width: 600px) {
-            .service-card-content { flex-direction: column; align-items: flex-start; gap: 1rem; }
-            .phone-link { font-size: 1.5rem; }
-        }
-        
-        /* NAP (Name, Address, Phone) Styling */
-        .nap-info { margin-top: 1rem; }
-        .nap-info p { margin-bottom: 0.5rem; line-height: 1.4; }
-        .nap-info a { color: var(--color-white); text-decoration: underline; }
-        .nap-info a:hover { color: var(--color-accent); }
-    </style>
+    <link rel="preload" href="assets/images/hero-background.jpg" as="image">
 
     <link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
+    
+    <style>
+        /* Critical above-the-fold CSS */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-family: 'Encode Sans Semi Condensed', sans-serif; color: #333; background-color: #FFFFFF; line-height: 1.6; }
+        .site-header { background-color: #212161; padding: 1rem 0; }
+        .container { max-width: 1282px; margin: 0 auto; padding: 0 1.5rem; }
+        .hero { position: relative; background: #212161; color: #FFFFFF; min-height: 712px; display: flex; align-items: center; overflow: hidden; }
+        .hero-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(87, 87, 87, 0.8); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; }
+        img { max-width: 100%; height: auto; display: block; }
+    </style>
     
     <link rel="dns-prefetch" href="//api.staticforms.dev">
     
@@ -263,38 +122,39 @@
 
     <header class="site-header">
         <div class="container">
-                         <div class="header-top">
+            <div class="header-top">
                 <a href="/" class="site-logo">
                     <img src="assets/images/logo-horizontal.svg" alt="I Pave Concrete & Asphalt Logo">
                     <span class="visually-hidden">I Pave Concrete & Asphalt</span>
                 </a>
-                 <div class="header-phone">
-                     <a href="tel:08004728348" class="phone-link">0800 472 8348</a>
-                 </div>
-             </div>
-             
-             <div class="header-bottom">
+                <div class="header-phone">
+                    <a href="tel:08004728348" class="phone-link">0800 472 8348</a>
+                </div>
+            </div>
+            
+            <div class="header-bottom">
                 <nav class="main-nav" aria-label="Main navigation">
                     <ul>
-                        <li><a href="/" aria-label="Go to homepage">Home</a></li>
-                        <li><a href="our-process.html" aria-label="Learn about our process">Our Process</a></li>
-                        <li><a href="services/" aria-label="View our services">Services</a></li>
-                        <li><a href="projects/" aria-label="See our projects">Our Projects</a></li>
-                        <li><a href="about.html" aria-label="Read our story">About Us</a></li>
-                        <li><a href="contact/" aria-label="Contact us">Contact</a></li>
+                        <li><a href="/" aria-label="Go to homepage">HOME</a></li>
+                        <li><a href="our-process.html" aria-label="Learn about our process">OUR PROCESSES</a></li>
+                        <li><a href="services/" aria-label="View our services">SERVICES</a></li>
+                        <li><a href="projects/" aria-label="See our projects">OUR PROJECTS</a></li>
+                        <li><a href="about.html" aria-label="Read our story">ABOUT US</a></li>
                     </ul>
                 </nav>
-                <a href="contact/" class="button-accent header-quote-button">Get a quote</a>
+                <a href="contact/" class="button-accent header-quote-button">GET  A QUOTE</a>
             </div>
         </div>
     </header>
 
     <main>
-                 <section class="hero">
+        <section class="hero">
+            <img src="assets/images/hero-background.jpg" alt="" class="hero-background" loading="eager">
+            <div class="hero-overlay"></div>
             <div class="container hero-content">
                 <div class="hero-text">
                     <h1>Christchurch's Most Experienced Concrete & Asphalt Specialists</h1>
-                    <p>Expertly crafted concrete patio Christchurch, driveways, foundations, and footpaths—built to last. At iPave, quality is always our foundation.</p>
+                    <p>Expertly crafted concrete patio Christchurch, driveways, foundations, and footpaths, built to last. At IPave, quality is always our foundation.</p>
                     <ul class="hero-services-list">
                         <li>Concrete Services</li>
                         <li>Decorative Concrete</li>
@@ -303,9 +163,9 @@
                     </ul>
                 </div>
                 <div class="hero-form-container">
-                    <h2>Contact I Pave Concrete & Asphalt for a free quote :</h2>
+                    <h3>Contact I Pave Concrete & Asphalt for a free quote :</h3>
                     <p>Ph: 0800 472 8348 or leave a message</p>
-                                         <form action="https://api.staticforms.dev/submit" method="POST" novalidate>
+                    <form action="https://api.staticforms.dev/submit" method="POST" novalidate>
                         <input type="hidden" name="apiKey" value="sf_21a1k3bflhbdnf58nh87n7m3">
                         <input type="hidden" name="redirectTo" value="https://ipave-website.pages.dev/thank-you.html">
                         <input type="hidden" name="replyTo" value="@email">
@@ -326,79 +186,124 @@
                             <label for="message" class="visually-hidden">Tell us about your project</label>
                             <textarea id="message" name="message" placeholder="Tell us about your project" rows="4" required aria-required="true"></textarea>
                         </div>
-                        <button type="submit" class="button-primary">Submit</button>
+                        <button type="submit" class="button-accent">GET  A QUOTE</button>
                     </form>
                 </div>
             </div>
         </section>
 
-                 <section class="intro">
+        <section class="intro-section">
             <div class="container text-center">
                 <h2>Professional Concrete & Asphalt Services in Christchurch</h2>
                 <p>Locally owned and operated since 1998, iPave is known across Canterbury for delivering high-quality concrete solutions with precision, transparency, and care. We specialize in concrete patio Christchurch projects and offer the full spectrum of concrete services: driveways, patios, foundations, decorative concrete, earthquake repairs, concrete cutting, asphalt, and more.</p>
             </div>
         </section>
 
-                 <section class="services-highlight">
+        <section class="services-highlight-section">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header-white">
                     <h2>Our Services</h2>
                     <p>Your One-Stop Concrete Contractor</p>
                 </div>
-                <div class="service-card">
-                                         <picture>
-                         <source media="(max-width: 600px)" 
-                                 srcset="assets/images/paved-driveway-mobile.webp" 
-                                 type="image/webp">
-                         <source media="(max-width: 900px)" 
-                                 srcset="assets/images/paved-driveway-tablet.webp" 
-                                 type="image/webp">
-                         <source media="(min-width: 901px)" 
-                                 srcset="assets/images/paved-driveway-desktop.webp" 
-                                 type="image/webp">
-                         <img src="assets/images/paved-driveway.jpg" 
-                              alt="A newly paved residential driveway" 
-                              loading="lazy" 
-                              width="800" 
-                              height="534" 
-                              class="service-image">
-                     </picture>
-                    <div class="service-card-content">
-                        <h3>Residential</h3>
-                        <p>Concrete Patio Christchurch, Driveways, Footpaths</p>
-                        <a href="services/" class="arrow-link">→</a>
+                <div class="services-grid">
+                    <div class="service-card-new">
+                        <img src="assets/images/service-commercial-paving.jpg" alt="Commercial paving work" class="service-card-image" loading="lazy">
+                        <div class="service-card-info">
+                            <h3 class="service-card-title">Commercial Paving</h3>
+                            <p class="service-card-description">Durable concrete paving for car parks, warehouses, and industrial sites — built tough for heavy use.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="text-center">
-                    <a href="services/" class="button-primary">Explore Our Full Services</a>
+                    <div class="service-card-new">
+                        <img src="assets/images/service-residential-driveways.jpg" alt="Residential driveway" class="service-card-image" loading="lazy">
+                        <div class="service-card-info">
+                            <h3 class="service-card-title">Residential Driveways</h3>
+                            <p class="service-card-description">Upgrade your entrance with a strong, stylish concrete driveway built to last in Christchurch conditions.</p>
+                        </div>
+                    </div>
+                    <div class="service-card-new">
+                        <img src="assets/images/service-concrete-repair.jpg" alt="Concrete repair work" class="service-card-image" loading="lazy">
+                        <div class="service-card-info">
+                            <h3 class="service-card-title">Concrete Repair</h3>
+                            <p class="service-card-description">We repair cracks, resurface damage, and restore your concrete to look like new again.</p>
+                        </div>
+                    </div>
+                    <div class="service-card-new">
+                        <img src="assets/images/service-decorative-concrete.jpg" alt="Decorative concrete patio" class="service-card-image" loading="lazy">
+                        <div class="service-card-info">
+                            <h3 class="service-card-title">Decorative Concrete</h3>
+                            <p class="service-card-description">Add style with stamped, coloured, exposed, or polished finishes designed to suit your space.</p>
+                        </div>
+                    </div>
+                    <div class="service-card-new">
+                        <img src="assets/images/service-kerbing.jpg" alt="Kerbing installation" class="service-card-image" loading="lazy">
+                        <div class="service-card-info">
+                            <h3 class="service-card-title">Kerbing Services</h3>
+                            <p class="service-card-description">Precision kerb and channel work that defines edges, improves drainage, and completes your project.</p>
+                        </div>
+                    </div>
+                    <div class="service-card-new">
+                        <img src="assets/images/service-concrete-patios.jpg" alt="Concrete patio" class="service-card-image" loading="lazy">
+                        <div class="service-card-info">
+                            <h3 class="service-card-title">Concrete Patios</h3>
+                            <p class="service-card-description">We repair cracks, resurface damage, and restore your concrete to look like new again.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="partners">
+        <section class="about-section">
             <div class="container text-center">
-                <h2>Partnerships and Industry Accreditations</h2>
-                <p>Proud member of industry-leading organizations</p>
-                <div class="partner-logos">
-                    <a href="https://www.nzconcretecontractors.org.nz/directories/i-pave-concrete-asphalt-ltd/" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/images/NZCCA-LOGO.svg" alt="NZ Concrete Contractors Association Logo" class="partner-logo" width="200" height="80" loading="lazy">
-                        <span class="partner-text">NZ Concrete Contractors Association</span>
-                    </a>
+                <h2>About iPave Concrete & Asphalt</h2>
+                <p>With nearly 50 years of hands-on experience, IPave has grown from a one-man operation into one of Christchurch's most trusted concrete teams.</p>
+                <p>Founded by Daryl McLachlan, who started concreting at just 16, IPave is built on real experience, family values, and genuine craftsmanship. From driveways and patios to large-scale commercial work, every project is delivered with pride, precision, and care.</p>
+                <p>Over the years, IPave has helped shape Canterbury, completing more than 22,000 jobs during the Christchurch rebuild and now operating in both Christchurch and Auckland. As a family-run business, with Daryl's son Brook and a loyal crew of long-serving team members, iPave continues to pour the same dedication into every job because for us, it's more than concrete. It's community.</p>
+            </div>
+        </section>
+
+        <section class="why-choose-section">
+            <div class="container text-center">
+                <h2>Why Choose I Pave Concrete & Kerbing?</h2>
+                <p class="why-choose-intro">Born and built in Christchurch, iPave has been shaping Canterbury driveways, paths, and spaces since 1998. With nearly 50 years of combined experience, we've learned that great concreting isn't just about materials, it's about pride, precision, and people you can rely on.</p>
+                <div class="why-choose-list">
+                    <p>What makes us different:</p>
+                    <ul>
+                        <li>Locally owned and operated – real people, right here in Christchurch.</li>
+                        <li>Transparent pricing – no hidden costs, no surprises.</li>
+                        <li>Quality craftsmanship – every job built to last.</li>
+                        <li>Full-service team – from design and prep to the final finish.</li>
+                        <li>Proven experience – trusted by homeowners and businesses across Canterbury.</li>
+                        <li>Comprehensive services – driveways, patios, repairs, kerbing, and more.</li>
+                    </ul>
+                    <p>Because at iPave, it's more than concrete, it's the foundation of trust we build with every project.</p>
                 </div>
+            </div>
+        </section>
+
+        <section class="services-highlight-section">
+            <div class="container text-center">
+                <h2 style="color: var(--color-accent);">See Our Craftsmanship</h2>
+                <div class="gallery-grid">
+                    <img src="assets/images/gallery-1.jpg" alt="Concrete project" class="gallery-item" loading="lazy">
+                    <img src="assets/images/gallery-2.jpg" alt="Concrete project" class="gallery-item" loading="lazy">
+                    <img src="assets/images/gallery-3.jpg" alt="Concrete project" class="gallery-item" loading="lazy">
+                    <img src="assets/images/gallery-4.jpg" alt="Concrete project" class="gallery-item" loading="lazy">
+                </div>
+                <a href="gallery/" class="button-accent" style="margin-top: 2rem; display: inline-block;">View Our Gallery</a>
             </div>
         </section>
 
         <section class="cta-banner">
             <div class="container">
-                <h3>Let Us Quote Your Concrete Project!</h3>
-                <p>Your One-Stop Concrete Contractor</p>
-                <a href="contact/" class="button-primary">Get a quote</a>
+                <h2>Ready to Start Your Concrete Project?</h2>
+                <p>Contact us today for a free, no-obligation quote</p>
+                <a href="contact/" class="button-primary">GET  A QUOTE</a>
             </div>
         </section>
 
     </main>
 
-         <footer class="site-footer">
+    <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-contact">
                 <img src="assets/images/logo-horizontal.svg" alt="I Pave Concrete & Asphalt Logo" class="footer-logo">
@@ -408,39 +313,40 @@
                     <p>335 Kainga Road<br>
                     Kainga, Christchurch 8083<br>
                     New Zealand</p>
-                    <p>Phone: <a href="tel:08004728348">0800 472 8348</a><br>
-                    Email: <a href="mailto:admin@ipave.co.nz">admin@ipave.co.nz</a></p>
+                    <p>Email: <a href="mailto:admin@ipave.co.nz">admin@ipave.co.nz</a></p>
+                    <p>Phone: <a href="tel:08004728348">0800 472 8348</a></p>
                 </div>
             </div>
             <div class="footer-services">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="concrete-patio.html">Concrete Patio Christchurch</a></li>
-                    <li><a href="services/residential-driveways.html">Residential Driveways</a></li>
                     <li><a href="services/commercial-paving.html">Commercial Paving</a></li>
+                    <li><a href="services/residential-driveways.html">Residential Driveways</a></li>
                     <li><a href="services/concrete-repair.html">Concrete Repair</a></li>
                     <li><a href="services/decorative-concrete.html">Decorative Concrete</a></li>
                     <li><a href="services/kerbing-services.html">Kerbing Services</a></li>
+                    <li><a href="concrete-patio.html">Concrete Patios</a></li>
                 </ul>
             </div>
             <div class="footer-form">
-                 <h4>Send Us a Message</h4>
-                 <form action="https://api.staticforms.dev/submit" method="POST">
+                <h4>Contact I Pave Concrete & Asphalt for a free quote :</h4>
+                <p>Ph: 0800 472 8348 or leave a message</p>
+                <form action="https://api.staticforms.dev/submit" method="POST">
                     <input type="hidden" name="apiKey" value="sf_21a1k3bflhbdnf58nh87n7m3">
                     <input type="hidden" name="redirectTo" value="https://ipave-website.pages.dev/thank-you.html">
                     <input type="hidden" name="replyTo" value="@email">
                     <input type="hidden" name="to" value="dave@intellinet.co.nz">
-                    <input type="text" name="name" placeholder="First Name" required>
+                    <input type="text" name="name" placeholder="Name" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <textarea name="message" placeholder="Tell us about your project" rows="3" required></textarea>
-                    <button type="submit" class="button-primary">Submit</button>
+                    <button type="submit" class="button-accent">GET  A QUOTE</button>
                 </form>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 I Pave Concrete & Asphalt. All Rights Reserved.</p>
         </div>
-        </footer>
+    </footer>
  
               <script>
          // Minimal script for optimal performance

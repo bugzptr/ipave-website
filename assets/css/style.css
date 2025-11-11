@@ -14,6 +14,73 @@
   src: url('../fonts/montserrat-v30-latin-700.woff2') format('woff2');
 }
 
+/* Encode Sans Semi Condensed */
+@font-face {
+  font-display: swap;
+  font-family: 'Encode Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/encode-sans-semi-condensed-400.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Encode Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/encode-sans-semi-condensed-600.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Encode Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/encode-sans-semi-condensed-700.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Encode Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/encode-sans-semi-condensed-900.ttf') format('truetype');
+}
+
+/* Encode Sans Expanded */
+@font-face {
+  font-display: swap;
+  font-family: 'Encode Sans Expanded';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/encode-sans-expanded-400.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Encode Sans Expanded';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/encode-sans-expanded-700.ttf') format('truetype');
+}
+
+/* DM Sans */
+@font-face {
+  font-display: swap;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/dm-sans-400.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/dm-sans-700.ttf') format('truetype');
+}
+
 :root {
     --color-primary: #212161;
     --color-accent: #FDE906;
@@ -21,10 +88,12 @@
     --color-dark: #000000;
     --color-white: #FFFFFF;
     --color-text-body: #333;
-    --font-family-heading: 'Montserrat', sans-serif;
-    --font-family-body: 'ABeeZee', sans-serif;
+    --font-family-heading: 'Encode Sans Expanded', sans-serif;
+    --font-family-body: 'Encode Sans Semi Condensed', sans-serif;
+    --font-family-nav: 'Encode Sans Semi Condensed', sans-serif;
+    --font-family-service-title: 'DM Sans', sans-serif;
     --spacing-unit: 1rem;
-    --container-width: 1140px;
+    --container-width: 1282px;
     --border-radius: 5px;
 }
 
@@ -32,12 +101,12 @@
     box-sizing: border-box; 
 }
 
-body { 
-    margin: 0; 
-    font-family: var(--font-family-body); 
-    color: var(--color-text-body); 
-    background-color: var(--color-white); 
-    line-height: 1.6; 
+p { 
+    margin: 0 0 1rem 0; 
+    font-family: var(--font-family-body);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.32px;
 }
 
 h1, h2, h3, h4 { 
@@ -45,15 +114,20 @@ h1, h2, h3, h4 {
     color: var(--color-primary); 
     margin: 0 0 1rem 0; 
     font-weight: 700; 
-    line-height: 1.2; 
+    line-height: 0.9; 
+    letter-spacing: -0.06em;
 }
 
 h1 { 
-    font-size: 3rem; 
+    font-size: 64px; 
+    line-height: 0.9;
+    letter-spacing: -0.06em;
 }
 
 h2 { 
-    font-size: 2.5rem; 
+    font-size: 48px; 
+    line-height: 0.9;
+    letter-spacing: -0.06em;
 }
 
 p { 
@@ -110,24 +184,31 @@ section {
 
 .button-primary, .button-accent { 
     display: inline-block; 
-    padding: 0.8rem 2rem; 
-    border-radius: var(--border-radius); 
-    font-family: var(--font-family-heading); 
+    padding: 0; 
+    height: 49px;
+    line-height: 49px;
+    padding: 0 20px;
+    border-radius: 0; 
+    font-family: var(--font-family-nav); 
     text-align: center; 
-    border: 2px solid transparent; 
+    border: none; 
     cursor: pointer; 
-    font-weight: 700; 
+    font-weight: 900; 
+    font-size: 20px;
+    letter-spacing: -0.4px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
 }
 
 .button-primary { 
     background-color: var(--color-primary); 
-    color: var(--color-white); 
+    color: var(--color-accent); 
 }
 
 .button-accent { 
     background-color: var(--color-accent); 
     color: var(--color-primary); 
-    border-color: var(--color-primary); 
+    border: 2px solid var(--color-primary);
 }
 
 form { 
@@ -191,11 +272,13 @@ form button {
 
 .phone-link { 
     color: var(--color-accent); 
-    font-family: var(--font-family-heading); 
-    font-size: 2.5rem; 
-    font-weight: 700; 
+    font-family: var(--font-family-nav); 
+    font-size: 37px; 
+    font-weight: 600; 
     text-decoration: none; 
-    transition: opacity 0.2s ease; 
+    transition: opacity 0.2s ease;
+    letter-spacing: -0.74px;
+    line-height: 1.1;
 }
 
 .phone-link:hover { 
@@ -212,7 +295,11 @@ form button {
 
 .main-nav a { 
     color: var(--color-white); 
-    font-family: var(--font-family-heading); 
+    font-family: var(--font-family-nav); 
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.4px;
+    line-height: 0.9;
 }
 
 .hero { 
@@ -393,13 +480,443 @@ picture {
     }
 }
 
+/* Hero Section with Background Image */
+.hero {
+    position: relative;
+    background: var(--color-primary);
+    color: var(--color-white);
+    min-height: 712px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(87, 87, 87, 0.8);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    padding: 4rem 0;
+}
+
+.hero-text {
+    color: var(--color-white);
+}
+
+.hero-text h1 {
+    color: var(--color-accent);
+    font-size: 64px;
+    line-height: 0.9;
+    letter-spacing: -3.84px;
+    margin-bottom: 1.5rem;
+    max-width: 612px;
+}
+
+.hero-text p {
+    font-size: 36px;
+    line-height: 0.9;
+    letter-spacing: -0.72px;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+    max-width: 643px;
+}
+
+.hero-services-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.hero-services-list li {
+    font-size: 36px;
+    line-height: 0.9;
+    letter-spacing: -0.72px;
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.hero-form-container {
+    background: var(--color-white);
+    border: 2px solid var(--color-primary);
+    padding: 2rem;
+    max-width: 472px;
+}
+
+.hero-form-container h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.hero-form-container p {
+    font-size: 20px;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.4px;
+}
+
+.hero-form-container form {
+    gap: 0.5rem;
+}
+
+.hero-form-container input,
+.hero-form-container textarea {
+    border: 1px solid var(--color-primary);
+    padding: 0.8rem;
+    font-size: 20px;
+    font-family: var(--font-family-body);
+    color: var(--color-primary);
+}
+
+.hero-form-container label {
+    font-size: 20px;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.4px;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.service-card-new {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.service-card-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.service-card-info {
+    background: var(--color-accent);
+    padding: 20px;
+    min-height: 155px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.service-card-title {
+    font-family: var(--font-family-service-title);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: -0.48px;
+    color: var(--color-dark);
+    margin: 0;
+}
+
+.service-card-description {
+    font-family: var(--font-family-body);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.1;
+    letter-spacing: -0.32px;
+    color: var(--color-dark);
+    margin: 0;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 410px;
+    object-fit: cover;
+}
+
+/* About Section */
+.about-section {
+    background: var(--color-white);
+    padding: 4rem 0;
+}
+
+.about-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-section p {
+    font-size: 32px;
+    line-height: 1.05;
+    letter-spacing: -0.64px;
+    text-align: center;
+    max-width: 1096px;
+    margin: 0 auto 1rem;
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+/* Why Choose Section */
+.why-choose-section {
+    background: var(--color-white);
+    padding: 4rem 0;
+}
+
+.why-choose-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.why-choose-intro {
+    font-size: 32px;
+    line-height: 1.05;
+    letter-spacing: -0.64px;
+    text-align: center;
+    max-width: 910px;
+    margin: 0 auto 2rem;
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.why-choose-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.why-choose-list li {
+    margin-bottom: 0.5rem;
+    text-align: left;
+    padding-left: 48px;
+    position: relative;
+}
+
+.why-choose-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-size: 32px;
+    line-height: 1.3;
+}
+
+/* CTA Banner */
+.cta-banner {
+    background-color: var(--color-accent);
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.cta-banner h2 {
+    color: var(--color-primary);
+    font-size: 48px;
+    line-height: 0.9;
+    letter-spacing: -2.88px;
+    margin-bottom: 1rem;
+}
+
+.cta-banner p {
+    font-size: 32px;
+    line-height: 0.96;
+    letter-spacing: -0.64px;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+}
+
+.cta-banner .button-primary {
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+}
+
+/* Section Headers */
+.section-header-white {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-header-white h2 {
+    color: var(--color-white);
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    margin-bottom: 0.5rem;
+}
+
+.section-header-white p {
+    color: var(--color-white);
+    font-size: 24px;
+    letter-spacing: -0.48px;
+}
+
+/* Intro Section */
+.intro-section {
+    background: var(--color-white);
+    padding: 3rem 0;
+}
+
+.intro-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 1032px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro-section p {
+    font-size: 36px;
+    line-height: 0.9;
+    letter-spacing: -0.72px;
+    text-align: center;
+    max-width: 967px;
+    margin: 0 auto;
+    color: var(--color-primary);
+    font-weight: 400;
+}
+
+/* Services Highlight Section */
+.services-highlight-section {
+    background: var(--color-primary);
+    padding: 4rem 0;
+    color: var(--color-white);
+}
+
+/* Form Styling Updates */
+form input,
+form textarea {
+    border: 1px solid var(--color-primary);
+    font-family: var(--font-family-body);
+    font-size: 20px;
+    letter-spacing: -0.4px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: var(--color-primary);
+    opacity: 0.7;
+}
+
+/* Footer Updates */
+.footer-form {
+    background: var(--color-white);
+    border: 2px solid var(--color-primary);
+    padding: 1.5rem;
+}
+
+.footer-form h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.32px;
+}
+
+.footer-form p {
+    font-size: 16px;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: -0.32px;
+}
+
+.footer-form input,
+.footer-form textarea {
+    border: 1px solid var(--color-primary);
+    padding: 0.5rem;
+    font-size: 16px;
+    height: 32px;
+}
+
+.footer-form textarea {
+    height: auto;
+    min-height: 32px;
+}
+
+.footer-form .button-accent {
+    height: 49px;
+    line-height: 49px;
+    font-size: 20px;
+}
+
+.footer-services h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    letter-spacing: -0.48px;
+}
+
+.footer-services a {
+    font-family: var(--font-family-service-title);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--color-white);
+    display: block;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.48px;
+}
+
+.footer-contact h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    letter-spacing: -0.4px;
+}
+
+.footer-contact p,
+.footer-contact a {
+    font-size: 20px;
+    color: var(--color-white);
+    letter-spacing: -0.4px;
+    line-height: 0.9;
+}
+
+.footer-bottom p {
+    font-size: 20px;
+    color: var(--color-white);
+    letter-spacing: -0.4px;
+    font-weight: 600;
+}
+
 .cta-banner { 
     background-color: var(--color-accent); 
     text-align: center; 
-}
-
-.cta-banner h2 { 
-    color: var(--color-primary); 
 }
 
 /* General image styles are already defined above */
@@ -441,13 +958,29 @@ picture {
     border-top: 1px solid rgba(255,255,255,0.2); 
 }
 
-@media (max-width: 900px) {
+/* Responsive Design - Tablet (601-900px) */
+@media (max-width: 900px) and (min-width: 601px) {
     h1 { 
-        font-size: 2.5rem; 
+        font-size: 48px; 
+        letter-spacing: -2.88px;
     }
     
     h2 { 
-        font-size: 2rem; 
+        font-size: 36px; 
+        letter-spacing: -2.16px;
+    }
+    
+    .hero-text h1 {
+        font-size: 48px;
+        letter-spacing: -2.88px;
+    }
+    
+    .hero-text p {
+        font-size: 28px;
+    }
+    
+    .hero-services-list li {
+        font-size: 28px;
     }
     
     .main-nav { 
@@ -456,6 +989,11 @@ picture {
     
     .hero-content { 
         grid-template-columns: 1fr; 
+        gap: 2rem;
+    }
+    
+    .hero-form-container {
+        max-width: 100%;
     }
     
     .header-top { 
@@ -474,18 +1012,242 @@ picture {
     }
     
     .phone-link {
-        font-size: 2rem;
+        font-size: 28px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gallery-item {
+        height: 300px;
+    }
+    
+    .intro-section p,
+    .about-section p,
+    .why-choose-intro {
+        font-size: 24px;
+    }
+    
+    .why-choose-list {
+        font-size: 24px;
+    }
+    
+    .cta-banner h2 {
+        font-size: 36px;
+    }
+    
+    .cta-banner p {
+        font-size: 24px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
 
+/* Responsive Design - Mobile (≤600px) */
 @media (max-width: 600px) {
-    .service-card-content { 
+    h1 { 
+        font-size: 32px; 
+        letter-spacing: -1.92px;
+    }
+    
+    h2 { 
+        font-size: 28px; 
+        letter-spacing: -1.68px;
+    }
+    
+    .hero {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+    
+    .hero-text h1 {
+        font-size: 32px;
+        letter-spacing: -1.92px;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-text p {
+        font-size: 20px;
+        letter-spacing: -0.4px;
+    }
+    
+    .hero-services-list li {
+        font-size: 20px;
+        letter-spacing: -0.4px;
+    }
+    
+    .hero-form-container {
+        padding: 1.5rem;
+    }
+    
+    .hero-form-container h3 {
+        font-size: 20px;
+    }
+    
+    .hero-form-container p {
+        font-size: 16px;
+    }
+    
+    .hero-form-container input,
+    .hero-form-container textarea {
+        font-size: 16px;
+        padding: 0.6rem;
+    }
+    
+    .main-nav { 
+        display: none; 
+    }
+    
+    .hero-content { 
+        grid-template-columns: 1fr; 
+        gap: 1.5rem;
+    }
+    
+    .header-top { 
         flex-direction: column; 
-        align-items: flex-start; 
         gap: 1rem; 
+        text-align: center; 
+        margin-bottom: 1rem; 
+    }
+    
+    .header-bottom { 
+        justify-content: center; 
+    }
+    
+    .header-quote-button { 
+        display: none; 
     }
     
     .phone-link {
-        font-size: 1.5rem;
+        font-size: 24px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .service-card-image {
+        height: 200px;
+    }
+    
+    .service-card-info {
+        padding: 1rem;
+        min-height: auto;
+    }
+    
+    .service-card-title {
+        font-size: 20px;
+    }
+    
+    .service-card-description {
+        font-size: 14px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .gallery-item {
+        height: 250px;
+    }
+    
+    .intro-section p,
+    .about-section p,
+    .why-choose-intro {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+    
+    .why-choose-list {
+        font-size: 18px;
+        text-align: left;
+    }
+    
+    .why-choose-list li {
+        padding-left: 24px;
+        margin-bottom: 0.75rem;
+    }
+    
+    .section-header-white h2 {
+        font-size: 28px;
+    }
+    
+    .section-header-white p {
+        font-size: 18px;
+    }
+    
+    .cta-banner {
+        padding: 2rem 0;
+    }
+    
+    .cta-banner h2 {
+        font-size: 28px;
+        letter-spacing: -1.68px;
+    }
+    
+    .cta-banner p {
+        font-size: 18px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-form {
+        padding: 1rem;
+    }
+    
+    .footer-form h4 {
+        font-size: 14px;
+    }
+    
+    .footer-form p {
+        font-size: 14px;
+    }
+    
+    .footer-form input,
+    .footer-form textarea {
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+    
+    .footer-services h4 {
+        font-size: 20px;
+    }
+    
+    .footer-services a {
+        font-size: 18px;
+    }
+    
+    .footer-contact h4 {
+        font-size: 18px;
+    }
+    
+    .footer-contact p,
+    .footer-contact a {
+        font-size: 16px;
+    }
+    
+    .footer-bottom p {
+        font-size: 16px;
+    }
+    
+    .button-primary,
+    .button-accent {
+        font-size: 18px;
+        height: 44px;
+        line-height: 44px;
+        padding: 0 16px;
     }
 }
