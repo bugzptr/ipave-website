@@ -490,10 +490,10 @@ picture {
     background: var(--color-primary);
     color: var(--color-white);
     min-height: 712px;
+    height: 712px; /* Fixed height to prevent overlay shift */
     display: flex;
     align-items: center;
     overflow: hidden;
-    height: auto; /* Allow content to determine height */
 }
 
 .hero picture {
@@ -546,6 +546,7 @@ picture {
     max-width: 612px;
     font-family: var(--font-family-heading);
     font-weight: 700;
+    min-height: 115px; /* Reserve space to prevent shift */
 }
 
 .hero-text p {
@@ -958,7 +959,8 @@ form textarea::placeholder {
     width: 200px;
     height: 50px;
     display: block;
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
+    aspect-ratio: 200 / 50; /* Explicit aspect ratio */
 }
 
 .site-footer h4 { 
