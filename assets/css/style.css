@@ -499,6 +499,7 @@ picture {
     height: 100%;
     object-fit: cover;
     z-index: 0;
+    aspect-ratio: 16 / 9;
 }
 
 .hero-overlay {
@@ -621,6 +622,7 @@ picture {
     height: 280px;
     object-fit: cover;
     display: block;
+    aspect-ratio: 3 / 2;
 }
 
 .service-card-info {
@@ -664,6 +666,7 @@ picture {
     width: 100%;
     height: 410px;
     object-fit: cover;
+    aspect-ratio: 973 / 668;
 }
 
 /* About Section */
