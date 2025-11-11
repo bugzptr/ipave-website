@@ -493,6 +493,7 @@ picture {
     display: flex;
     align-items: center;
     overflow: hidden;
+    height: auto; /* Allow content to determine height */
 }
 
 .hero picture {
@@ -517,6 +518,7 @@ picture {
     height: 100%;
     background: rgba(87, 87, 87, 0.8);
     z-index: 1;
+    will-change: transform; /* Optimize for compositing */
 }
 
 .hero-content {
