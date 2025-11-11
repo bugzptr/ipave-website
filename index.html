@@ -49,11 +49,12 @@
         body { margin: 0; font-family: 'Encode Sans Semi Condensed', sans-serif; color: #333; background-color: #FFFFFF; line-height: 1.6; }
         .site-header { background-color: #212161; padding: 1rem 0; }
         .container { max-width: 1282px; margin: 0 auto; padding: 0 1.5rem; }
+        .site-logo img { width: 200px; height: 50px; display: block; }
         .hero { position: relative; background: #212161; color: #FFFFFF; min-height: 712px; display: flex; align-items: center; overflow: hidden; }
         .hero picture { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
         .hero-background { position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; object-fit: cover; z-index: 0; }
         .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(87, 87, 87, 0.8); z-index: 1; }
-        .hero-content { position: relative; z-index: 2; }
+        .hero-content { position: relative; z-index: 2; min-height: 400px; }
         img { max-width: 100%; height: auto; display: block; }
         .hero picture img { height: 100% !important; }
     </style>
@@ -217,7 +218,7 @@
                 <div class="services-grid">
                     <div class="service-card-new">
                         <picture>
-                            <source srcset="assets/images/service-commercial-paving-400.webp 400w, assets/images/service-commercial-paving-800.webp 800w, assets/images/service-commercial-paving-1200.webp 1200w" sizes="(max-width: 480px) 400px, (max-width: 768px) 800px, 1200px" type="image/webp">
+                            <source srcset="assets/images/service-commercial-paving-400.webp 400w, assets/images/service-commercial-paving-800.webp 800w, assets/images/service-commercial-paving-1200.webp 1200w" sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw" type="image/webp">
                             <img src="assets/images/service-commercial-paving.jpg" alt="Commercial paving work" class="service-card-image" loading="lazy" width="1200" height="800">
                         </picture>
                         <div class="service-card-info">
@@ -227,7 +228,7 @@
                     </div>
                     <div class="service-card-new">
                         <picture>
-                            <source srcset="assets/images/service-residential-driveways-400.webp 400w, assets/images/service-residential-driveways-800.webp 800w" sizes="(max-width: 480px) 400px, 800px" type="image/webp">
+                            <source srcset="assets/images/service-residential-driveways-400.webp 400w, assets/images/service-residential-driveways-800.webp 800w" sizes="(max-width: 480px) 100vw, 50vw" type="image/webp">
                             <img src="assets/images/service-residential-driveways.jpg" alt="Residential driveway" class="service-card-image" loading="lazy" width="800" height="533">
                         </picture>
                         <div class="service-card-info">
@@ -237,7 +238,7 @@
                     </div>
                     <div class="service-card-new">
                         <picture>
-                            <source srcset="assets/images/service-concrete-repair-400.webp 400w, assets/images/service-concrete-repair-800.webp 800w" sizes="(max-width: 480px) 400px, 800px" type="image/webp">
+                            <source srcset="assets/images/service-concrete-repair-400.webp 400w, assets/images/service-concrete-repair-800.webp 800w" sizes="(max-width: 480px) 100vw, 50vw" type="image/webp">
                             <img src="assets/images/service-concrete-repair.jpg" alt="Concrete repair work" class="service-card-image" loading="lazy" width="800" height="533">
                         </picture>
                         <div class="service-card-info">
@@ -247,7 +248,7 @@
                     </div>
                     <div class="service-card-new">
                         <picture>
-                            <source srcset="assets/images/service-decorative-concrete-400.webp 400w, assets/images/service-decorative-concrete-800.webp 800w" sizes="(max-width: 480px) 400px, 800px" type="image/webp">
+                            <source srcset="assets/images/service-decorative-concrete-400.webp 400w, assets/images/service-decorative-concrete-800.webp 800w" sizes="(max-width: 480px) 100vw, 50vw" type="image/webp">
                             <img src="assets/images/service-decorative-concrete.jpg" alt="Decorative concrete patio" class="service-card-image" loading="lazy" width="800" height="533">
                         </picture>
                         <div class="service-card-info">
@@ -257,7 +258,7 @@
                     </div>
                     <div class="service-card-new">
                         <picture>
-                            <source srcset="assets/images/service-kerbing-400.webp 400w, assets/images/service-kerbing-800.webp 800w, assets/images/service-kerbing-1200.webp 1200w" sizes="(max-width: 480px) 400px, (max-width: 768px) 800px, 1200px" type="image/webp">
+                            <source srcset="assets/images/service-kerbing-400.webp 400w, assets/images/service-kerbing-800.webp 800w, assets/images/service-kerbing-1200.webp 1200w" sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw" type="image/webp">
                             <img src="assets/images/service-kerbing.jpg" alt="Kerbing installation" class="service-card-image" loading="lazy" width="1200" height="658">
                         </picture>
                         <div class="service-card-info">
@@ -267,7 +268,7 @@
                     </div>
                     <div class="service-card-new">
                         <picture>
-                            <source srcset="assets/images/service-concrete-patios-400.webp 400w, assets/images/service-concrete-patios-800.webp 800w" sizes="(max-width: 480px) 400px, 800px" type="image/webp">
+                            <source srcset="assets/images/service-concrete-patios-400.webp 400w, assets/images/service-concrete-patios-800.webp 800w" sizes="(max-width: 480px) 100vw, 50vw" type="image/webp">
                             <img src="assets/images/service-concrete-patios.jpg" alt="Concrete patio" class="service-card-image" loading="lazy" width="1000" height="548">
                         </picture>
                         <div class="service-card-info">
@@ -312,19 +313,19 @@
                 <h2 style="color: var(--color-accent);">See Our Craftsmanship</h2>
                 <div class="gallery-grid">
                     <picture>
-                        <source srcset="assets/images/gallery-1-400.webp 400w, assets/images/gallery-1-800.webp 800w" sizes="(max-width: 480px) 400px, 800px" type="image/webp">
+                        <source srcset="assets/images/gallery-1-400.webp 400w, assets/images/gallery-1-800.webp 800w" sizes="(max-width: 480px) 100vw, 50vw" type="image/webp">
                         <img src="assets/images/gallery-1.jpg" alt="Concrete project" class="gallery-item" loading="lazy" width="973" height="668">
                     </picture>
                     <picture>
-                        <source srcset="assets/images/gallery-2-400.webp 400w, assets/images/gallery-2-800.webp 800w" sizes="(max-width: 480px) 400px, 800px" type="image/webp">
+                        <source srcset="assets/images/gallery-2-400.webp 400w, assets/images/gallery-2-800.webp 800w" sizes="(max-width: 480px) 100vw, 50vw" type="image/webp">
                         <img src="assets/images/gallery-2.jpg" alt="Concrete project" class="gallery-item" loading="lazy" width="973" height="668">
                     </picture>
                     <picture>
-                        <source srcset="assets/images/gallery-3-400.webp 400w, assets/images/gallery-3-800.webp 800w" sizes="(max-width: 480px) 400px, 800px" type="image/webp">
+                        <source srcset="assets/images/gallery-3-400.webp 400w, assets/images/gallery-3-800.webp 800w" sizes="(max-width: 480px) 100vw, 50vw" type="image/webp">
                         <img src="assets/images/gallery-3.jpg" alt="Concrete project" class="gallery-item" loading="lazy" width="973" height="668">
                     </picture>
                     <picture>
-                        <source srcset="assets/images/gallery-4-400.webp 400w, assets/images/gallery-4-800.webp 800w" sizes="(max-width: 480px) 400px, 800px" type="image/webp">
+                        <source srcset="assets/images/gallery-4-400.webp 400w, assets/images/gallery-4-800.webp 800w" sizes="(max-width: 480px) 100vw, 50vw" type="image/webp">
                         <img src="assets/images/gallery-4.jpg" alt="Concrete project" class="gallery-item" loading="lazy" width="973" height="668">
                     </picture>
                 </div>

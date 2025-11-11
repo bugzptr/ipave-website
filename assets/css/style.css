@@ -229,7 +229,8 @@ form input, form textarea {
     border-radius: var(--border-radius); 
     font-family: var(--font-family-body); 
     font-size: 1rem; 
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: box-shadow 0.2s ease;
+    will-change: box-shadow;
 }
 
 form input:focus, form textarea:focus {
@@ -263,7 +264,10 @@ form button {
 }
 
 .site-logo img { 
-    max-width: 250px; 
+    max-width: 250px;
+    width: 200px;
+    height: 50px;
+    display: block;
 }
 
 .header-phone { 
@@ -523,6 +527,7 @@ picture {
     gap: 3rem;
     align-items: start;
     padding: 4rem 0;
+    min-height: 400px;
 }
 
 .hero-text {
@@ -597,6 +602,8 @@ picture {
     font-size: 20px;
     font-family: var(--font-family-body);
     color: var(--color-primary);
+    transition: box-shadow 0.2s ease;
+    will-change: box-shadow;
 }
 
 .hero-form-container label {
@@ -866,6 +873,8 @@ form textarea::placeholder {
     padding: 0.5rem;
     font-size: 16px;
     height: 32px;
+    transition: box-shadow 0.2s ease;
+    will-change: box-shadow;
 }
 
 .footer-form textarea {
@@ -940,7 +949,10 @@ form textarea::placeholder {
 }
 
 .footer-logo { 
-    max-width: 200px; 
+    max-width: 200px;
+    width: 200px;
+    height: 50px;
+    display: block;
     margin-bottom: 1rem; 
 }
 
