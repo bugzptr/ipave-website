@@ -56,31 +56,76 @@
             color: #FFFFFF !important;
             overflow-x: hidden !important;
             overflow-y: visible !important;
+            margin: 0 !important;
+            padding: 0 !important;
         }
         
         .about-page main {
             overflow: visible !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        .about-page .about-hero {
+            width: 100% !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            position: relative !important;
+            left: 0 !important;
+            right: 0 !important;
         }
         
         /* Header Styles - Use same as homepage */
+        .about-page .site-header {
+            padding: 1rem 0 !important;
+            min-height: auto !important;
+        }
+        
+        .about-page .header-top {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            margin-bottom: 1rem !important;
+            padding-bottom: 0.5rem !important;
+            border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+        }
+        
+        .about-page .header-bottom {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+        }
+        
+        .about-page .site-logo img {
+            width: 200px !important;
+            height: 50px !important;
+            display: block !important;
+        }
         
         /* Hero Section */
         .about-hero {
             position: relative !important;
             height: 712px !important;
-            overflow: hidden;
-            background-color: #212161 !important;
             min-height: 712px !important;
+            overflow: hidden !important;
+            background-color: #212161 !important;
+            border: none !important;
+            outline: none !important;
+            display: flex !important;
+            align-items: center !important;
         }
         
         .about-hero-background {
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 100% !important;
+            height: 100% !important;
             object-fit: cover;
             z-index: 0;
+            border: none !important;
+            outline: none !important;
+            display: block;
         }
         
         .about-hero-overlay {
@@ -98,16 +143,17 @@
             z-index: 2 !important;
             max-width: 1282px !important;
             margin: 0 auto !important;
-            padding: 65px 68px 0 !important;
+            padding: 64px 68px 64px !important;
             display: grid !important;
             grid-template-columns: 1fr 472px !important;
             gap: 0 !important;
-            height: 100% !important;
             align-items: start !important;
         }
         
         .about-hero-text {
             padding-right: 25px;
+            position: relative;
+            z-index: 3;
         }
         
         .about-hero-text h1 {
@@ -129,7 +175,7 @@
             line-height: 0.9;
             letter-spacing: -0.72px;
             color: #FFFFFF;
-            margin-top: 25px;
+            margin-top: 24px;
             max-width: 643px;
             margin-bottom: 0;
         }
@@ -141,24 +187,31 @@
             line-height: 0.9;
             letter-spacing: -0.72px;
             color: #FFFFFF;
-            margin-top: 161px;
+            margin-top: 16px;
+            margin-bottom: 0;
             list-style: none;
             padding: 0;
         }
         
         .about-hero-services li {
+            margin-bottom: 8px;
+        }
+        
+        .about-hero-services li:last-child {
             margin-bottom: 0;
         }
         
         .about-hero-form-container {
             background: #FFFFFF;
             border: 2px solid #212161;
-            padding: 42px 52px;
+            padding: 28px 52px 28px;
             width: 472px;
-            min-height: 581px;
+            max-height: calc(100% - 20px);
             position: relative;
             margin-top: 0;
             box-sizing: border-box;
+            z-index: 3;
+            overflow: hidden;
         }
         
         .about-hero-form-container h3 {
@@ -169,7 +222,7 @@
             letter-spacing: -0.5px;
             color: #212161;
             text-align: center;
-            margin: 0 0 21px 0;
+            margin: 0 0 16px 0;
         }
         
         .about-hero-form-container .form-subtitle {
@@ -180,7 +233,7 @@
             letter-spacing: -0.4px;
             color: #212161;
             text-align: center;
-            margin: 0 0 18px 0;
+            margin: 0 0 16px 0;
         }
         
         .about-hero-form-container form {
@@ -190,7 +243,11 @@
         }
         
         .about-hero-form-container .form-group {
-            margin-bottom: 22px;
+            margin-bottom: 14px;
+        }
+        
+        .about-hero-form-container .form-group:last-of-type {
+            margin-bottom: 12px;
         }
         
         .about-hero-form-container .form-group label {
@@ -211,8 +268,8 @@
             width: 100%;
             background: #FFFFFF;
             border: 1px solid #212161;
-            padding: 12px 15px;
-            height: 52px;
+            padding: 10px 15px;
+            height: 48px;
             font-family: 'Encode Sans Semi Condensed', sans-serif;
             font-size: 20px;
             color: #212161;
@@ -220,9 +277,9 @@
         }
         
         .about-hero-form-container textarea {
-            height: 113px;
+            height: 90px;
             resize: none;
-            padding: 12px 15px;
+            padding: 10px 15px;
         }
         
         .about-hero-form-container button {
@@ -236,15 +293,17 @@
             border: none;
             height: 49px;
             width: 206px;
-            margin: 10px auto 0;
+            margin: 8px auto 0;
             cursor: pointer;
         }
         
         /* Story Sections */
         .about-story-section {
             background-color: #212161 !important;
-            padding: 0 !important;
+            padding: 60px 0 60px !important;
             color: #FFFFFF !important;
+            margin-top: 40px !important;
+            clear: both !important;
         }
         
         .about-story-section .container {
@@ -263,7 +322,7 @@
             text-align: center !important;
             margin: 0 auto !important;
             max-width: 1032px !important;
-            padding-top: 80px !important;
+            padding-top: 0 !important;
             margin-bottom: 0 !important;
         }
         
@@ -296,23 +355,30 @@
         
         .about-story-section .story-intro {
             padding-top: 0;
+            margin-bottom: 50px;
         }
         
         .about-story-section .story-intro p {
             max-width: 890px;
-            padding-top: 40px;
+            padding-top: 30px;
         }
         
         .about-story-section .story-section {
             padding-top: 0;
+            margin-bottom: 50px;
+        }
+        
+        .about-story-section .story-section:last-child {
+            margin-bottom: 0;
         }
         
         .about-story-section .story-section h3 {
-            padding-top: 60px;
+            padding-top: 0;
+            margin-bottom: 20px;
         }
         
         .about-story-section .story-section p {
-            padding-top: 30px;
+            padding-top: 0;
             max-width: 1049px;
         }
         
@@ -378,7 +444,7 @@
         .about-footer {
             background-color: #212161;
             color: #FFFFFF;
-            padding: 104px 0 0;
+            padding: 60px 0 0;
         }
         
         .about-footer .footer-grid {
@@ -558,7 +624,7 @@
         
         .about-footer .footer-bottom {
             text-align: center;
-            padding: 183px 0 0;
+            padding: 40px 0 20px;
             border-top: none;
         }
         
@@ -759,18 +825,18 @@
                 <div class="story-section">
                     <h3>From Humble Beginnings to a Trusted Christchurch Name</h3>
                     <p>Daryl learned the ropes with Duncan Grey and Enterprise Homes, mastering his craft and building the skills that would later define his own company. Then, 28 years ago, he took the leap, starting IPave Concrete with just one team member, one truck, and a big vision: to deliver quality concreting with care, pride, and precision. What started small has now grown into one of Christchurch's most trusted concrete companies, built on reputation, relationships, and results.</p>
-                </div>
+                    </div>
                 
                 <div class="story-section">
                     <h3>Built on Loyalty, Strengthened by Experience</h3>
                     <p>Over the years, Daryl has built not just projects but people.<br>
                     Many of iPave's team members have been by his side for 15 to 20 years, a rare loyalty that reflects the company's culture of respect, teamwork, and craftsmanship. That same dedication was tested after the Christchurch earthquakes, when iPave played a key role in the city's rebuild, completing over 22,000 jobs in seven years and employing close to 100 staff during its busiest period.</p>
-                </div>
+                    </div>
                 
                 <div class="story-section">
                     <h3>Expanding Horizons</h3>
                     <p>Never one to stand still, Daryl later expanded operations to Auckland, spotting a gap in the market. Today, iPave continues to run a skilled crew there, specialising in kerb and channel work for major civil companies and new developments.</p>
-                </div>
+                    </div>
                 
                 <div class="story-section">
                     <h3>A Family Business at Heart</h3>
