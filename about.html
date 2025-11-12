@@ -56,103 +56,7 @@
             color: #FFFFFF !important;
         }
         
-        /* Header Styles */
-        .about-header.site-header {
-            background-color: #212161 !important;
-            padding: 26px 0 0 0 !important;
-            position: relative;
-            min-height: 195px !important;
-        }
-        
-        .about-header .header-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 0 68px;
-            margin-bottom: 0;
-        }
-        
-        .about-header .site-logo {
-            width: 148px;
-            height: 64px;
-        }
-        
-        .about-header .site-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        
-        .about-header .header-phone {
-            margin-top: 23px;
-        }
-        
-        .about-header .phone-link {
-            color: #FDE906 !important;
-            font-family: 'Encode Sans Semi Condensed', sans-serif !important;
-            font-weight: 600 !important;
-            font-size: 37px !important;
-            line-height: 1.1 !important;
-            letter-spacing: -0.74px !important;
-            text-decoration: none !important;
-        }
-        
-        .about-header .header-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 68px;
-            margin-top: 49px;
-            padding-bottom: 0;
-        }
-        
-        .about-header .main-nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 25px;
-            align-items: center;
-        }
-        
-        .about-header .main-nav a {
-            color: #FFFFFF !important;
-            font-family: 'Encode Sans Semi Condensed', sans-serif !important;
-            font-weight: 600 !important;
-            font-size: 20px !important;
-            line-height: 0.9 !important;
-            letter-spacing: -0.4px !important;
-            text-decoration: none !important;
-            text-transform: none !important;
-        }
-        
-        .about-header .header-quote-button {
-            background-color: #FDE906;
-            color: #212161;
-            font-family: 'Encode Sans Semi Condensed', sans-serif;
-            font-weight: 900;
-            font-size: 20px;
-            line-height: 0.9;
-            letter-spacing: -0.4px;
-            padding: 0;
-            height: 49px;
-            width: 206px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            border: none;
-        }
-        
-        .about-header .header-divider {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: url('assets/images/about-header-bg.svg') repeat-x;
-            background-size: auto 100%;
-        }
+        /* Header Styles - Use same as homepage */
         
         /* Hero Section */
         .about-hero {
@@ -243,11 +147,12 @@
         .about-hero-form-container {
             background: #FFFFFF;
             border: 2px solid #212161;
-            padding: 0;
+            padding: 42px 52px;
             width: 472px;
-            height: 581px;
+            min-height: 581px;
             position: relative;
             margin-top: 0;
+            box-sizing: border-box;
         }
         
         .about-hero-form-container h3 {
@@ -258,8 +163,7 @@
             letter-spacing: -0.5px;
             color: #212161;
             text-align: center;
-            margin: 42px 0 0 0;
-            padding: 0 52px;
+            margin: 0 0 21px 0;
         }
         
         .about-hero-form-container .form-subtitle {
@@ -270,12 +174,10 @@
             letter-spacing: -0.4px;
             color: #212161;
             text-align: center;
-            margin: 63px 0 0 0;
+            margin: 0 0 18px 0;
         }
         
         .about-hero-form-container form {
-            padding: 0 52px;
-            margin-top: 18px;
             display: flex;
             flex-direction: column;
             gap: 0;
@@ -293,10 +195,7 @@
             letter-spacing: -0.4px;
             color: #212161;
             display: block;
-            margin-bottom: 0;
-            position: absolute;
-            left: 52px;
-            pointer-events: none;
+            margin-bottom: 8px;
         }
         
         .about-hero-form-container input[type="text"],
@@ -306,35 +205,18 @@
             width: 100%;
             background: #FFFFFF;
             border: 1px solid #212161;
-            padding: 0;
+            padding: 12px 15px;
             height: 52px;
             font-family: 'Encode Sans Semi Condensed', sans-serif;
             font-size: 20px;
             color: #212161;
-            padding-left: 15px;
-            padding-top: 17px;
+            box-sizing: border-box;
         }
         
         .about-hero-form-container textarea {
             height: 113px;
-            padding-top: 12px;
             resize: none;
-        }
-        
-        .about-hero-form-container .form-group.name-group label {
-            top: 403px;
-        }
-        
-        .about-hero-form-container .form-group.email-group label {
-            top: 474px;
-        }
-        
-        .about-hero-form-container .form-group.phone-group label {
-            top: 545px;
-        }
-        
-        .about-hero-form-container .form-group.message-group label {
-            top: 617px;
+            padding: 12px 15px;
         }
         
         .about-hero-form-container button {
@@ -348,30 +230,8 @@
             border: none;
             height: 49px;
             width: 206px;
-            margin: 132px auto 0;
+            margin: 10px auto 0;
             cursor: pointer;
-        }
-        
-        .about-hero .hero-quote-button-bottom {
-            position: absolute;
-            bottom: 0;
-            left: 872px;
-            width: 206px;
-            height: 49px;
-            background-color: #FDE906;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 3;
-        }
-        
-        .about-hero .hero-quote-button-bottom span {
-            font-family: 'Encode Sans Semi Condensed', sans-serif;
-            font-weight: 900;
-            font-size: 20px;
-            line-height: 0.9;
-            letter-spacing: -0.4px;
-            color: #212161;
         }
         
         /* Story Sections */
@@ -714,25 +574,17 @@
         }
         
         @media (max-width: 900px) {
-            .about-header .header-top,
-            .about-header .header-bottom {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;
-            }
-            
-            .about-header .main-nav {
-                display: none;
-            }
-            
             .about-hero-content {
-                grid-template-columns: 1fr;
-                padding-top: 2rem;
+                grid-template-columns: 1fr !important;
+                padding-top: 2rem !important;
+                padding-left: 1.5rem !important;
+                padding-right: 1.5rem !important;
             }
             
             .about-hero-form-container {
-                width: 100%;
-                max-width: 472px;
-                margin: 2rem auto 0;
+                width: 100% !important;
+                max-width: 472px !important;
+                margin: 2rem auto 0 !important;
             }
             
             .about-hero-text h1 {
@@ -818,30 +670,31 @@
 </head>
 <body class="about-page">
 
-    <header class="about-header site-header">
-        <div class="header-top">
-            <a href="/" class="site-logo">
-                <img src="assets/images/logo-horizontal.svg" alt="I Pave Concrete & Asphalt Logo" width="148" height="64">
-                <span class="visually-hidden">I Pave Concrete & Asphalt</span>
-            </a>
-            <div class="header-phone">
-                <a href="tel:08004728348" class="phone-link">0800 472 8348</a>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-top">
+                <a href="/" class="site-logo">
+                    <img src="assets/images/logo-horizontal.svg" alt="I Pave Concrete & Asphalt Logo" width="200" height="50">
+                    <span class="visually-hidden">I Pave Concrete & Asphalt</span>
+                </a>
+                <div class="header-phone">
+                    <a href="tel:08004728348" class="phone-link">0800 472 8348</a>
+                </div>
+            </div>
+            
+            <div class="header-bottom">
+                <nav class="main-nav" aria-label="Main navigation">
+                    <ul>
+                        <li><a href="/" aria-label="Go to homepage">HOME</a></li>
+                        <li><a href="our-process.html" aria-label="Learn about our process">OUR PROCESSES</a></li>
+                        <li><a href="services/" aria-label="View our services">SERVICES</a></li>
+                        <li><a href="projects/" aria-label="See our projects">OUR PROJECTS</a></li>
+                        <li><a href="about.html" aria-label="Read our story">ABOUT US</a></li>
+                    </ul>
+                </nav>
+                <a href="contact/" class="button-accent header-quote-button">GET  A QUOTE</a>
             </div>
         </div>
-        
-        <div class="header-bottom">
-            <nav class="main-nav" aria-label="Main navigation">
-                <ul>
-                    <li><a href="/" aria-label="Go to homepage">HOME</a></li>
-                    <li><a href="our-process.html" aria-label="Learn about our process">OUR PROCESSES</a></li>
-                    <li><a href="services/" aria-label="View our services">SERVICES</a></li>
-                    <li><a href="projects/" aria-label="See our projects">OUR PROJECTS</a></li>
-                    <li><a href="about.html" aria-label="Read our story">ABOUT US</a></li>
-                </ul>
-            </nav>
-            <a href="contact/" class="header-quote-button button-accent">GET  A QUOTE</a>
-        </div>
-        <div class="header-divider"></div>
     </header>
 
     <main>
@@ -868,20 +721,20 @@
                         <input type="hidden" name="replyTo" value="@email">
                         <input type="hidden" name="to" value="dave@intellinet.co.nz">
                         <div class="form-group name-group">
-                            <label for="hero-name" class="visually-hidden">Name</label>
-                            <input type="text" id="hero-name" name="name" placeholder="Name" required aria-required="true">
+                            <label for="hero-name">Name</label>
+                            <input type="text" id="hero-name" name="name" required aria-required="true">
                         </div>
                         <div class="form-group email-group">
-                            <label for="hero-email" class="visually-hidden">Email</label>
-                            <input type="email" id="hero-email" name="email" placeholder="Email" required aria-required="true">
+                            <label for="hero-email">Email</label>
+                            <input type="email" id="hero-email" name="email" required aria-required="true">
                         </div>
                         <div class="form-group phone-group">
-                            <label for="hero-phone" class="visually-hidden">Phone Number</label>
-                            <input type="tel" id="hero-phone" name="phone" placeholder="Phone Number">
+                            <label for="hero-phone">Phone Number</label>
+                            <input type="tel" id="hero-phone" name="phone">
                         </div>
                         <div class="form-group message-group">
-                            <label for="hero-message" class="visually-hidden">Tell us about your project</label>
-                            <textarea id="hero-message" name="message" placeholder="Tell us about your project" rows="4" required aria-required="true"></textarea>
+                            <label for="hero-message">Tell us about your project</label>
+                            <textarea id="hero-message" name="message" rows="4" required aria-required="true"></textarea>
                         </div>
                         <button type="submit">GET  A QUOTE</button>
                     </form>
