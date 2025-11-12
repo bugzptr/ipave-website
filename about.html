@@ -44,25 +44,24 @@
     <link rel="preload" href="assets/images/logo-horizontal.svg" as="image">
     <link rel="preload" href="assets/images/about-hero-background.jpg" as="image">
     
-    <link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
-    
     <link rel="dns-prefetch" href="//api.staticforms.dev">
     <link rel="preconnect" href="https://api.staticforms.dev">
     
+    <link rel="stylesheet" href="assets/css/style.css">
+    
     <style>
-        /* About Page Specific Styles */
+        /* About Page Specific Styles - Loaded after style.css to override */
         .about-page {
-            background-color: #212161;
-            color: #FFFFFF;
+            background-color: #212161 !important;
+            color: #FFFFFF !important;
         }
         
         /* Header Styles */
-        .about-header {
-            background-color: #212161;
-            padding: 26px 0 0 0;
+        .about-header.site-header {
+            background-color: #212161 !important;
+            padding: 26px 0 0 0 !important;
             position: relative;
-            min-height: 195px;
+            min-height: 195px !important;
         }
         
         .about-header .header-top {
@@ -89,13 +88,13 @@
         }
         
         .about-header .phone-link {
-            color: #FDE906;
-            font-family: 'Encode Sans Semi Condensed', sans-serif;
-            font-weight: 600;
-            font-size: 37px;
-            line-height: 1.1;
-            letter-spacing: -0.74px;
-            text-decoration: none;
+            color: #FDE906 !important;
+            font-family: 'Encode Sans Semi Condensed', sans-serif !important;
+            font-weight: 600 !important;
+            font-size: 37px !important;
+            line-height: 1.1 !important;
+            letter-spacing: -0.74px !important;
+            text-decoration: none !important;
         }
         
         .about-header .header-bottom {
@@ -117,13 +116,14 @@
         }
         
         .about-header .main-nav a {
-            color: #FFFFFF;
-            font-family: 'Encode Sans Semi Condensed', sans-serif;
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 0.9;
-            letter-spacing: -0.4px;
-            text-decoration: none;
+            color: #FFFFFF !important;
+            font-family: 'Encode Sans Semi Condensed', sans-serif !important;
+            font-weight: 600 !important;
+            font-size: 20px !important;
+            line-height: 0.9 !important;
+            letter-spacing: -0.4px !important;
+            text-decoration: none !important;
+            text-transform: none !important;
         }
         
         .about-header .header-quote-button {
@@ -156,17 +156,18 @@
         
         /* Hero Section */
         .about-hero {
-            position: relative;
-            height: 712px;
+            position: relative !important;
+            height: 712px !important;
             overflow: hidden;
-            background-color: #212161;
+            background-color: #212161 !important;
+            min-height: 712px !important;
         }
         
         .about-hero-background {
             position: absolute;
             top: 0;
-            left: -117px;
-            width: 1494px;
+            left: 0;
+            width: 100%;
             height: 100%;
             object-fit: cover;
             z-index: 0;
@@ -183,17 +184,16 @@
         }
         
         .about-hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 1282px;
-            margin: 0 auto;
-            padding: 65px 68px 0;
-            display: grid;
-            grid-template-columns: 1fr 472px;
-            gap: 0;
-            height: 100%;
-            align-items: start;
-            padding-top: 65px;
+            position: relative !important;
+            z-index: 2 !important;
+            max-width: 1282px !important;
+            margin: 0 auto !important;
+            padding: 65px 68px 0 !important;
+            display: grid !important;
+            grid-template-columns: 1fr 472px !important;
+            gap: 0 !important;
+            height: 100% !important;
+            align-items: start !important;
         }
         
         .about-hero-text {
@@ -201,15 +201,15 @@
         }
         
         .about-hero-text h1 {
-            font-family: 'Encode Sans Expanded', sans-serif;
-            font-weight: 700;
-            font-size: 64px;
-            line-height: 0.9;
-            letter-spacing: -3.84px;
-            color: #FFFFFF;
-            margin: 0 0 0 0;
+            font-family: 'Encode Sans Expanded', sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 64px !important;
+            line-height: 0.9 !important;
+            letter-spacing: -3.84px !important;
+            color: #FFFFFF !important;
+            margin: 0 0 0 0 !important;
             max-width: 612px;
-            margin-bottom: 0;
+            margin-bottom: 0 !important;
         }
         
         .about-hero-text .hero-description {
@@ -376,9 +376,9 @@
         
         /* Story Sections */
         .about-story-section {
-            background-color: #212161;
-            padding: 0;
-            color: #FFFFFF;
+            background-color: #212161 !important;
+            padding: 0 !important;
+            color: #FFFFFF !important;
         }
         
         .about-story-section .container {
@@ -388,17 +388,17 @@
         }
         
         .about-story-section h2 {
-            font-family: 'Encode Sans Expanded', sans-serif;
-            font-weight: 700;
-            font-size: 64px;
-            line-height: 0.9;
-            letter-spacing: -3.84px;
-            color: #FDE906;
-            text-align: center;
-            margin: 0 auto;
-            max-width: 1032px;
-            padding-top: 167px;
-            margin-bottom: 0;
+            font-family: 'Encode Sans Expanded', sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 64px !important;
+            line-height: 0.9 !important;
+            letter-spacing: -3.84px !important;
+            color: #FDE906 !important;
+            text-align: center !important;
+            margin: 0 auto !important;
+            max-width: 1032px !important;
+            padding-top: 167px !important;
+            margin-bottom: 0 !important;
         }
         
         .about-story-section h3 {
@@ -462,9 +462,9 @@
         
         /* CTA Banner */
         .about-cta-banner {
-            background-color: #FDE906;
-            padding: 43px 0;
-            text-align: center;
+            background-color: #FDE906 !important;
+            padding: 43px 0 !important;
+            text-align: center !important;
         }
         
         .about-cta-banner h2 {
@@ -707,13 +707,6 @@
         
         /* Responsive Styles */
         @media (max-width: 1282px) {
-            .about-hero-background {
-                left: 50%;
-                transform: translateX(-50%);
-                width: 100%;
-                max-width: 1494px;
-            }
-            
             .about-hero-content {
                 padding-left: 1.5rem;
                 padding-right: 1.5rem;
@@ -852,7 +845,7 @@
     </header>
 
     <main>
-        <section class="about-hero hero">
+        <section class="about-hero">
             <img src="assets/images/about-hero-background.jpg" alt="" class="about-hero-background" loading="eager">
             <div class="about-hero-overlay"></div>
             <div class="about-hero-content">
@@ -926,7 +919,7 @@
             </div>
         </section>
 
-        <section class="about-cta-banner cta-banner">
+        <section class="about-cta-banner">
             <div class="container">
                 <h2>Ready to Start Your Concrete Project?</h2>
                 <p>Contact us today for a free, no-obligation quote</p>
