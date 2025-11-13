@@ -63,11 +63,11 @@ def create_hero_variants():
         max_size=(1600, 900)
     )
     
-    # Desktop standard: 1200x675
+    # Desktop standard: 1200x675 (reduce quality slightly)
     optimize_webp(
         hero_jpg,
         images_dir / "hero-background-desktop.webp",
-        quality=80,
+        quality=75,
         max_size=(1200, 675)
     )
     
@@ -90,17 +90,24 @@ def optimize_service_images():
     images_dir = Path("assets/images")
     
     # Map WebP files to their JPG sources for better compression
+    # Create 420px versions for desktop display (actual display size)
     service_sources = {
+        "service-commercial-paving-420.webp": ("service-commercial-paving.jpg", (420, 280)),
         "service-commercial-paving-800.webp": ("service-commercial-paving.jpg", (800, 533)),
         "service-commercial-paving-400.webp": ("service-commercial-paving.jpg", (400, 267)),
+        "service-kerbing-420.webp": ("service-kerbing.jpg", (420, 280)),
         "service-kerbing-800.webp": ("service-kerbing.jpg", (800, 533)),
         "service-kerbing-400.webp": ("service-kerbing.jpg", (400, 267)),
+        "service-concrete-patios-420.webp": ("service-concrete-patios.jpg", (420, 280)),
         "service-concrete-patios-800.webp": ("service-concrete-patios.jpg", (800, 533)),
         "service-concrete-patios-400.webp": ("service-concrete-patios.jpg", (400, 267)),
+        "service-residential-driveways-420.webp": ("service-residential-driveways.jpg", (420, 280)),
         "service-residential-driveways-800.webp": ("service-residential-driveways.jpg", (800, 533)),
         "service-residential-driveways-400.webp": ("service-residential-driveways.jpg", (400, 267)),
+        "service-concrete-repair-420.webp": ("service-concrete-repair.jpg", (420, 280)),
         "service-concrete-repair-800.webp": ("service-concrete-repair.jpg", (800, 533)),
         "service-concrete-repair-400.webp": ("service-concrete-repair.jpg", (400, 267)),
+        "service-decorative-concrete-420.webp": ("service-decorative-concrete.jpg", (420, 280)),
         "service-decorative-concrete-800.webp": ("service-decorative-concrete.jpg", (800, 533)),
         "service-decorative-concrete-400.webp": ("service-decorative-concrete.jpg", (400, 267)),
     }
@@ -111,11 +118,13 @@ def optimize_service_images():
         jpg_path = images_dir / jpg_name
         
         if jpg_path.exists():
-            # Optimize from JPG source
-            optimize_webp(jpg_path, webp_path, quality=75, max_size=size)
+            # Use lower quality for 420px versions (desktop display size)
+            quality = 70 if "420" in webp_name else 75
+            optimize_webp(jpg_path, webp_path, quality=quality, max_size=size)
         elif webp_path.exists():
             # Fallback to recompressing existing WebP
-            optimize_webp(webp_path, quality=75, force_recompress=True)
+            quality = 70 if "420" in webp_name else 75
+            optimize_webp(webp_path, quality=quality, force_recompress=True)
         else:
             print(f"  Skipping {webp_name} (source not found)")
 
