@@ -20,7 +20,8 @@
   font-family: 'Encode Sans Semi Condensed';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/encode-sans-semi-condensed-400.ttf') format('truetype');
+  src: url('../fonts/encode-sans-semi-condensed-400.woff2') format('woff2'),
+       url('../fonts/encode-sans-semi-condensed-400.ttf') format('truetype');
 }
 
 @font-face {
@@ -28,7 +29,8 @@
   font-family: 'Encode Sans Semi Condensed';
   font-style: normal;
   font-weight: 600;
-  src: url('../fonts/encode-sans-semi-condensed-600.ttf') format('truetype');
+  src: url('../fonts/encode-sans-semi-condensed-600.woff2') format('woff2'),
+       url('../fonts/encode-sans-semi-condensed-600.ttf') format('truetype');
 }
 
 @font-face {
@@ -36,7 +38,8 @@
   font-family: 'Encode Sans Semi Condensed';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/encode-sans-semi-condensed-700.ttf') format('truetype');
+  src: url('../fonts/encode-sans-semi-condensed-700.woff2') format('woff2'),
+       url('../fonts/encode-sans-semi-condensed-700.ttf') format('truetype');
 }
 
 @font-face {
@@ -44,7 +47,8 @@
   font-family: 'Encode Sans Semi Condensed';
   font-style: normal;
   font-weight: 900;
-  src: url('../fonts/encode-sans-semi-condensed-900.ttf') format('truetype');
+  src: url('../fonts/encode-sans-semi-condensed-900.woff2') format('woff2'),
+       url('../fonts/encode-sans-semi-condensed-900.ttf') format('truetype');
 }
 
 /* Encode Sans Expanded */
@@ -53,7 +57,8 @@
   font-family: 'Encode Sans Expanded';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/encode-sans-expanded-400.ttf') format('truetype');
+  src: url('../fonts/encode-sans-expanded-400.woff2') format('woff2'),
+       url('../fonts/encode-sans-expanded-400.ttf') format('truetype');
 }
 
 @font-face {
@@ -61,7 +66,8 @@
   font-family: 'Encode Sans Expanded';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/encode-sans-expanded-700.ttf') format('truetype');
+  src: url('../fonts/encode-sans-expanded-700.woff2') format('woff2'),
+       url('../fonts/encode-sans-expanded-700.ttf') format('truetype');
 }
 
 /* DM Sans */
@@ -70,7 +76,8 @@
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/dm-sans-400.ttf') format('truetype');
+  src: url('../fonts/dm-sans-400.woff2') format('woff2'),
+       url('../fonts/dm-sans-400.ttf') format('truetype');
 }
 
 @font-face {
@@ -78,7 +85,8 @@
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/dm-sans-700.ttf') format('truetype');
+  src: url('../fonts/dm-sans-700.woff2') format('woff2'),
+       url('../fonts/dm-sans-700.ttf') format('truetype');
 }
 
 :root {
@@ -1274,5 +1282,234 @@ form textarea::placeholder {
         height: 44px;
         line-height: 44px;
         padding: 0 16px;
+    }
+}
+
+/* Projects Page Styles */
+.projects-intro-section {
+    background: var(--color-white);
+    padding: 4rem 0 2rem;
+}
+
+.projects-intro-section h1 {
+    font-size: 64px;
+    line-height: 0.9;
+    letter-spacing: -3.84px;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.projects-intro-text {
+    font-size: 36px;
+    line-height: 0.9;
+    letter-spacing: -0.72px;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.projects-description {
+    font-size: 36px;
+    line-height: 0.9;
+    letter-spacing: -0.72px;
+    color: var(--color-primary);
+    text-align: center;
+    max-width: 928px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+.projects-showcase-section {
+    background: var(--color-primary);
+    padding: 4rem 0;
+    color: var(--color-white);
+}
+
+.project-section {
+    margin-bottom: 4rem;
+}
+
+.project-section:last-child {
+    margin-bottom: 0;
+}
+
+.project-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 1159px;
+    margin: 0 auto 2rem;
+    border: 2px solid var(--color-accent);
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: 609px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-category-tag {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--color-accent);
+    color: var(--color-dark);
+    font-family: var(--font-family-service-title);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: -0.48px;
+    padding: 20px;
+    min-width: 420px;
+    box-sizing: border-box;
+}
+
+.project-content-overlay {
+    background: transparent;
+    color: var(--color-white);
+    text-align: center;
+    max-width: 918px;
+    margin: 0 auto;
+}
+
+.project-content-overlay h2 {
+    font-family: var(--font-family-body);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 0.9;
+    letter-spacing: -0.8px;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.project-description {
+    font-family: var(--font-family-body);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -0.64px;
+    color: var(--color-white);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.project-testimonial {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.testimonial-text {
+    font-family: var(--font-family-body);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -0.64px;
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+    font-style: normal;
+}
+
+.testimonial-author {
+    font-family: var(--font-family-body);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -0.64px;
+    color: var(--color-white);
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design for Projects Page */
+@media (max-width: 900px) and (min-width: 601px) {
+    .projects-intro-section h1 {
+        font-size: 48px;
+        letter-spacing: -2.88px;
+    }
+    
+    .projects-intro-text,
+    .projects-description {
+        font-size: 28px;
+        letter-spacing: -0.56px;
+    }
+    
+    .project-image {
+        height: 400px;
+    }
+    
+    .project-category-tag {
+        font-size: 20px;
+        padding: 16px;
+        min-width: 300px;
+    }
+    
+    .project-content-overlay h2 {
+        font-size: 32px;
+    }
+    
+    .project-description,
+    .testimonial-text,
+    .testimonial-author {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-intro-section {
+        padding: 2rem 0 1rem;
+    }
+    
+    .projects-intro-section h1 {
+        font-size: 32px;
+        letter-spacing: -1.92px;
+    }
+    
+    .projects-intro-text,
+    .projects-description {
+        font-size: 20px;
+        letter-spacing: -0.4px;
+        line-height: 1.2;
+    }
+    
+    .projects-showcase-section {
+        padding: 2rem 0;
+    }
+    
+    .project-section {
+        margin-bottom: 3rem;
+    }
+    
+    .project-image-container {
+        margin-bottom: 1.5rem;
+    }
+    
+    .project-image {
+        height: 300px;
+    }
+    
+    .project-category-tag {
+        font-size: 18px;
+        padding: 12px;
+        min-width: 250px;
+    }
+    
+    .project-content-overlay h2 {
+        font-size: 24px;
+        letter-spacing: -0.48px;
+    }
+    
+    .project-description,
+    .testimonial-text,
+    .testimonial-author {
+        font-size: 18px;
+        letter-spacing: -0.36px;
+        line-height: 1.3;
+    }
+    
+    .project-testimonial {
+        margin-top: 1.5rem;
     }
 }
