@@ -462,7 +462,33 @@ All Pages → Contact/Quote Request Forms
 ### Asset Management
 
 *   **Images:** Place all images in the `/assets/images/` folder. Use descriptive filenames (e.g., `residential-driveway-paving.jpg`). Use SVGs for logos and icons whenever possible.
-*   **Fonts:** All fonts are self-hosted in `/assets/fonts/`. Ensure you have the correct `.woff2` files for any new font styles or weights.
+*   **Fonts:** All fonts are self-hosted in `/assets/fonts/`. Fonts are stored as TTF files and automatically converted to WOFF2 format for optimal performance.
+
+#### Font Conversion Workflow
+
+When adding or updating fonts:
+
+1. **Add TTF files** to `/assets/fonts/` directory
+2. **Run the conversion script** to generate WOFF2 files:
+   ```bash
+   # Windows (PowerShell)
+   .\convert-fonts.ps1
+   
+   # Windows (Command Prompt)
+   convert-fonts.bat
+   
+   # Or directly with Python
+   python convert-fonts-to-woff2.py
+   ```
+3. **Verify** that WOFF2 files are generated (they should be smaller than TTF files)
+4. **Commit both TTF and WOFF2 files** to the repository
+
+**Note:** The CSS uses WOFF2 as primary format with TTF as fallback. Always regenerate WOFF2 files when TTF fonts are updated to ensure browser compatibility and optimal performance.
+
+**Requirements:** Python with `fonttools[woff]` installed:
+```bash
+pip install fonttools[woff]
+```
 
 ### Image Optimization with Squoosh - Hybrid Approach
 

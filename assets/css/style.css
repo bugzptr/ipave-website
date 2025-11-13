@@ -16,7 +16,7 @@
 
 /* Encode Sans Semi Condensed */
 @font-face {
-  font-display: swap;
+  font-display: optional;
   font-family: 'Encode Sans Semi Condensed';
   font-style: normal;
   font-weight: 400;
@@ -34,7 +34,7 @@
 }
 
 @font-face {
-  font-display: swap;
+  font-display: optional;
   font-family: 'Encode Sans Semi Condensed';
   font-style: normal;
   font-weight: 700;
@@ -62,7 +62,7 @@
 }
 
 @font-face {
-  font-display: swap;
+  font-display: optional;
   font-family: 'Encode Sans Expanded';
   font-style: normal;
   font-weight: 700;
