@@ -47,20 +47,130 @@
     <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
     
     <style>
-        /* Critical above-the-fold CSS */
+        /* Critical Above-the-Fold CSS - Inline for immediate rendering */
+        /* Font faces - Critical weights only */
+        @font-face {
+          font-display: block;
+          font-family: 'Encode Sans Semi Condensed';
+          font-style: normal;
+          font-weight: 400;
+          src: url('assets/fonts/encode-sans-semi-condensed-400.woff2') format('woff2'),
+               url('assets/fonts/encode-sans-semi-condensed-400.ttf') format('truetype');
+        }
+        @font-face {
+          font-display: block;
+          font-family: 'Encode Sans Semi Condensed';
+          font-style: normal;
+          font-weight: 600;
+          src: url('assets/fonts/encode-sans-semi-condensed-600.woff2') format('woff2'),
+               url('assets/fonts/encode-sans-semi-condensed-600.ttf') format('truetype');
+        }
+        @font-face {
+          font-display: block;
+          font-family: 'Encode Sans Semi Condensed';
+          font-style: normal;
+          font-weight: 700;
+          src: url('assets/fonts/encode-sans-semi-condensed-700.woff2') format('woff2'),
+               url('assets/fonts/encode-sans-semi-condensed-700.ttf') format('truetype');
+        }
+        @font-face {
+          font-display: block;
+          font-family: 'Encode Sans Expanded';
+          font-style: normal;
+          font-weight: 700;
+          src: url('assets/fonts/encode-sans-expanded-700.woff2') format('woff2'),
+               url('assets/fonts/encode-sans-expanded-700.ttf') format('truetype');
+        }
+
+        /* CSS Variables */
+        :root {
+            --color-primary: #212161;
+            --color-accent: #FDE906;
+            --color-light-gray: #E0E0E0;
+            --color-dark: #000000;
+            --color-white: #FFFFFF;
+            --color-text-body: #333;
+            --font-family-heading: 'Encode Sans Expanded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-family-body: 'Encode Sans Semi Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-family-nav: 'Encode Sans Semi Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --container-width: 1282px;
+            --border-radius: 5px;
+        }
+
+        /* Reset & Base */
         *, *::before, *::after { box-sizing: border-box; }
-        body { margin: 0; font-family: 'Encode Sans Semi Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; color: #333; background-color: #FFFFFF; line-height: 1.6; }
-        .site-header { background-color: #212161; padding: 1rem 0; }
+        body { margin: 0; font-family: var(--font-family-body); color: #333; background-color: #FFFFFF; line-height: 1.6; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* Container */
         .container { max-width: 1282px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* Header */
+        .site-header { background-color: #212161; padding: 1rem 0; }
+        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .header-bottom { display: flex; justify-content: space-between; align-items: center; }
         .site-logo img { width: 200px; height: 50px; display: block; }
+        .header-phone { text-align: right; }
+        .phone-link { color: #FDE906; font-family: var(--font-family-nav); font-size: 37px; font-weight: 600; text-decoration: none; letter-spacing: -0.74px; line-height: 1.1; transition: opacity 0.2s ease; }
+        .phone-link:hover { opacity: 0.8; }
+        .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 2rem; }
+        .main-nav a { color: #FFFFFF; font-family: var(--font-family-nav); font-weight: 600; font-size: 20px; letter-spacing: -0.4px; line-height: 0.9; text-decoration: none; transition: opacity 0.2s ease; }
+        .main-nav a:hover { opacity: 0.8; }
+        .button-accent { display: inline-block; padding: 0; height: 49px; line-height: 49px; padding: 0 20px; border-radius: 0; font-family: var(--font-family-nav); text-align: center; border: 2px solid #212161; cursor: pointer; font-weight: 900; font-size: 20px; letter-spacing: -0.4px; text-decoration: none; transition: opacity 0.2s ease; background-color: #FDE906; color: #212161; }
+        .button-accent:hover { opacity: 0.8; }
+
+        /* Hero Section */
         .hero { position: relative; background: #212161; color: #FFFFFF; min-height: 712px; height: 712px; display: flex; align-items: center; overflow: hidden; }
         .hero picture { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
         .hero-background { position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; object-fit: cover; z-index: 0; }
-        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(87, 87, 87, 0.8); z-index: 1; will-change: transform; }
-        .hero-text h1 { font-family: 'Encode Sans Expanded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 64px; line-height: 0.9; letter-spacing: -3.84px; margin-bottom: 1.5rem; max-width: 612px; color: #FDE906; min-height: 115px; }
+        .hero picture img { height: 100% !important; width: 100% !important; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(87, 87, 87, 0.8); z-index: 1; }
         .hero-content { position: relative; z-index: 2; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 4rem 0; min-width: 0; }
-        img { max-width: 100%; height: auto; display: block; }
-        .hero picture img { height: 100% !important; }
+        .hero-text { color: #FFFFFF; margin-top: -2rem; }
+        .hero-text h1 { font-family: var(--font-family-heading); font-weight: 700; font-size: 64px; line-height: 0.9; letter-spacing: -3.84px; margin-bottom: 1.5rem; max-width: 612px; color: #FDE906; min-height: 115px; }
+        .hero-text p { font-size: 36px; line-height: 0.9; letter-spacing: -0.72px; color: #FFFFFF; margin-bottom: 1.5rem; max-width: 643px; }
+        .hero-services-list { list-style: none; padding: 0; margin: 1rem 0; }
+        .hero-services-list li { font-size: 36px; line-height: 0.9; letter-spacing: -0.72px; color: #FFFFFF; margin-bottom: 0.5rem; font-weight: 600; }
+        .hero-form-container { background: #FFFFFF; border: 2px solid #212161; padding: 2rem; max-width: 472px; color: #333; }
+        .hero-form-container h3 { font-size: 25px; font-weight: 700; color: #212161; text-align: center; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+        .hero-form-container p { font-size: 20px; color: #212161; text-align: center; margin-bottom: 1.5rem; letter-spacing: -0.4px; }
+        .hero-form-container form { display: flex; flex-direction: column; gap: 0.5rem; }
+        .hero-form-container input,
+        .hero-form-container textarea { width: 100%; padding: 0.8rem; border: 1px solid #212161; font-size: 20px; font-family: var(--font-family-body); color: #212161; border-radius: 5px; }
+        .hero-form-container button { width: 100%; height: 49px; line-height: 49px; padding: 0 20px; background-color: #FDE906; color: #212161; border: 2px solid #212161; font-family: var(--font-family-nav); font-weight: 900; font-size: 20px; letter-spacing: -0.4px; cursor: pointer; border-radius: 0; }
+
+        /* Responsive - Tablet */
+        @media (max-width: 900px) and (min-width: 601px) {
+            .hero-text h1 { font-size: 48px; letter-spacing: -2.88px; }
+            .hero-text p { font-size: 28px; }
+            .hero-services-list li { font-size: 28px; }
+            .main-nav { display: none; }
+            .hero-content { grid-template-columns: 1fr; gap: 2rem; }
+            .hero-form-container { max-width: 100%; }
+            .header-top { flex-direction: column; gap: 1rem; text-align: center; margin-bottom: 1rem; }
+            .header-bottom { justify-content: center; }
+            .header-quote-button { display: none; }
+            .phone-link { font-size: 28px; }
+        }
+
+        /* Responsive - Mobile */
+        @media (max-width: 600px) {
+            .hero { min-height: auto; padding: 2rem 0; }
+            .hero-text h1 { font-size: 32px; letter-spacing: -1.92px; margin-bottom: 1rem; }
+            .hero-text p { font-size: 20px; letter-spacing: -0.4px; }
+            .hero-services-list li { font-size: 20px; letter-spacing: -0.4px; }
+            .hero-form-container { padding: 1.5rem; }
+            .hero-form-container h3 { font-size: 20px; }
+            .hero-form-container p { font-size: 16px; }
+            .hero-form-container input,
+            .hero-form-container textarea { font-size: 16px; padding: 0.6rem; }
+            .main-nav { display: none; }
+            .hero-content { grid-template-columns: 1fr; gap: 1.5rem; }
+            .header-top { flex-direction: column; gap: 1rem; text-align: center; margin-bottom: 1rem; }
+            .header-bottom { justify-content: center; }
+            .header-quote-button { display: none; }
+            .phone-link { font-size: 24px; }
+        }
     </style>
     
     <link rel="dns-prefetch" href="//api.staticforms.dev">
