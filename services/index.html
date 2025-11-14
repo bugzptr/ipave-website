@@ -33,24 +33,59 @@
     
     <link rel="canonical" href="https://ipave4u.co.nz/services/">
 
-    <link rel="preload" href="../assets/fonts/montserrat-v30-latin-700.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../assets/fonts/abeezee-v22-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/encode-sans-semi-condensed-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/encode-sans-semi-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/encode-sans-semi-condensed-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/encode-sans-semi-condensed-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/encode-sans-expanded-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/images/logo-horizontal.svg" as="image">
+    <link rel="preload" href="../assets/images/hero-background-mobile.webp" as="image" media="(max-width: 480px)">
+    <link rel="preload" href="../assets/images/hero-background-tablet.webp" as="image" media="(max-width: 768px)">
+    <link rel="preload" href="../assets/images/hero-background-desktop.webp" as="image" media="(min-width: 769px) and (max-width: 1439px)">
+    <link rel="preload" href="../assets/images/hero-background-desktop-large.webp" as="image" media="(min-width: 1440px)">
     
     <style>
+        /* Critical Above-the-Fold CSS - Inline for immediate rendering */
+        /* Font faces - Critical weights only */
         @font-face {
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 700;
-            font-display: block;
-            src: url('../assets/fonts/montserrat-v30-latin-700.woff2') format('woff2');
+          font-display: block;
+          font-family: 'Encode Sans Semi Condensed';
+          font-style: normal;
+          font-weight: 400;
+          src: url('../assets/fonts/encode-sans-semi-condensed-400.woff2') format('woff2'),
+               url('../assets/fonts/encode-sans-semi-condensed-400.ttf') format('truetype');
         }
         @font-face {
-            font-family: 'ABeeZee';
-            font-style: normal;
-            font-weight: 400;
-            font-display: block;
-            src: url('../assets/fonts/abeezee-v22-latin-regular.woff2') format('woff2');
+          font-display: block;
+          font-family: 'Encode Sans Semi Condensed';
+          font-style: normal;
+          font-weight: 600;
+          src: url('../assets/fonts/encode-sans-semi-condensed-600.woff2') format('woff2'),
+               url('../assets/fonts/encode-sans-semi-condensed-600.ttf') format('truetype');
+        }
+        @font-face {
+          font-display: block;
+          font-family: 'Encode Sans Semi Condensed';
+          font-style: normal;
+          font-weight: 700;
+          src: url('../assets/fonts/encode-sans-semi-condensed-700.woff2') format('woff2'),
+               url('../assets/fonts/encode-sans-semi-condensed-700.ttf') format('truetype');
+        }
+        @font-face {
+          font-display: block;
+          font-family: 'Encode Sans Expanded';
+          font-style: normal;
+          font-weight: 700;
+          src: url('../assets/fonts/encode-sans-expanded-700.woff2') format('woff2'),
+               url('../assets/fonts/encode-sans-expanded-700.ttf') format('truetype');
+        }
+        @font-face {
+          font-display: block;
+          font-family: 'Encode Sans Semi Condensed';
+          font-style: normal;
+          font-weight: 900;
+          src: url('../assets/fonts/encode-sans-semi-condensed-900.woff2') format('woff2'),
+               url('../assets/fonts/encode-sans-semi-condensed-900.ttf') format('truetype');
         }
     </style>
     
@@ -62,10 +97,11 @@
             --color-dark: #000000;
             --color-white: #FFFFFF;
             --color-text-body: #333;
-            --font-family-heading: 'Montserrat', sans-serif;
-            --font-family-body: 'ABeeZee', sans-serif;
+            --font-family-heading: 'Encode Sans Expanded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-family-body: 'Encode Sans Semi Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-family-nav: 'Encode Sans Semi Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             --spacing-unit: 1rem;
-            --container-width: 1140px;
+            --container-width: 1282px;
             --border-radius: 5px;
         }
         
@@ -101,30 +137,42 @@
         .text-center p { max-width: 750px; margin-left: auto; margin-right: auto; }
         .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
         
-        .button-primary, .button-accent { display: inline-block; padding: 0.8rem 2rem; border-radius: var(--border-radius); font-family: var(--font-family-heading); text-align: center; border: 2px solid transparent; cursor: pointer; font-weight: 700; }
-        .button-primary { background-color: var(--color-primary); color: var(--color-white); }
-        .button-accent { background-color: var(--color-accent); color: var(--color-primary); border-color: var(--color-primary); }
+        .button-primary, .button-accent { display: inline-block; padding: 0; height: 49px; line-height: 49px; padding: 0 20px; border-radius: 0; font-family: var(--font-family-nav); text-align: center; border: none; cursor: pointer; font-weight: 900; font-size: 20px; letter-spacing: -0.4px; text-decoration: none; transition: opacity 0.2s ease; }
+        .button-primary { background-color: var(--color-primary); color: var(--color-accent); }
+        .button-accent { background-color: var(--color-accent); color: var(--color-primary); border: 2px solid var(--color-primary); }
+        .button-accent:hover { opacity: 0.8; }
         
         form { display: flex; flex-direction: column; gap: 1rem; }
         form input, form textarea { width: 100%; padding: 0.8rem; border: 1px solid var(--color-light-gray); border-radius: var(--border-radius); font-family: var(--font-family-body); font-size: 1rem; }
         form button { width: 100%; }
         
-        .site-header { background-color: var(--color-primary); padding: 1rem 0; min-height: 120px; }
-        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); min-height: 60px; }
-        .header-bottom { display: flex; justify-content: space-between; align-items: center; min-height: 40px; }
-        .site-logo img { max-width: 250px; }
-        .header-phone { text-align: right; min-height: 60px; display: flex; align-items: center; justify-content: flex-end; contain: layout; }
-        .phone-link { color: var(--color-accent); font-family: var(--font-family-heading); font-size: 2.5rem; font-weight: 700; text-decoration: none; transition: opacity 0.2s ease; }
+        .site-header { background-color: var(--color-primary); padding: 1rem 0; }
+        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .header-bottom { display: flex; justify-content: space-between; align-items: center; }
+        .site-logo img { width: 200px; height: 50px; display: block; }
+        .header-phone { text-align: right; }
+        .phone-link { color: var(--color-accent); font-family: var(--font-family-nav); font-size: 37px; font-weight: 600; text-decoration: none; transition: opacity 0.2s ease; letter-spacing: -0.74px; line-height: 1.1; }
         .main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 2rem; }
-        .main-nav a { color: var(--color-white); font-family: var(--font-family-heading); }
+        .main-nav a { color: var(--color-white); font-family: var(--font-family-nav); font-weight: 600; font-size: 20px; letter-spacing: -0.4px; line-height: 0.9; text-decoration: none; transition: opacity 0.2s ease; }
+        .main-nav a:hover { opacity: 0.8; }
         
-        .hero { background: var(--color-primary); color: var(--color-white); min-height: 60vh; display: flex; align-items: center; }
-        .hero h1 { color: var(--color-accent); }
-        .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; width: 100%; contain: layout; min-height: 400px; }
-        
-        .hero-text { min-height: 300px; display: flex; flex-direction: column; justify-content: center; contain: layout; }
-        .hero-form-container { background: var(--color-white); color: var(--color-text-body); padding: 2rem; border-radius: var(--border-radius); min-height: 400px; display: flex; flex-direction: column; justify-content: center; }
-        .hero-form-container h3, .hero-form-container p { color: var(--color-primary); text-align: center; }
+        .hero { position: relative; background: var(--color-primary); color: var(--color-white); min-height: 712px; height: 712px; display: flex; align-items: center; overflow: hidden; }
+        .hero picture { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+        .hero-background { position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; object-fit: cover; z-index: 0; }
+        .hero picture img { height: 100% !important; width: 100% !important; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(87, 87, 87, 0.8); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 4rem 0; min-width: 0; }
+        .hero-text { color: var(--color-white); margin-top: -2rem; }
+        .hero-text h1 { font-family: var(--font-family-heading); font-weight: 700; font-size: 64px; line-height: 0.9; letter-spacing: -3.84px; margin-bottom: 1.5rem; max-width: 612px; color: var(--color-accent); min-height: 115px; }
+        .hero-text p { font-size: 36px; line-height: 0.9; letter-spacing: -0.72px; color: var(--color-white); margin-bottom: 1.5rem; max-width: 643px; }
+        .hero-services-list { list-style: none; padding: 0; margin: 1rem 0; }
+        .hero-services-list li { font-size: 36px; line-height: 0.9; letter-spacing: -0.72px; color: var(--color-white); margin-bottom: 0.5rem; font-weight: 600; }
+        .hero-form-container { background: var(--color-white); border: 2px solid var(--color-primary); padding: 2rem; max-width: 472px; color: var(--color-text-body); }
+        .hero-form-container h3 { font-size: 25px; font-weight: 700; color: var(--color-primary); text-align: center; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+        .hero-form-container p { font-size: 20px; color: var(--color-primary); text-align: center; margin-bottom: 1.5rem; letter-spacing: -0.4px; }
+        .hero-form-container form { display: flex; flex-direction: column; gap: 0.5rem; }
+        .hero-form-container input, .hero-form-container textarea { width: 100%; padding: 0.8rem; border: 1px solid var(--color-primary); font-size: 20px; font-family: var(--font-family-body); color: var(--color-primary); border-radius: 5px; }
+        .hero-form-container button { width: 100%; height: 49px; line-height: 49px; padding: 0 20px; background-color: var(--color-accent); color: var(--color-primary); border: 2px solid var(--color-primary); font-family: var(--font-family-nav); font-weight: 900; font-size: 20px; letter-spacing: -0.4px; cursor: pointer; border-radius: 0; }
         
         .services-highlight { background-color: #f9f9f9; }
         .section-header { text-align: center; margin-bottom: 3rem; }
@@ -143,8 +191,10 @@
             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23FDE906' class='bi bi-check-lg' viewBox='0 0 16 16'%3E%3Cpath d='M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z'/%3E%3C/svg%3E") no-repeat 0 0.4em; 
         }
         
-        .cta-banner { background: var(--color-primary); color: var(--color-white); text-align: center; }
-        .cta-banner h3 { color: var(--color-accent); }
+        .cta-banner { background-color: var(--color-accent); text-align: center; padding: 4rem 0; }
+        .cta-banner h2 { color: var(--color-primary); font-size: 48px; line-height: 0.9; letter-spacing: -2.88px; margin-bottom: 1rem; }
+        .cta-banner p { font-size: 32px; line-height: 0.96; letter-spacing: -0.64px; color: var(--color-primary); margin-bottom: 2rem; }
+        .cta-banner .button-primary { background-color: var(--color-primary); color: var(--color-accent); }
         
         .site-footer { background: var(--color-primary); color: var(--color-white); padding: 3rem 0 1rem; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
@@ -154,17 +204,35 @@
         .footer-services a { color: var(--color-white); }
         .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
         
-        @media (max-width: 900px) {
+        @media (max-width: 900px) and (min-width: 601px) {
+            .hero-text h1 { font-size: 48px; letter-spacing: -2.88px; }
+            .hero-text p { font-size: 28px; }
+            .hero-services-list li { font-size: 28px; }
+            .main-nav { display: none; }
+            .hero-content { grid-template-columns: 1fr; gap: 2rem; }
+            .hero-form-container { max-width: 100%; }
+            .header-top { flex-direction: column; gap: 1rem; text-align: center; margin-bottom: 1rem; }
+            .header-bottom { justify-content: center; }
+            .header-quote-button { display: none; }
+            .phone-link { font-size: 28px; }
             h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); min-height: 1.2em; }
             h2 { font-size: 2rem; min-height: 1.2em; }
-            .main-nav { display: none; }
-            .hero-content { grid-template-columns: 1fr; }
-            .header-flex { justify-content: center; }
-            .header-quote-button { display: none; }
-            .phone-link { font-size: 2rem; }
         }
         @media (max-width: 600px) {
-            .phone-link { font-size: 1.5rem; }
+            .hero { min-height: auto; padding: 2rem 0; }
+            .hero-text h1 { font-size: 32px; letter-spacing: -1.92px; margin-bottom: 1rem; }
+            .hero-text p { font-size: 20px; letter-spacing: -0.4px; }
+            .hero-services-list li { font-size: 20px; letter-spacing: -0.4px; }
+            .hero-form-container { padding: 1.5rem; }
+            .hero-form-container h3 { font-size: 20px; }
+            .hero-form-container p { font-size: 16px; }
+            .hero-form-container input, .hero-form-container textarea { font-size: 16px; padding: 0.6rem; }
+            .main-nav { display: none; }
+            .hero-content { grid-template-columns: 1fr; gap: 1.5rem; }
+            .header-top { flex-direction: column; gap: 1rem; text-align: center; margin-bottom: 1rem; }
+            .header-bottom { justify-content: center; }
+            .header-quote-button { display: none; }
+            .phone-link { font-size: 24px; }
         }
         
         /* NAP (Name, Address, Phone) Styling */
@@ -187,7 +255,7 @@
         <div class="container">
             <div class="header-top">
                 <a href="../" class="site-logo">
-                    <img src="../assets/images/logo-horizontal.svg" alt="I Pave Concrete & Asphalt Logo">
+                    <img src="../assets/images/logo-horizontal.svg" alt="I Pave Concrete & Asphalt Logo" width="200" height="50">
                     <span class="visually-hidden">I Pave Concrete & Asphalt</span>
                 </a>
                 <div class="header-phone">
@@ -198,34 +266,41 @@
             <div class="header-bottom">
                 <nav class="main-nav" aria-label="Main navigation">
                     <ul>
-                        <li><a href="../" aria-label="Go to homepage">Home</a></li>
-                        <li><a href="../our-process.html" aria-label="Learn about our process">Our Process</a></li>
-                        <li><a href="../services/" aria-label="View our services">Services</a></li>
-                        <li><a href="../projects/" aria-label="See our projects">Our Projects</a></li>
-                        <li><a href="../about.html" aria-label="Read our story">About Us</a></li>
-                        <li><a href="../contact/" aria-label="Contact us">Contact</a></li>
+                        <li><a href="../" aria-label="Go to homepage">HOME</a></li>
+                        <li><a href="../our-process.html" aria-label="Learn about our process">OUR PROCESSES</a></li>
+                        <li><a href="../services/" aria-label="View our services">SERVICES</a></li>
+                        <li><a href="../projects/" aria-label="See our projects">OUR PROJECTS</a></li>
+                        <li><a href="../about.html" aria-label="Read our story">ABOUT US</a></li>
                     </ul>
                 </nav>
-                <a href="../contact/" class="button-accent header-quote-button">Get a quote</a>
+                <a href="../contact/" class="button-accent header-quote-button">GET  A QUOTE</a>
             </div>
         </div>
     </header>
 
     <main>
         <section class="hero">
+            <picture>
+                <source media="(max-width: 480px)" srcset="../assets/images/hero-background-mobile.webp" type="image/webp">
+                <source media="(max-width: 768px)" srcset="../assets/images/hero-background-tablet.webp" type="image/webp">
+                <source media="(min-width: 1440px)" srcset="../assets/images/hero-background-desktop-large.webp" type="image/webp">
+                <source srcset="../assets/images/hero-background-desktop.webp" type="image/webp">
+                <img src="../assets/images/hero-background.jpg" alt="" class="hero-background" loading="eager" fetchpriority="high" width="1920" height="1080">
+            </picture>
+            <div class="hero-overlay"></div>
             <div class="container hero-content">
                 <div class="hero-text">
-                    <h1>Comprehensive Concrete Services in Christchurch</h1>
-                    <p>Your one-stop concrete contractor for residential and commercial projects. From driveways to decorative finishes, we deliver quality craftsmanship across Christchurch and Canterbury.</p>
-                    <ul class="benefits-list">
-                        <li>Residential & Commercial Services</li>
-                        <li>Over 25 Years Experience</li>
-                        <li>Quality Guaranteed</li>
-                        <li>Free Quotes Available</li>
+                    <h1>Christchurch's Most Experienced Concrete & Asphalt Specialists</h1>
+                    <p>Expertly crafted concrete patio Christchurch, driveways, foundations, and footpaths, built to last. At IPave, quality is always our foundation.</p>
+                    <ul class="hero-services-list">
+                        <li>Concrete Services</li>
+                        <li>Decorative Concrete</li>
+                        <li>Kerbing Services</li>
+                        <li>Landscape Services</li>
                     </ul>
                 </div>
                 <div class="hero-form-container">
-                    <h3>Get Your Free Quote</h3>
+                    <h3>Contact I Pave Concrete & Asphalt for a free quote :</h3>
                     <p>Ph: 0800 472 8348 or leave a message</p>
                     <form action="https://api.staticforms.dev/submit" method="POST" novalidate>
                         <input type="hidden" name="apiKey" value="sf_21a1k3bflhbdnf58nh87n7m3">
@@ -248,87 +323,101 @@
                             <label for="message" class="visually-hidden">Tell us about your project</label>
                             <textarea id="message" name="message" placeholder="Tell us about your project" rows="4" required aria-required="true"></textarea>
                         </div>
-                        <button type="submit" class="button-primary">Get Free Quote</button>
+                        <button type="submit" class="button-accent">GET  A QUOTE</button>
                     </form>
                 </div>
             </div>
         </section>
 
-        <section class="intro">
-            <div class="container text-center">
-                <h2>Professional Concrete Services Across Christchurch</h2>
-                <p>Since 1998, I Pave Concrete & Asphalt has been Christchurch's trusted name for quality concrete work. We offer a complete range of concrete services for both residential and commercial projects, from initial design through to final completion. Our experienced team combines traditional craftsmanship with modern techniques to deliver results that stand the test of time.</p>
-            </div>
-        </section>
-
-        <section class="services-highlight">
+        <section class="services-intro-section">
             <div class="container">
-                <div class="section-header">
-                    <h2>Our Concrete Services</h2>
-                    <p>Comprehensive solutions for all your concrete needs</p>
-                </div>
-                
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>Residential Driveways</h3>
-                        <p>Transform your home's entrance with a durable, attractive concrete driveway. We specialize in custom driveway solutions that enhance curb appeal and withstand Christchurch's weather conditions.</p>
-                        <a href="residential-driveways.html" class="button-primary">Learn More</a>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h3>Commercial Paving</h3>
-                        <p>Professional commercial concrete paving for parking lots, warehouse floors, and industrial applications. Built to handle heavy traffic and meet commercial standards.</p>
-                        <a href="commercial-paving.html" class="button-primary">Learn More</a>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h3>Concrete Repair</h3>
-                        <p>Expert concrete repair and restoration services. We fix cracks, resurface damaged areas, and restore your concrete to like-new condition.</p>
-                        <a href="concrete-repair.html" class="button-primary">Learn More</a>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h3>Decorative Concrete</h3>
-                        <p>Add style and sophistication with decorative concrete finishes. Choose from stamped, colored, exposed aggregate, and polished options to match your design vision.</p>
-                        <a href="decorative-concrete.html" class="button-primary">Learn More</a>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h3>Kerbing Services</h3>
-                        <p>Professional kerb and channel installation for driveways, gardens, and property boundaries. Precision work that defines spaces and improves drainage.</p>
-                        <a href="kerbing-services.html" class="button-primary">Learn More</a>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h3>Concrete Patios</h3>
-                        <p>Create beautiful outdoor living spaces with custom concrete patios. Perfect for entertaining, relaxing, and enhancing your property value.</p>
-                        <a href="../concrete-patio.html" class="button-primary">Learn More</a>
-                    </div>
-                </div>
+                <h2>Our Services</h2>
+                <p class="intro-subheading">One contractor. All concrete solutions. Built to last.</p>
+                <p class="intro-description">With over 45 years' experience across Canterbury, IPave delivers professional concrete and asphalt services for homes, businesses and specialist civil projects. From a tidy residential driveway to large commercial slabs and precision kerbing, we handle every job from design through to completion, no shortcuts, no surprises</p>
             </div>
         </section>
 
-        <section class="intro">
-            <div class="container text-center">
-                <h2>Why Choose I Pave Concrete & Asphalt?</h2>
-                <p>With nearly 50 years of combined experience, we bring expertise, reliability, and quality to every project:</p>
-                <ul class="benefits-list" style="text-align: left; max-width: 600px; margin: 0 auto;">
-                    <li>Locally owned and operated since 1998</li>
-                    <li>Transparent pricing with no hidden costs</li>
-                    <li>Quality craftsmanship guaranteed</li>
-                    <li>Full service from design to completion</li>
-                    <li>Experienced team with proven track record</li>
-                    <li>Comprehensive range of concrete services</li>
-                    <li>Christchurch and Canterbury coverage</li>
-                </ul>
+        <section class="services-panels-section">
+            <div class="container">
+                <!-- Commercial Paving -->
+                <div class="service-panel">
+                    <div class="service-panel-content">
+                        <h3 class="service-title">Commercial Paving</h3>
+                        <p class="service-description">When it's time for car parks, warehouse floors or industrial access ways, our commercial-grade concrete paving is built to perform. With planning, mixing, reinforcement, control joints and precision finishing, we deliver slabs that meet heavy-duty demands and commercial standards.</p>
+                        <a href="commercial-paving.html" class="service-button">Commercial Paving</a>
+                    </div>
+                    <div class="service-panel-image-wrapper">
+                        <img src="../assets/images/service-commercial-paving-figma.jpg" alt="Commercial paving work" class="service-panel-image">
+                    </div>
+                </div>
+
+                <!-- Kerbing Services -->
+                <div class="service-panel">
+                    <div class="service-panel-content">
+                        <h3 class="service-title">Kerbing Services</h3>
+                        <p class="service-description">Precision kerb and channel installation defines edges, manages runoff and completes the look of your project. From driveways and gardens to commercial boundaries and stormwater control, we install kerbs and channels with accuracy and long-term performance.</p>
+                        <a href="kerbing-services.html" class="service-button">Kerbing Services</a>
+                    </div>
+                    <div class="service-panel-image-wrapper">
+                        <img src="../assets/images/service-kerbing-figma.jpg" alt="Kerbing installation" class="service-panel-image">
+                    </div>
+                </div>
+
+                <!-- Concrete Patios -->
+                <div class="service-panel">
+                    <div class="service-panel-content">
+                        <h3 class="service-title">Concrete Patios</h3>
+                        <p class="service-description">Create beautiful outdoor living spaces with custom concrete patios designed for entertaining, relaxation and long-term value. From design consultation through to finishing touches, we deliver patios that complement your home and withstand Canterbury's climate.</p>
+                        <a href="../concrete-patio.html" class="service-button">Concrete Patios</a>
+                    </div>
+                    <div class="service-panel-image-wrapper">
+                        <img src="../assets/images/service-concrete-patios-figma.jpg" alt="Concrete patio" class="service-panel-image">
+                    </div>
+                </div>
+
+                <!-- Residential Driveways -->
+                <div class="service-panel">
+                    <div class="service-panel-content">
+                        <h3 class="service-title">Residential Driveways</h3>
+                        <p class="service-description">Upgrade your home's entrance with a custom concrete driveway designed to withstand Canterbury's climate and deliver long-term value. From site assessment and base preparation to reinforcement, pouring, finishing and sealing, we handle every step. Choose broomed, coloured, textured or exposed-aggregate finishes to match your style and vehicle-load needs.</p>
+                        <a href="residential-driveways.html" class="service-button">Residential Driveways</a>
+                    </div>
+                    <div class="service-panel-image-wrapper">
+                        <img src="../assets/images/service-residential-driveways-figma.jpg" alt="Residential driveway" class="service-panel-image">
+                    </div>
+                </div>
+
+                <!-- Decorative Concrete -->
+                <div class="service-panel">
+                    <div class="service-panel-content">
+                        <h3 class="service-title">Decorative Concrete</h3>
+                        <p class="service-description">If you're looking for concrete that doesn't just last but looks exceptional, our decorative options give you both. Choose from stamped, coloured, exposed aggregate or polished finishes. We match your design vision while building in durability and slip-resistance for real-world use.</p>
+                        <a href="decorative-concrete.html" class="service-button">Decorative Concrete</a>
+                    </div>
+                    <div class="service-panel-image-wrapper">
+                        <img src="../assets/images/service-decorative-concrete-figma.jpg" alt="Decorative concrete" class="service-panel-image">
+                    </div>
+                </div>
+
+                <!-- Concrete Repair & Restoration -->
+                <div class="service-panel">
+                    <div class="service-panel-content">
+                        <h3 class="service-title">Concrete Repair & Restoration</h3>
+                        <p class="service-description">Cracks, spalling, worn surfaces, we restore your concrete rather than simply replace it. Our repair and resurfacing services include crack injection, protective coatings and weather-damage remediation suited to the Christchurch environment. Bring your surface back to strength and appearance.</p>
+                        <a href="concrete-repair.html" class="service-button">Concrete Repair</a>
+                    </div>
+                    <div class="service-panel-image-wrapper">
+                        <img src="../assets/images/service-concrete-repair-figma.jpg" alt="Concrete repair work" class="service-panel-image">
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="cta-banner">
             <div class="container">
-                <h3>Ready to Start Your Concrete Project?</h3>
+                <h2>Ready to Start Your Concrete Project?</h2>
                 <p>Contact us today for a free, no-obligation quote</p>
-                <a href="tel:08004728348" class="button-accent">Call 0800 472 8348</a>
+                <a href="../contact/" class="button-primary">GET  A QUOTE</a>
             </div>
         </section>
 

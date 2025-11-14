@@ -1513,3 +1513,206 @@ form textarea::placeholder {
         margin-top: 1.5rem;
     }
 }
+
+/* Service Panels - Figma Design */
+.services-panels-section {
+    padding: clamp(3rem, 8vw, 5rem) 0;
+    background-color: var(--color-white);
+}
+
+.service-panel {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-accent);
+    padding: 64px;
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-panel-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.service-panel-image-wrapper {
+    flex: 1;
+    max-width: 50%;
+}
+
+.service-panel-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid var(--color-accent);
+    object-fit: cover;
+}
+
+.service-title {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 0.9;
+    letter-spacing: -0.64px;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.service-description {
+    font-family: var(--font-family-heading);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.1;
+    letter-spacing: -0.48px;
+    color: var(--color-dark);
+    margin-bottom: 1.5rem;
+}
+
+.service-button {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.48px;
+    text-decoration: none;
+    text-align: center;
+    transition: opacity 0.2s ease;
+    margin-top: 1rem;
+}
+
+.service-button:hover {
+    opacity: 0.8;
+}
+
+/* Services Introduction Section */
+.services-intro-section {
+    padding: clamp(3rem, 8vw, 5rem) 0;
+    background-color: var(--color-white);
+    text-align: center;
+}
+
+.services-intro-section h2 {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 0.9;
+    letter-spacing: -3.84px;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.services-intro-section .intro-subheading {
+    font-family: var(--font-family-heading);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -0.64px;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+}
+
+.services-intro-section .intro-description {
+    font-family: var(--font-family-heading);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -0.64px;
+    color: var(--color-primary);
+    max-width: 967px;
+    margin: 0 auto;
+}
+
+/* Responsive Design for Service Panels */
+@media (max-width: 900px) and (min-width: 601px) {
+    .service-panel {
+        flex-direction: column;
+        padding: 48px;
+        gap: 32px;
+    }
+    
+    .service-panel-content,
+    .service-panel-image-wrapper {
+        max-width: 100%;
+    }
+    
+    .service-title {
+        font-size: 28px;
+        letter-spacing: -0.56px;
+    }
+    
+    .service-description {
+        font-size: 20px;
+        letter-spacing: -0.4px;
+    }
+    
+    .service-button {
+        font-size: 20px;
+        height: 50px;
+        line-height: 50px;
+    }
+    
+    .services-intro-section h2 {
+        font-size: 48px;
+        letter-spacing: -2.88px;
+    }
+    
+    .services-intro-section .intro-subheading,
+    .services-intro-section .intro-description {
+        font-size: 24px;
+        letter-spacing: -0.48px;
+    }
+}
+
+@media (max-width: 600px) {
+    .service-panel {
+        flex-direction: column;
+        padding: 32px 24px;
+        gap: 24px;
+    }
+    
+    .service-panel-content,
+    .service-panel-image-wrapper {
+        max-width: 100%;
+    }
+    
+    .service-title {
+        font-size: 24px;
+        letter-spacing: -0.48px;
+    }
+    
+    .service-description {
+        font-size: 18px;
+        letter-spacing: -0.36px;
+    }
+    
+    .service-button {
+        font-size: 18px;
+        height: 45px;
+        line-height: 45px;
+        padding: 0 16px;
+    }
+    
+    .services-intro-section {
+        padding: 2rem 0;
+    }
+    
+    .services-intro-section h2 {
+        font-size: 32px;
+        letter-spacing: -1.92px;
+    }
+    
+    .services-intro-section .intro-subheading,
+    .services-intro-section .intro-description {
+        font-size: 20px;
+        letter-spacing: -0.4px;
+    }
+}
