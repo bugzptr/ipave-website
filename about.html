@@ -42,7 +42,10 @@
     <link rel="preload" href="assets/fonts/dm-sans-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/dm-sans-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/images/logo-horizontal.svg" as="image">
-    <link rel="preload" href="assets/images/about-hero-background.jpg" as="image">
+    <link rel="preload" href="assets/images/hero-background-mobile.webp" as="image" media="(max-width: 480px)">
+    <link rel="preload" href="assets/images/hero-background-tablet.webp" as="image" media="(max-width: 768px)">
+    <link rel="preload" href="assets/images/hero-background-desktop.webp" as="image" media="(min-width: 769px) and (max-width: 1439px)">
+    <link rel="preload" href="assets/images/hero-background-desktop-large.webp" as="image" media="(min-width: 1440px)">
     
     <link rel="dns-prefetch" href="//api.staticforms.dev">
     <link rel="preconnect" href="https://api.staticforms.dev">
@@ -66,14 +69,6 @@
             padding: 0 !important;
         }
         
-        .about-page .about-hero {
-            width: 100% !important;
-            margin-left: 0 !important;
-            margin-right: 0 !important;
-            position: relative !important;
-            left: 0 !important;
-            right: 0 !important;
-        }
         
         /* Header Styles - Use same as homepage */
         .about-page .site-header {
@@ -102,201 +97,7 @@
             display: block !important;
         }
         
-        /* Hero Section */
-        .about-hero {
-            position: relative !important;
-            height: 712px !important;
-            min-height: 712px !important;
-            overflow: hidden !important;
-            background-color: #212161 !important;
-            border: none !important;
-            outline: none !important;
-            display: flex !important;
-            align-items: center !important;
-        }
-        
-        .about-hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover;
-            z-index: 0;
-            border: none !important;
-            outline: none !important;
-            display: block;
-        }
-        
-        .about-hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(87, 87, 87, 0.8);
-            z-index: 1;
-        }
-        
-        .about-hero-content {
-            position: relative !important;
-            z-index: 2 !important;
-            max-width: 1282px !important;
-            margin: 0 auto !important;
-            padding: 4rem 0 !important;
-            display: grid !important;
-            grid-template-columns: 1fr 1fr !important;
-            gap: 3rem !important;
-            align-items: start !important;
-            width: 100% !important;
-        }
-        
-        .about-hero-text {
-            color: var(--color-white);
-            margin-top: -1rem;
-            position: relative;
-            z-index: 3;
-        }
-        
-        .about-hero-text h1 {
-            font-family: 'Encode Sans Expanded', sans-serif !important;
-            font-weight: 700 !important;
-            font-size: 64px !important;
-            line-height: 0.9 !important;
-            letter-spacing: -3.84px !important;
-            color: #FDE906 !important;
-            margin: 0 0 1.5rem 0 !important;
-            max-width: 612px;
-        }
-        
-        .about-hero-text .hero-description {
-            font-family: 'Encode Sans Semi Condensed', sans-serif;
-            font-weight: 600;
-            font-size: 36px;
-            line-height: 0.9;
-            letter-spacing: -0.72px;
-            color: #FFFFFF;
-            margin-top: 24px;
-            max-width: 643px;
-            margin-bottom: 0;
-        }
-        
-        .about-hero-services {
-            font-family: 'Encode Sans Semi Condensed', sans-serif;
-            font-weight: 600;
-            font-size: 36px;
-            line-height: 0.9;
-            letter-spacing: -0.72px;
-            color: #FFFFFF;
-            margin-top: 16px;
-            margin-bottom: 0;
-            list-style: none;
-            padding: 0;
-        }
-        
-        .about-hero-services li {
-            margin-bottom: 8px;
-        }
-        
-        .about-hero-services li:last-child {
-            margin-bottom: 0;
-        }
-        
-        .about-hero-form-container {
-            background: #FFFFFF;
-            border: 2px solid #212161;
-            padding: 28px 52px 28px;
-            width: 472px;
-            max-height: calc(100% - 20px);
-            position: relative;
-            margin-top: 0;
-            box-sizing: border-box;
-            z-index: 3;
-            overflow: hidden;
-        }
-        
-        .about-hero-form-container h3 {
-            font-family: 'Encode Sans Semi Condensed', sans-serif;
-            font-weight: 700;
-            font-size: 25px;
-            line-height: 0.9;
-            letter-spacing: -0.5px;
-            color: #212161;
-            text-align: center;
-            margin: 0 0 16px 0;
-        }
-        
-        .about-hero-form-container .form-subtitle {
-            font-family: 'Encode Sans Semi Condensed', sans-serif;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 0.9;
-            letter-spacing: -0.4px;
-            color: #212161;
-            text-align: center;
-            margin: 0 0 16px 0;
-        }
-        
-        .about-hero-form-container form {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
-        
-        .about-hero-form-container .form-group {
-            margin-bottom: 14px;
-        }
-        
-        .about-hero-form-container .form-group:last-of-type {
-            margin-bottom: 12px;
-        }
-        
-        .about-hero-form-container .form-group label {
-            font-family: 'Encode Sans Semi Condensed', sans-serif;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 0.9;
-            letter-spacing: -0.4px;
-            color: #212161;
-            display: block;
-            margin-bottom: 8px;
-        }
-        
-        .about-hero-form-container input[type="text"],
-        .about-hero-form-container input[type="email"],
-        .about-hero-form-container input[type="tel"],
-        .about-hero-form-container textarea {
-            width: 100%;
-            background: #FFFFFF;
-            border: 1px solid #212161;
-            padding: 10px 15px;
-            height: 48px;
-            font-family: 'Encode Sans Semi Condensed', sans-serif;
-            font-size: 20px;
-            color: #212161;
-            box-sizing: border-box;
-        }
-        
-        .about-hero-form-container textarea {
-            height: 90px;
-            resize: none;
-            padding: 10px 15px;
-        }
-        
-        .about-hero-form-container button {
-            background-color: #FDE906;
-            color: #212161;
-            font-family: 'Encode Sans Semi Condensed', sans-serif;
-            font-weight: 900;
-            font-size: 20px;
-            line-height: 0.9;
-            letter-spacing: -0.4px;
-            border: none;
-            height: 49px;
-            width: 206px;
-            margin: 8px auto 0;
-            cursor: pointer;
-        }
+        /* Hero Section - Use standard hero styles */
         
         /* Story Sections */
         .about-story-section {
@@ -641,38 +442,24 @@
         
         /* Responsive Styles */
         @media (max-width: 1282px) {
-            .about-hero-content {
+            .hero-content {
                 padding-left: 1.5rem;
                 padding-right: 1.5rem;
             }
         }
         
         @media (max-width: 900px) {
-            .about-hero-content {
+            .hero-content {
                 grid-template-columns: 1fr !important;
                 padding-top: 2rem !important;
                 padding-left: 1.5rem !important;
                 padding-right: 1.5rem !important;
             }
             
-            .about-hero-form-container {
+            .hero-form-container {
                 width: 100% !important;
                 max-width: 472px !important;
                 margin: 2rem auto 0 !important;
-            }
-            
-            .about-hero-text h1 {
-                font-size: 40px;
-                letter-spacing: -2.4px;
-            }
-            
-            .about-hero-text .hero-description {
-                font-size: 24px;
-            }
-            
-            .about-hero-services {
-                font-size: 24px;
-                margin-top: 2rem;
             }
             
             .about-story-section h2 {
@@ -705,18 +492,6 @@
                 font-size: 24px;
             }
             
-            .about-hero-text h1 {
-                font-size: 32px;
-                letter-spacing: -1.92px;
-            }
-            
-            .about-hero-text .hero-description {
-                font-size: 20px;
-            }
-            
-            .about-hero-services {
-                font-size: 20px;
-            }
             
             .about-story-section h2 {
                 font-size: 32px;
@@ -772,23 +547,29 @@
     </header>
 
     <main>
-        <section class="about-hero">
-            <img src="assets/images/about-hero-background.jpg" alt="" class="about-hero-background" loading="eager">
-            <div class="about-hero-overlay"></div>
-            <div class="container about-hero-content">
-                <div class="about-hero-text">
+        <section class="hero">
+            <picture>
+                <source media="(max-width: 480px)" srcset="assets/images/hero-background-mobile.webp" type="image/webp">
+                <source media="(max-width: 768px)" srcset="assets/images/hero-background-tablet.webp" type="image/webp">
+                <source media="(min-width: 1440px)" srcset="assets/images/hero-background-desktop-large.webp" type="image/webp">
+                <source srcset="assets/images/hero-background-desktop.webp" type="image/webp">
+                <img src="assets/images/hero-background.jpg" alt="" class="hero-background" loading="eager" fetchpriority="high" width="1920" height="1080">
+            </picture>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
                     <h1>Christchurch's Most Experienced Concrete & Asphalt Specialists</h1>
-                    <p class="hero-description">Expertly crafted concrete patio Christchurch, driveways, foundations, and footpaths, built to last. At IPave, quality is always our foundation.</p>
-                    <ul class="about-hero-services">
+                    <p>Expertly crafted concrete patio Christchurch, driveways, foundations, and footpaths, built to last. At IPave, quality is always our foundation.</p>
+                    <ul class="hero-services-list">
                         <li>Concrete Services</li>
                         <li>Decorative Concrete</li>
                         <li>Kerbing Services</li>
                         <li>Landscape Services</li>
                     </ul>
                 </div>
-                <div class="about-hero-form-container">
+                <div class="hero-form-container">
                     <h3>Contact I Pave Concrete & Asphalt for a free quote :</h3>
-                    <p class="form-subtitle">Ph: 0800 472 8348 or leave a message</p>
+                    <p>Ph: 0800 472 8348 or leave a message</p>
                     <form action="https://api.staticforms.dev/submit" method="POST" novalidate>
                         <input type="hidden" name="apiKey" value="sf_21a1k3bflhbdnf58nh87n7m3">
                         <input type="hidden" name="redirectTo" value="https://ipave-website.pages.dev/thank-you.html">
@@ -810,7 +591,7 @@
                             <label for="hero-message">Tell us about your project</label>
                             <textarea id="hero-message" name="message" rows="4" required aria-required="true"></textarea>
                         </div>
-                        <button type="submit">GET  A QUOTE</button>
+                        <button type="submit" class="button-accent">GET  A QUOTE</button>
                     </form>
                 </div>
             </div>
