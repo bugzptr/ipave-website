@@ -1716,3 +1716,320 @@ form textarea::placeholder {
         letter-spacing: -0.4px;
     }
 }
+
+/* Our Process Page Styles */
+.process-intro-section {
+    background: var(--color-primary);
+    padding: clamp(3rem, 8vw, 5rem) 0;
+    color: var(--color-white);
+}
+
+.process-title {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 0.9;
+    letter-spacing: -3.84px;
+    color: var(--color-accent);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.process-intro-text {
+    font-family: var(--font-family-body);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 0.96;
+    letter-spacing: -0.64px;
+    color: var(--color-white);
+    text-align: center;
+    max-width: 890px;
+    margin: 0 auto;
+}
+
+.process-steps-section {
+    background: var(--color-primary);
+    padding: clamp(3rem, 8vw, 5rem) 0;
+}
+
+.process-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.process-step-card {
+    background: var(--color-accent);
+    padding: 2rem;
+    position: relative;
+    min-height: 348px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.step-number-large {
+    font-family: var(--font-family-body);
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 0.9;
+    letter-spacing: -1.92px;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.step-title {
+    font-family: var(--font-family-body);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 0.96;
+    letter-spacing: -0.64px;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.step-description {
+    font-family: var(--font-family-body);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 0.96;
+    letter-spacing: -0.48px;
+    color: var(--color-primary);
+    text-align: center;
+    margin: 0;
+}
+
+/* Process steps grid layout - 3 top, 2 middle, 2 middle, 1 bottom */
+.process-step-card:nth-child(1),
+.process-step-card:nth-child(2),
+.process-step-card:nth-child(3) {
+    grid-column: span 1;
+}
+
+.process-step-card:nth-child(4) {
+    grid-column: 1 / span 1;
+}
+
+.process-step-card:nth-child(5) {
+    grid-column: 2 / span 1;
+}
+
+.process-step-card:nth-child(6) {
+    grid-column: 3 / span 1;
+}
+
+.process-step-card:nth-child(7) {
+    grid-column: 1 / span 1;
+}
+
+.process-step-card:nth-child(8) {
+    grid-column: 2 / span 2;
+}
+
+.expectations-section {
+    background: var(--color-primary);
+    padding: clamp(3rem, 8vw, 5rem) 0;
+    color: var(--color-white);
+}
+
+.expectations-title {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 0.9;
+    letter-spacing: -3.84px;
+    color: var(--color-accent);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.expectations-intro {
+    font-family: var(--font-family-body);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 0.96;
+    letter-spacing: -0.64px;
+    color: var(--color-white);
+    text-align: center;
+    max-width: 765px;
+    margin: 0 auto 3rem;
+}
+
+.expectations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.expectation-block {
+    background: transparent;
+    padding: 1rem 0;
+}
+
+.expectation-block-wide {
+    grid-column: 1 / -1;
+    max-width: 730px;
+    margin: 0 auto;
+}
+
+.expectation-title {
+    font-family: var(--font-family-body);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 0.96;
+    letter-spacing: -0.64px;
+    color: var(--color-white);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.expectation-text {
+    font-family: var(--font-family-body);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 0.96;
+    letter-spacing: -0.64px;
+    color: var(--color-white);
+    text-align: center;
+    margin: 0;
+}
+
+.expectation-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.expectation-list li {
+    font-family: var(--font-family-body);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 0.96;
+    letter-spacing: -0.64px;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    padding-left: 48px;
+    position: relative;
+}
+
+.expectation-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-size: 32px;
+    line-height: 0.96;
+}
+
+/* Responsive Design for Process Page */
+@media (max-width: 900px) and (min-width: 601px) {
+    .process-title,
+    .expectations-title {
+        font-size: 48px;
+        letter-spacing: -2.88px;
+    }
+    
+    .process-intro-text,
+    .expectations-intro,
+    .expectation-text,
+    .expectation-title {
+        font-size: 24px;
+        letter-spacing: -0.48px;
+    }
+    
+    .step-number-large {
+        font-size: 72px;
+    }
+    
+    .step-title {
+        font-size: 24px;
+    }
+    
+    .step-description {
+        font-size: 20px;
+    }
+    
+    .process-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .process-step-card:nth-child(8) {
+        grid-column: 1 / -1;
+    }
+    
+    .expectations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .expectation-block-wide {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .process-intro-section,
+    .process-steps-section,
+    .expectations-section {
+        padding: 2rem 0;
+    }
+    
+    .process-title,
+    .expectations-title {
+        font-size: 32px;
+        letter-spacing: -1.92px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .process-intro-text,
+    .expectations-intro {
+        font-size: 20px;
+        letter-spacing: -0.4px;
+        line-height: 1.3;
+    }
+    
+    .process-steps-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .process-step-card {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+    
+    .step-number-large {
+        font-size: 64px;
+    }
+    
+    .step-title {
+        font-size: 20px;
+    }
+    
+    .step-description {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+    
+    .expectations-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .expectation-title {
+        font-size: 24px;
+    }
+    
+    .expectation-text {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+    
+    .expectation-list li {
+        font-size: 18px;
+        padding-left: 24px;
+    }
+}
