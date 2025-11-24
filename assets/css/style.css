@@ -109,6 +109,19 @@
     box-sizing: border-box; 
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 p { 
     margin: 0 0 1rem 0; 
     font-family: var(--font-family-body);
@@ -159,7 +172,9 @@ img {
 }
 
 section { 
-    padding: clamp(3rem, 8vw, 5rem) 0; 
+    padding: clamp(3rem, 8vw, 5rem) 0;
+    width: 100%;
+    margin: 0;
 }
 
 .container { 
@@ -253,7 +268,9 @@ form button {
 
 .site-header { 
     background-color: var(--color-primary); 
-    padding: 1rem 0; 
+    padding: 1rem 0;
+    width: 100%;
+    margin: 0;
 }
 
 .header-top { 
@@ -502,6 +519,8 @@ picture {
     display: flex;
     align-items: center;
     overflow: hidden;
+    width: 100%;
+    margin: 0;
 }
 
 .hero picture {
@@ -767,6 +786,8 @@ picture {
     background-color: var(--color-accent);
     text-align: center;
     padding: 4rem 0;
+    width: 100%;
+    margin: 0;
 }
 
 .cta-banner h2 {
@@ -953,7 +974,9 @@ form textarea::placeholder {
 .site-footer { 
     background-color: var(--color-primary); 
     color: var(--color-white); 
-    padding-top: 4rem; 
+    padding-top: 4rem;
+    width: 100%;
+    margin: 0;
 }
 
 .footer-grid { 
@@ -1722,6 +1745,8 @@ form textarea::placeholder {
     background: var(--color-primary);
     padding: clamp(3rem, 8vw, 5rem) 0;
     color: var(--color-white);
+    width: 100%;
+    margin: 0;
 }
 
 .process-title {
@@ -1750,6 +1775,8 @@ form textarea::placeholder {
 .process-steps-section {
     background: var(--color-primary);
     padding: clamp(3rem, 8vw, 5rem) 0;
+    width: 100%;
+    margin: 0;
 }
 
 .process-steps-grid {
@@ -1833,6 +1860,8 @@ form textarea::placeholder {
     background: var(--color-primary);
     padding: clamp(3rem, 8vw, 5rem) 0;
     color: var(--color-white);
+    width: 100%;
+    margin: 0;
 }
 
 .expectations-title {
