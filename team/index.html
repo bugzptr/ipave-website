@@ -148,6 +148,14 @@
 
     <main>
         <section class="hero">
+            <picture>
+                <source media="(max-width: 480px)" srcset="../assets/images/hero-background-mobile.webp" type="image/webp">
+                <source media="(max-width: 768px)" srcset="../assets/images/hero-background-tablet.webp" type="image/webp">
+                <source media="(min-width: 1440px)" srcset="../assets/images/hero-background-desktop-large.webp" type="image/webp">
+                <source srcset="../assets/images/hero-background-desktop.webp" type="image/webp">
+                <img src="../assets/images/hero-background.jpg" alt="" class="hero-background" loading="eager" fetchpriority="high" width="1920" height="1080">
+            </picture>
+            <div class="hero-overlay"></div>
             <div class="container hero-content">
                 <h1>Our Team</h1>
                 <p>Meet the experienced professionals behind I Pave Concrete & Asphalt. Our dedicated team brings decades of combined experience to every project.</p>
