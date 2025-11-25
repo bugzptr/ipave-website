@@ -561,10 +561,10 @@
                     <h1>Christchurch's Most Experienced Concrete & Asphalt Specialists</h1>
                     <p>Expertly crafted concrete patio Christchurch, driveways, foundations, and footpaths, built to last. At IPave, quality is always our foundation.</p>
                     <ul class="hero-services-list">
-                        <li>Concrete Services</li>
-                        <li>Decorative Concrete</li>
-                        <li>Kerbing Services</li>
-                        <li>Landscape Services</li>
+                        <li><a href="services/">Concrete Services</a></li>
+                        <li><a href="services/decorative-concrete.html">Decorative Concrete</a></li>
+                        <li><a href="services/kerbing-services.html">Kerbing Services</a></li>
+                        <li><a href="concrete-patio.html">Landscape Services</a></li>
                     </ul>
                 </div>
                 <div class="hero-form-container">
@@ -575,21 +575,21 @@
                         <input type="hidden" name="redirectTo" value="https://ipave-website.pages.dev/thank-you.html">
                         <input type="hidden" name="replyTo" value="@email">
                         <input type="hidden" name="to" value="dave@intellinet.co.nz">
-                        <div class="form-group name-group">
-                            <label for="hero-name">Name</label>
-                            <input type="text" id="hero-name" name="name" required aria-required="true">
+                        <div class="form-group">
+                            <label for="name" class="visually-hidden">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Name" required aria-required="true">
                         </div>
-                        <div class="form-group email-group">
-                            <label for="hero-email">Email</label>
-                            <input type="email" id="hero-email" name="email" required aria-required="true">
+                        <div class="form-group">
+                            <label for="email" class="visually-hidden">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Email" required aria-required="true">
                         </div>
-                        <div class="form-group phone-group">
-                            <label for="hero-phone">Phone Number</label>
-                            <input type="tel" id="hero-phone" name="phone">
+                        <div class="form-group">
+                            <label for="phone" class="visually-hidden">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
                         </div>
-                        <div class="form-group message-group">
-                            <label for="hero-message">Tell us about your project</label>
-                            <textarea id="hero-message" name="message" rows="4" required aria-required="true"></textarea>
+                        <div class="form-group">
+                            <label for="message" class="visually-hidden">Tell us about your project</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your project" rows="4" required aria-required="true"></textarea>
                         </div>
                         <button type="submit" class="button-accent">GET  A QUOTE</button>
                     </form>

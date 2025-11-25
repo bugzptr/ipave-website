@@ -106,28 +106,40 @@
             <div class="hero-overlay"></div>
             <div class="container hero-content">
                 <div class="hero-text">
-                    <h1>Concrete Repair Christchurch</h1>
-                    <p>Expert concrete repair and restoration services. We fix cracks, resurface damaged areas, and restore your concrete to like-new condition. Emergency repairs available.</p>
-                    <ul class="benefits-list">
-                        <li>Crack Repair & Filling</li>
-                        <li>Surface Resurfacing</li>
-                        <li>Emergency Repairs</li>
-                        <li>25+ Years Experience</li>
+                    <h1>Christchurch's Most Experienced Concrete & Asphalt Specialists</h1>
+                    <p>Expertly crafted concrete patio Christchurch, driveways, foundations, and footpaths, built to last. At IPave, quality is always our foundation.</p>
+                    <ul class="hero-services-list">
+                        <li><a href="index.html">Concrete Services</a></li>
+                        <li><a href="decorative-concrete.html">Decorative Concrete</a></li>
+                        <li><a href="kerbing-services.html">Kerbing Services</a></li>
+                        <li><a href="../concrete-patio.html">Landscape Services</a></li>
                     </ul>
                 </div>
                 <div class="hero-form-container">
-                    <h3>Get Your Free Repair Quote</h3>
+                    <h3>Contact I Pave Concrete & Asphalt for a free quote :</h3>
                     <p>Ph: 0800 472 8348 or leave a message</p>
-                    <form action="https://api.staticforms.dev/submit" method="POST">
+                    <form action="https://api.staticforms.dev/submit" method="POST" novalidate>
                         <input type="hidden" name="apiKey" value="sf_21a1k3bflhbdnf58nh87n7m3">
                         <input type="hidden" name="redirectTo" value="https://ipave-website.pages.dev/thank-you.html">
                         <input type="hidden" name="replyTo" value="@email">
                         <input type="hidden" name="to" value="dave@intellinet.co.nz">
-                        <input type="text" name="name" placeholder="Name" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="tel" name="phone" placeholder="Phone Number">
-                        <textarea name="message" placeholder="Tell us about your concrete repair needs" rows="4" required></textarea>
-                        <button type="submit" class="button-primary">Get Free Quote</button>
+                        <div class="form-group">
+                            <label for="name" class="visually-hidden">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Name" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="visually-hidden">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Email" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="visually-hidden">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="visually-hidden">Tell us about your project</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your project" rows="4" required aria-required="true"></textarea>
+                        </div>
+                        <button type="submit" class="button-accent">GET  A QUOTE</button>
                     </form>
                 </div>
             </div>
