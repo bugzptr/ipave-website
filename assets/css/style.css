@@ -535,6 +535,8 @@ picture {
 .hero picture img {
     height: 100% !important;
     width: 100% !important;
+    object-fit: cover;
+    object-position: center;
 }
 
 .hero-overlay {
