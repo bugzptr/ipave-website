@@ -100,6 +100,7 @@
     --font-family-body: 'Encode Sans Semi Condensed', sans-serif;
     --font-family-nav: 'Encode Sans Semi Condensed', sans-serif;
     --font-family-service-title: 'DM Sans', sans-serif;
+    --body-text-size: 18px;
     --spacing-unit: 1rem;
     --container-width: 1282px;
     --border-radius: 5px;
@@ -1027,6 +1028,26 @@ form textarea::placeholder {
     border-top: 1px solid rgba(255,255,255,0.2); 
 }
 
+/* Home page: consistent body text font and size */
+body.home .intro-section p,
+body.home .section-header-white p,
+body.home .service-card-description,
+body.home .about-section p,
+body.home .why-choose-intro,
+body.home .why-choose-list p,
+body.home .why-choose-list li,
+body.home .cta-banner p,
+body.home .hero-form-container p,
+body.home .footer-form p,
+body.home .footer-contact p,
+body.home .footer-contact a,
+body.home .footer-bottom p {
+    font-family: var(--font-family-body);
+    font-size: var(--body-text-size);
+    line-height: 1.5;
+    letter-spacing: -0.36px;
+}
+
 /* Responsive Design - Tablet (601-900px) */
 @media (max-width: 900px) and (min-width: 601px) {
     h1 { 
@@ -1117,6 +1138,22 @@ form textarea::placeholder {
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    body.home .intro-section p,
+    body.home .section-header-white p,
+    body.home .service-card-description,
+    body.home .about-section p,
+    body.home .why-choose-intro,
+    body.home .why-choose-list p,
+    body.home .why-choose-list li,
+    body.home .cta-banner p,
+    body.home .hero-form-container p,
+    body.home .footer-form p,
+    body.home .footer-contact p,
+    body.home .footer-contact a,
+    body.home .footer-bottom p {
+        font-size: var(--body-text-size);
     }
 }
 
@@ -1318,6 +1355,22 @@ form textarea::placeholder {
         height: 44px;
         line-height: 44px;
         padding: 0 16px;
+    }
+    
+    body.home .intro-section p,
+    body.home .section-header-white p,
+    body.home .service-card-description,
+    body.home .about-section p,
+    body.home .why-choose-intro,
+    body.home .why-choose-list p,
+    body.home .why-choose-list li,
+    body.home .cta-banner p,
+    body.home .hero-form-container p,
+    body.home .footer-form p,
+    body.home .footer-contact p,
+    body.home .footer-contact a,
+    body.home .footer-bottom p {
+        font-size: 16px;
     }
 }
 
