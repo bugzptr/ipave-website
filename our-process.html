@@ -47,6 +47,97 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     
+    <style>
+        /* Critical Above-the-Fold CSS - Hero (match index.html) */
+        @font-face {
+          font-display: block;
+          font-family: 'Encode Sans Semi Condensed';
+          font-style: normal;
+          font-weight: 400;
+          src: url('assets/fonts/encode-sans-semi-condensed-400.woff2') format('woff2'),
+               url('assets/fonts/encode-sans-semi-condensed-400.ttf') format('truetype');
+        }
+        @font-face {
+          font-display: block;
+          font-family: 'Encode Sans Semi Condensed';
+          font-style: normal;
+          font-weight: 600;
+          src: url('assets/fonts/encode-sans-semi-condensed-600.woff2') format('woff2'),
+               url('assets/fonts/encode-sans-semi-condensed-600.ttf') format('truetype');
+        }
+        @font-face {
+          font-display: block;
+          font-family: 'Encode Sans Semi Condensed';
+          font-style: normal;
+          font-weight: 700;
+          src: url('assets/fonts/encode-sans-semi-condensed-700.woff2') format('woff2'),
+               url('assets/fonts/encode-sans-semi-condensed-700.ttf') format('truetype');
+        }
+        @font-face {
+          font-display: block;
+          font-family: 'Encode Sans Expanded';
+          font-style: normal;
+          font-weight: 700;
+          src: url('assets/fonts/encode-sans-expanded-700.woff2') format('woff2'),
+               url('assets/fonts/encode-sans-expanded-700.ttf') format('truetype');
+        }
+        @font-face {
+          font-display: block;
+          font-family: 'Encode Sans Semi Condensed';
+          font-style: normal;
+          font-weight: 900;
+          src: url('assets/fonts/encode-sans-semi-condensed-900.woff2') format('woff2'),
+               url('assets/fonts/encode-sans-semi-condensed-900.ttf') format('truetype');
+        }
+        :root {
+            --color-primary: #212161;
+            --color-accent: #FDE906;
+            --color-white: #FFFFFF;
+            --font-family-heading: 'Encode Sans Expanded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-family-body: 'Encode Sans Semi Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-family-nav: 'Encode Sans Semi Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --container-width: 1282px;
+            --border-radius: 5px;
+        }
+        .hero { position: relative; background: #212161; color: #FFFFFF; min-height: 712px; height: 712px; display: flex; align-items: center; overflow: hidden; }
+        .hero picture { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+        .hero-background { position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; object-fit: cover; z-index: 0; }
+        .hero picture img { height: 100% !important; width: 100% !important; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(87, 87, 87, 0.8); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 4rem 0; min-width: 0; }
+        .hero-text { color: #FFFFFF; margin-top: -2rem; }
+        .hero-text h1 { font-family: var(--font-family-heading); font-weight: 700; font-size: 64px; line-height: 0.9; letter-spacing: -3.84px; margin-bottom: 1.5rem; max-width: 612px; color: #FDE906; min-height: 115px; }
+        .hero-text p { font-size: 36px; line-height: 0.9; letter-spacing: -0.72px; color: #FFFFFF; margin-bottom: 1.5rem; max-width: 643px; }
+        .hero-services-list { list-style: none; padding: 0; margin: 1rem 0; }
+        .hero-services-list li { font-size: 36px; line-height: 0.9; letter-spacing: -0.72px; color: #FFFFFF; margin-bottom: 0.5rem; font-weight: 600; }
+        .hero-form-container { background: #FFFFFF; border: 2px solid #212161; padding: 2rem; max-width: 472px; color: #212161; }
+        .hero-form-container h3 { font-size: 25px; font-weight: 700; color: #212161; text-align: center; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+        .hero-form-container p { font-size: 20px; color: #212161; text-align: center; margin-bottom: 1.5rem; letter-spacing: -0.4px; }
+        .hero-form-container form { display: flex; flex-direction: column; gap: 0.5rem; }
+        .hero-form-container input,
+        .hero-form-container textarea { width: 100%; padding: 0.8rem; border: 1px solid #212161; font-size: 20px; font-family: var(--font-family-body); color: #212161; border-radius: 5px; }
+        .hero-form-container button { width: 100%; height: 49px; line-height: 49px; padding: 0 20px; background-color: #FDE906; color: #212161; border: 2px solid #212161; font-family: var(--font-family-nav); font-weight: 900; font-size: 20px; letter-spacing: -0.4px; cursor: pointer; border-radius: 0; }
+        @media (max-width: 900px) and (min-width: 601px) {
+            .hero-text h1 { font-size: 48px; letter-spacing: -2.88px; }
+            .hero-text p { font-size: 28px; }
+            .hero-services-list li { font-size: 28px; }
+            .hero-content { grid-template-columns: 1fr; gap: 2rem; }
+            .hero-form-container { max-width: 100%; }
+        }
+        @media (max-width: 600px) {
+            .hero { min-height: auto; padding: 2rem 0; }
+            .hero-text h1 { font-size: 32px; letter-spacing: -1.92px; margin-bottom: 1rem; }
+            .hero-text p { font-size: 20px; letter-spacing: -0.4px; }
+            .hero-services-list li { font-size: 20px; letter-spacing: -0.4px; }
+            .hero-form-container { padding: 1.5rem; }
+            .hero-form-container h3 { font-size: 20px; }
+            .hero-form-container p { font-size: 16px; }
+            .hero-form-container input,
+            .hero-form-container textarea { font-size: 16px; padding: 0.6rem; }
+            .hero-content { grid-template-columns: 1fr; gap: 1.5rem; }
+        }
+    </style>
+    
     <link rel="dns-prefetch" href="//api.staticforms.dev">
     <link rel="preconnect" href="https://api.staticforms.dev">
     

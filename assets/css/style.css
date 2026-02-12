@@ -1930,6 +1930,11 @@ body.home .footer-bottom p {
     grid-column: 2 / span 1;
 }
 
+.process-step-card:nth-child(7),
+.process-step-card:nth-child(8) {
+    margin-left: 16.67%;
+}
+
 .expectations-section {
     background: var(--color-primary);
     padding: clamp(3rem, 8vw, 5rem) 0;
@@ -2060,6 +2065,11 @@ body.home .footer-bottom p {
         grid-template-columns: repeat(2, 1fr);
     }
     
+    .process-step-card:nth-child(7),
+    .process-step-card:nth-child(8) {
+        margin-left: 0;
+    }
+    
     .expectations-grid {
         grid-template-columns: 1fr;
     }
@@ -2098,6 +2108,11 @@ body.home .footer-bottom p {
     .process-step-card {
         min-height: auto;
         padding: 1.5rem;
+    }
+    
+    .process-step-card:nth-child(7),
+    .process-step-card:nth-child(8) {
+        margin-left: 0;
     }
     
     .step-number-large {
