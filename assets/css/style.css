@@ -95,7 +95,7 @@
     --color-light-gray: #E0E0E0;
     --color-dark: #000000;
     --color-white: #FFFFFF;
-    --color-text-body: #333;
+    --color-text-body: #212161;
     --font-family-heading: 'Encode Sans Expanded', sans-serif;
     --font-family-body: 'Encode Sans Semi Condensed', sans-serif;
     --font-family-nav: 'Encode Sans Semi Condensed', sans-serif;
@@ -115,6 +115,10 @@ html, body {
     padding: 0;
     width: 100%;
     overflow-x: hidden;
+}
+
+body {
+    color: var(--color-primary);
 }
 
 main {
@@ -429,7 +433,7 @@ picture {
 
 .service-card p { 
     margin: 0; 
-    color: #666; 
+    color: var(--color-primary); 
 }
 
 .arrow-link { 
@@ -697,7 +701,7 @@ picture {
     font-size: 24px;
     line-height: 1;
     letter-spacing: -0.48px;
-    color: var(--color-dark);
+    color: var(--color-primary);
     margin: 0;
 }
 
@@ -707,7 +711,7 @@ picture {
     font-size: 16px;
     line-height: 1.1;
     letter-spacing: -0.32px;
-    color: var(--color-dark);
+    color: var(--color-primary);
     margin: 0;
 }
 
@@ -1010,6 +1014,10 @@ form textarea::placeholder {
 
 .site-footer h4 { 
     color: var(--color-accent); 
+}
+
+.footer-form h4 {
+    color: var(--color-primary);
 }
 
 .footer-services ul { 
@@ -1445,7 +1453,7 @@ body.home .footer-bottom p {
     bottom: 0;
     left: 0;
     background: var(--color-accent);
-    color: var(--color-dark);
+    color: var(--color-primary);
     font-family: var(--font-family-service-title);
     font-weight: 700;
     font-size: 24px;
@@ -1656,7 +1664,7 @@ body.home .footer-bottom p {
     font-size: 24px;
     line-height: 1.1;
     letter-spacing: -0.48px;
-    color: var(--color-dark);
+    color: var(--color-primary);
     margin-bottom: 1.5rem;
 }
 
@@ -1919,7 +1927,7 @@ body.home .footer-bottom p {
 }
 
 .process-step-card:nth-child(8) {
-    grid-column: 2 / span 2;
+    grid-column: 2 / span 1;
 }
 
 .expectations-section {
@@ -2050,10 +2058,6 @@ body.home .footer-bottom p {
     
     .process-steps-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .process-step-card:nth-child(8) {
-        grid-column: 1 / -1;
     }
     
     .expectations-grid {
