@@ -1923,16 +1923,17 @@ body.home .footer-bottom p {
 }
 
 .process-step-card:nth-child(7) {
-    grid-column: 1 / span 1;
-}
-
-.process-step-card:nth-child(8) {
     grid-column: 2 / span 1;
 }
 
+.process-step-card:nth-child(8) {
+    grid-column: 3 / span 1;
+}
+
+/* Shift 7 and 8 left by half a column so the gap between 4 and 5 is at the midpoint of box 7 */
 .process-step-card:nth-child(7),
 .process-step-card:nth-child(8) {
-    margin-left: 16.67%;
+    transform: translateX(-50%);
 }
 
 .expectations-section {
@@ -2067,7 +2068,7 @@ body.home .footer-bottom p {
     
     .process-step-card:nth-child(7),
     .process-step-card:nth-child(8) {
-        margin-left: 0;
+        transform: none;
     }
     
     .expectations-grid {
@@ -2112,7 +2113,7 @@ body.home .footer-bottom p {
     
     .process-step-card:nth-child(7),
     .process-step-card:nth-child(8) {
-        margin-left: 0;
+        transform: none;
     }
     
     .step-number-large {
