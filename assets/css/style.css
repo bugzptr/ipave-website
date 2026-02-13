@@ -363,7 +363,7 @@ form button {
     border-radius: var(--border-radius);
 }
 
-.hero-form-container h3, .hero-form-container p { 
+.hero-form-container h2, .hero-form-container p { 
     color: var(--color-primary); 
     text-align: center; 
 }
@@ -625,7 +625,7 @@ picture {
     max-width: 472px;
 }
 
-.hero-form-container h3 {
+.hero-form-container h2 {
     font-size: 25px;
     font-weight: 700;
     color: var(--color-primary);
@@ -903,7 +903,7 @@ form textarea::placeholder {
     padding: 1.5rem;
 }
 
-.footer-form h4 {
+.footer-form h3 {
     font-size: 16px;
     font-weight: 700;
     color: var(--color-primary);
@@ -941,7 +941,7 @@ form textarea::placeholder {
     font-size: 20px;
 }
 
-.footer-services h4 {
+.footer-services h3 {
     font-size: 24px;
     font-weight: 700;
     color: var(--color-white);
@@ -959,7 +959,7 @@ form textarea::placeholder {
     letter-spacing: -0.48px;
 }
 
-.footer-contact h4 {
+.footer-contact h3 {
     font-size: 20px;
     font-weight: 600;
     color: var(--color-white);
@@ -1012,11 +1012,11 @@ form textarea::placeholder {
     aspect-ratio: 200 / 50; /* Explicit aspect ratio */
 }
 
-.site-footer h4 { 
+.site-footer h3 { 
     color: var(--color-accent); 
 }
 
-.footer-form h4 {
+.footer-form h3 {
     color: var(--color-primary);
 }
 
@@ -1202,7 +1202,7 @@ body.home .footer-bottom p {
         padding: 1.5rem;
     }
     
-    .hero-form-container h3 {
+    .hero-form-container h2 {
         font-size: 20px;
     }
     
@@ -1322,7 +1322,7 @@ body.home .footer-bottom p {
         padding: 1rem;
     }
     
-    .footer-form h4 {
+    .footer-form h3 {
         font-size: 14px;
     }
     
@@ -1336,7 +1336,7 @@ body.home .footer-bottom p {
         padding: 0.5rem;
     }
     
-    .footer-services h4 {
+    .footer-services h3 {
         font-size: 20px;
     }
     
@@ -1344,7 +1344,7 @@ body.home .footer-bottom p {
         font-size: 18px;
     }
     
-    .footer-contact h4 {
+    .footer-contact h3 {
         font-size: 18px;
     }
     
