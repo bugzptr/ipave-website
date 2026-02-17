@@ -572,7 +572,7 @@ picture {
 }
 
 .hero-text h1 {
-    color: var(--color-accent);
+    color: var(--color-white);
     font-size: 64px;
     line-height: 0.9;
     letter-spacing: -3.84px;
