@@ -27,6 +27,9 @@
 /services/commercial-concrete /services/commercial-paving.html 301
 /services/concrete-maintenance /services/concrete-repair.html 301
 
+# FAQ page
+/faq/ /faq.html 301
+
 # 404 Error Page - Catch-all for unmatched routes
 /* /404.html 404
 
