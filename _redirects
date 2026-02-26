@@ -30,6 +30,9 @@
 # FAQ page
 /faq/ /faq.html 301
 
+# Stamped & Patterned Concrete service
+/services/stamped-patterned-concrete/ /services/stamped-patterned-concrete.html 301
+
 # 404 Error Page - Catch-all for unmatched routes
 /* /404.html 404
 
